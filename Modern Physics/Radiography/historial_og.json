@@ -1,0 +1,209 @@
+[
+    {
+        "Filename": "0001002A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 52.900000000000006,
+        "Sheet_Count": 500,
+        "Mean_Intensity": 3221.9488452173914,
+        "Std_Dev": 24.5530047359804,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001003A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 47.61,
+        "Sheet_Count": 450,
+        "Mean_Intensity": 3351.1552428985506,
+        "Std_Dev": 23.027024896355538,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001005A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 43.0606,
+        "Sheet_Count": 407,
+        "Mean_Intensity": 3455.6598933333335,
+        "Std_Dev": 21.355139284976946,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001006A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 38.617000000000004,
+        "Sheet_Count": 365,
+        "Mean_Intensity": 3549.679155942029,
+        "Std_Dev": 19.769330728174822,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001007A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 36.0778,
+        "Sheet_Count": 341,
+        "Mean_Intensity": 3598.431495652174,
+        "Std_Dev": 19.186682445010444,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001008A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 31.422600000000003,
+        "Sheet_Count": 297,
+        "Mean_Intensity": 3682.7376985507244,
+        "Std_Dev": 17.3271966660898,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001009A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 26.8732,
+        "Sheet_Count": 254,
+        "Mean_Intensity": 3751.045633623188,
+        "Std_Dev": 14.597531973021303,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001010A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 23.381800000000002,
+        "Sheet_Count": 221,
+        "Mean_Intensity": 3799.067424927536,
+        "Std_Dev": 13.632760917344987,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001011A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 19.678800000000003,
+        "Sheet_Count": 186,
+        "Mean_Intensity": 3845.7845379710143,
+        "Std_Dev": 12.609614477700815,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001012A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 14.917800000000002,
+        "Sheet_Count": 141,
+        "Mean_Intensity": 3899.5538863768115,
+        "Std_Dev": 11.209934113265515,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001013A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 11.3206,
+        "Sheet_Count": 107,
+        "Mean_Intensity": 3937.4475652173915,
+        "Std_Dev": 10.366679683388307,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001014A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 10.2626,
+        "Sheet_Count": 97,
+        "Mean_Intensity": 3947.640818550725,
+        "Std_Dev": 10.078826439899542,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001015A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 9.204600000000001,
+        "Sheet_Count": 87,
+        "Mean_Intensity": 3957.2035698550726,
+        "Std_Dev": 9.818488139537196,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001016A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 8.146600000000001,
+        "Sheet_Count": 77,
+        "Mean_Intensity": 3966.7588985507246,
+        "Std_Dev": 9.447337985974594,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001017A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 7.6176,
+        "Sheet_Count": 72,
+        "Mean_Intensity": 3973.0057460869566,
+        "Std_Dev": 8.996741340095154,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001018A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 6.5596000000000005,
+        "Sheet_Count": 62,
+        "Mean_Intensity": 3981.248699130435,
+        "Std_Dev": 8.300120843012763,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001019A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 4.4436,
+        "Sheet_Count": 42,
+        "Mean_Intensity": 3996.767619710145,
+        "Std_Dev": 7.600515486034483,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001020A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 5.5016,
+        "Sheet_Count": 52,
+        "Mean_Intensity": 3981.4816104347824,
+        "Std_Dev": 8.327016596931854,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001021A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 3.3856,
+        "Sheet_Count": 32,
+        "Mean_Intensity": 4003.9655860869566,
+        "Std_Dev": 7.45610397698536,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001022A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 1.2696,
+        "Sheet_Count": 12,
+        "Mean_Intensity": 4018.2473936231886,
+        "Std_Dev": 7.017280709798376,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001023A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 0.2116,
+        "Sheet_Count": 2,
+        "Mean_Intensity": 4021.493496811594,
+        "Std_Dev": 6.974925789285212,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001024A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 0.1058,
+        "Sheet_Count": 1,
+        "Mean_Intensity": 4022.4217820289855,
+        "Std_Dev": 6.9093297915176395,
+        "Max_Bit": 4095
+    },
+    {
+        "Filename": "0001025A",
+        "Label": "Serie_Calibracion",
+        "Thickness_mm": 0.529,
+        "Sheet_Count": 5,
+        "Mean_Intensity": 4019.8509101449276,
+        "Std_Dev": 6.9736643450295865,
+        "Max_Bit": 4095
+    }
+]
