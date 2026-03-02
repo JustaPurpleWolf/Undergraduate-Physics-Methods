@@ -4,6 +4,7 @@ import numpy as np
 from scipy import stats
 import pydicom
 import os
+from lmfit import Model
 
 class Radiograph:
     def __init__(self, path):
@@ -65,12 +66,14 @@ class dicom:
             df.to_csv(filename, mode='a', header=not file_exists, index=False)
             print(f"Se han añadido {len(df)} registros a '{filename}'.")
 
-def plot_calibration(csv_file, unit_thickness =0.10, mu = None, MaxBit = 4095, xlim = False, 
-                     label = '',figure=1, caption=''):
+def beer_lambert_model(z, mu, z0):
+    return np.exp(-(mu*z + z0))
+
+def plot_calibration_legacy(csv_file, unit_thickness =0.10, mu = None, berger= None, MaxBit = 4095, xlim = False, label = '',figure=1, caption=''):
     plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize':10})
     df = pd.read_csv(csv_file)
 
-    fig, bx = plt.subplots(1, figsize=(6,4), dpi = 100)
+    fig, bx = plt.subplots(1, figsize=(10,4), dpi = 100)
     
     x = df['Sheet_Count']
     g = x*unit_thickness
@@ -84,45 +87,46 @@ def plot_calibration(csv_file, unit_thickness =0.10, mu = None, MaxBit = 4095, x
             n = np.linspace(0,x.max(), 1000)
         t = n*unit_thickness
         I = np.exp(-mu*t)
-        #ax.plot(n, I, color='blue', linewidth = 0.6, label=f'Theory ($\mu$={mu})', zorder=2)
-        bx.plot(t, I, color='red', linewidth = 0.8, label=f'Simulation ($\mu$={mu:.6f})', zorder=2)
+        bx.plot(t, I, color='red', linewidth = 0.8, label=f'Ley de Beer-Lambert ($\mu$={mu:.6f})', zorder=2)
+        if berger:
+            I_berger = (1+berger*t)*np.exp(-mu*t)
+            bx.plot(t, I_berger, color='blue', linewidth = 0.8, linestyle = ':', label=f'Aproximación de Berger  ($C$={berger/mu:.2f})', zorder=2)
         
-    '''
-    ax.errorbar(x, y, yerr=y_err, fmt='ks', markersize=3, capsize=2, 
-                elinewidth=0.4, markeredgecolor='black', markerfacecolor='white', 
-                label='Experimental Data (Mean ± SD)', zorder=3)
-                
-    ax.set_xlabel(r'Material Thickness [$n$ Sheets]', fontweight='bold')
-    ax.set_ylabel(r'Relative Intensity [AU]', fontweight='bold')
-    ax.grid(True, which='both', linestyle='--', alpha=0.5)
-    ax.legend(loc='upper right', frameon=True)
-    '''
-    plt.suptitle(f'Radiographic Attenuation Curve.',fontweight = 'bold', fontsize = 14)
-    bx.set_title(f'Figure {figure}. {caption}',  pad=10, fontsize = 12)
-    bx.errorbar(g, y, yerr=y_err, fmt='ks', markersize=5, capsize=3, 
+    plt.suptitle(f'Curva de Atenuación.',fontweight = 'bold', fontsize = 14,y = 0.93)
+    bx.set_title(f'Figura {figure}. {caption}',  pad=10, fontsize = 12)
+    bx.errorbar(g, y, yerr=y_err, ecolor='black', fmt='s', markersize=5, capsize=3, 
                 elinewidth=0.6, markeredgecolor='black', markerfacecolor='white', 
-                label='Experimental Data (Mean ± Std)', zorder=3)
+                label='Datos Experimentales', zorder=3)
     
-    bx.set_xlabel(r'Material Thickness [$mm$]', fontweight='bold')
-    bx.set_ylabel(r'Relative Intensity [AU]', fontweight='bold')
+    bx.set_xlabel(r'Grosor [$mm$]', fontweight='bold')
+    bx.set_ylabel(r'Intensidad Relativa [AU]', fontweight='bold')
 
     bx.grid(True, which='both', linestyle='--', alpha=0.5)
-    bx.legend(loc='upper right', frameon=True)
+    plt.legend(
+    loc='center left', 
+    bbox_to_anchor=(1.05, 0.5, 0.3, 0.2), 
+    mode=None,
+    fontsize=8,
+    frameon=True,
+    labelspacing=1.1,
+    handletextpad=0.8,
+    borderaxespad=0
+    )
 
-    plt.tight_layout()
-    plt.savefig('calibration_curve_'+label+'.png', bbox_inches='tight')
+    plt.subplots_adjust(left=0.12, right=0.75, bottom=0.15, top=0.80)
+    plt.savefig('legacy/calibration_curve_'+label+'.png', dpi=300, bbox_inches='tight')
     plt.show()
 
-def plot_all(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = None, mu_al= None, MaxBit = 4095, 
-             xlim = False, label = '',figure=1, caption=''):
+def plot_all(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = None, mu_al= None, berger = None, berger_al=None, 
+             MaxBit = 4095, xlim = False, label = '',figure=1, caption=''):
     plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize': 10})
     df_og = pd.read_csv(csv_file_og)
     df_sf = pd.read_csv(csv_file_sf)
     df_al = pd.read_csv(csv_file_al)
 
-    fig, bx = plt.subplots(1, figsize=(6,4), dpi = 100)
-    plt.suptitle(f'Radiographic Attenuation Curve.',fontweight = 'bold', fontsize = 14)
-    bx.set_title(f'Figure {figure}. {caption}',  pad=10, fontsize = 12)
+    fig, bx = plt.subplots(1, figsize=(8,4), dpi = 100)
+    plt.suptitle(f'Curva de Atenuación.',fontweight = 'bold', fontsize = 14)
+    bx.set_title(f'Figura {figure}. {caption}',  pad=10, fontsize = 12)
     
     x1 = df_og['Sheet_Count']
     g1 = x1*unit_thickness
@@ -139,30 +143,18 @@ def plot_all(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = N
     yal = df_al['Mean [12bit]']/MaxBit
     yal_err = df_al['StdDev [12bit]']/MaxBit
     
-    '''
-    ax.errorbar(x1, y1, yerr=y1_err, fmt='ks', markersize=3, capsize=2, 
-                elinewidth=0.4, markeredgecolor='black', markerfacecolor='white', 
-                label='Experimental Data (Mean ± Std)', zorder=3)
-
-    ax.errorbar(x2, y2, yerr=y2_err, fmt='ro', markersize=3, capsize=2, 
-                elinewidth=0.4, markeredgecolor='red', markerfacecolor='white', 
-                label='Experimental Data w/o Backround(Mean ± Std)', zorder=3)
-
-    ax.set_xlabel(r'Material Thickness [$n$ Sheets]', fontweight='bold')
-    ax.set_ylabel(r'Relative Intensity [AU]', fontweight='bold')
-    '''
-    bx.errorbar(g1, y1, yerr=y1_err, fmt='ks', markersize=5, capsize=3, 
-                elinewidth=0.6, markeredgecolor='black', markerfacecolor='white', 
-                label='Paper Sheets Raw Data (Mean ± Std)', zorder=3)
-    
-    bx.errorbar(g2, y2, yerr=y2_err, fmt='r^', markersize=5, capsize=3, 
-                elinewidth=0.6, markeredgecolor='red', markerfacecolor='white', 
-                label='Paper Sheets Background Removed (Mean ± Std)', zorder=3)
-    
-    bx.errorbar(gal, yal, xerr= gal_err, yerr=yal_err, fmt='bo', markersize=5, capsize=3, 
+    bx.errorbar(g1, y1, yerr=y1_err, fmt='bs', markersize=5, capsize=3, 
                 elinewidth=0.6, markeredgecolor='blue', markerfacecolor='white', 
-                label='Aluminum Data (Mean ± Std)', zorder=3)
+                label='Papel, Datos Crudos', zorder=1,alpha= 0.3)
     
+    
+    bx.errorbar(g2, y2, yerr=y2_err, fmt='b^', markersize=5, capsize=3, 
+                elinewidth=0.6, markeredgecolor='blue', markerfacecolor='white', 
+                label='Papel, Corrección de Fondo', zorder=3)
+    
+    bx.errorbar(gal, yal, xerr= gal_err, yerr=yal_err, fmt='go', markersize=5, capsize=3, 
+                elinewidth=0.6, markeredgecolor='green', markerfacecolor='white', 
+                label='Aluminio, Datos Crudos', zorder=3)
     
     if mu:
         if xlim:
@@ -171,48 +163,54 @@ def plot_all(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = N
             xmax = max(x1.max(), x2.max())
             n = np.linspace(0,xmax, 1000)
         t = n*unit_thickness
+        if berger:
+            I_berger = (1+berger*t)*np.exp(-mu*t)
+            bx.plot(t, I_berger, color='blue', linewidth = 0.8, linestyle = ':', label=f'Papel, Aproximación de Berger ($C$={berger/mu:.2f})', zorder=2)
         I = np.exp(-mu*t)
-        #ax.plot(n, I, color='blue', linewidth = 0.6, label=f'Theory ($\mu$={mu})', zorder=2)
-        bx.plot(t, I, color='black', linewidth = 0.8, label=f'Simulation ($\mu$={mu:.6f})', zorder=2)
-        '''
-        expA = np.exp(-mu*x2*unit_thickness)
-        divA = y2/expA
-        restA = expA-y2
-
-        expB = np.exp(-mu*g2)
-        divB = y2-expB
-        '''
+        bx.plot(t, I, color='blue', linewidth = 0.8, label=f'Papel, Ley de Beer-Lambert ($\mu$={mu:.6f})', zorder=2)
+            
     if mu_al:
         t = np.linspace(0, gal.max(),1000)
+        if berger_al:
+            I_berger = (1+berger_al*t)*np.exp(-mu_al*t)
+            bx.plot(t, I_berger, color='green', linewidth = 0.8, linestyle = ':', label=f'Aluminio, Ley de Beer-Lambert ($\mu$={mu_al:.6f})', zorder=2)   
         I = np.exp(-mu_al*t)
-        bx.plot(t, I, color='blue', linewidth = 0.8, linestyle = ':', label=f'Simulation ($\mu$={mu_al:.6f})', zorder=2)
+        bx.plot(t, I, color='green', linewidth = 0.8, label=f'Aluminio, Aproximación de Berger ($C$={berger_al/mu_al:.2f})', zorder=2)
 
-    plt.suptitle(f'Radiographic Attenuation Curve.',fontweight = 'bold', fontsize = 14)
-    bx.set_title(f'Figure {figure}. {caption}',  pad=10, fontsize = 12)
-
-    bx.grid(True, which='both', linestyle='--', alpha=0.5)
-    bx.legend(loc='upper right', frameon=True)
-
-    bx.set_xlabel(r'Material Thickness [$mm$]', fontweight='bold')
-    bx.set_ylabel(r'Relative Intensity [AU]', fontweight='bold')
-
-    bx.grid(True, which='both', linestyle='--', alpha=0.5)
-    bx.legend(loc='upper right', frameon=True)
     
-    plt.tight_layout()
-    plt.savefig('calibration_curve_'+label+'.png', bbox_inches='tight')
-    plt.show()
+    bx.grid(True, which='both', linestyle='--', alpha=0.5)
+    bx.legend(loc='upper right', frameon=True)
 
-def plot_diff(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = None, mu_al= None, MaxBit = 4095, 
-             xlim = False, label = '',figure=1, caption=''):
+    bx.set_xlabel(r'Grosor [$mm$]', fontweight='bold')
+    bx.set_ylabel(r'Intensidad Relativa [AU]', fontweight='bold')
+
+    bx.grid(True, which='both', linestyle='--', alpha=0.5)
+    plt.legend(
+    loc='center left', 
+    bbox_to_anchor=(1.05, 0.5, 0.3, 0.2), 
+    mode=None,
+    fontsize=8,
+    frameon=True,
+    labelspacing=1.1,
+    handletextpad=0.8,
+    borderaxespad=0
+    )
+
+    plt.subplots_adjust(left=0.12, right=0.75, bottom=0.15, top=0.80)
+    plt.tight_layout()
+    plt.savefig('legacy/calibration_curve_'+label+'.png', dpi=300, bbox_inches='tight')
+    plt.show()
+    
+def plot_quo(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = None, mu_al= None, berger = None, berger_al= None, MaxBit = 4095,
+             label = '',figure=1, caption='', var = ''):
     plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize': 10})
     df_og = pd.read_csv(csv_file_og)
     df_sf = pd.read_csv(csv_file_sf)
     df_al = pd.read_csv(csv_file_al)
 
-    fig, bx = plt.subplots(1, figsize=(6,4), dpi = 100)
-    plt.suptitle(f'Radiographic Attenuation Curve.',fontweight = 'bold', fontsize = 14)
-    bx.set_title(f'Figure {figure}. {caption}',  pad=10, fontsize = 12)
+    fig, bx = plt.subplots(1, figsize=(10,4), dpi = 100)
+    plt.suptitle(f'Curva de Atenuación.',fontweight = 'bold', fontsize = 14)
+    bx.set_title(f'Figura {figure}. {caption}',  pad=10, fontsize = 12)
     
     x1 = df_og['Sheet_Count']
     g1 = x1*unit_thickness
@@ -227,68 +225,251 @@ def plot_diff(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = 
     
     I1 = np.exp(-mu*g1)
     I2 = np.exp(-mu*g2)
+    I_berger = (1+berger*g2)*np.exp(-mu*g2)
+    
     Ial = np.exp(-mu_al*gal)
-    
-    bx.plot(g1, I1-y1, color='black', linewidth = 0.8, label=f'Paper Sheets Raw Error ($\mu$={mu:.6f})', zorder=2)   
-    bx.plot(g2, I2-y2, color='red', linewidth = 0.8, linestyle = '--', label=f'Paper Sheets Background Correction Error ($\mu$={mu:.6f})', zorder=2)
-    bx.plot(gal, Ial-yal, color='blue', linewidth = 0.8, linestyle = ':', label=f'Aluminum Error ($\mu$={mu_al:.6f})', zorder=2)
-    plt.suptitle(f'Radiographic Attenuation Curve.',fontweight = 'bold', fontsize = 14)
-    bx.set_title(f'Figure {figure}. {caption}',  pad=10, fontsize = 12)
+    I_berger_al = (1+berger_al*gal)*np.exp(-mu_al*gal)
+
+    if var == 'paper':
+        bx.plot(g1, y1/I1, color='blue', linewidth = 0.8, label=f'Papel; Datos Crudos, Beer-Lambert ($\mu$={mu:.6f})', zorder=2)   
+        bx.plot(g2, y2/I2, color='blue', linewidth = 0.8, linestyle = '--', label=f'Papel; Corrección de Fondo, Beer-Lambert ($\mu$={mu:.6f})', zorder=2)
+        bx.plot(g2, y2/I_berger, color='blue', linewidth = 0.8, linestyle = ':', label=f'Papel; Corrección de Fondo, Berger ($C$={berger/mu:.2f})', zorder=2)
+
+    if var == 'al':
+        bx.plot(gal, yal/Ial, color='green', linewidth = 0.8, label=f'Aluminio; Datos Crudos, Beer-Lambert ($\mu$={mu_al:.6f})', zorder=2)
+        bx.plot(gal, yal/I_berger_al, color='green', linewidth = 0.8, linestyle = ':', label=f'Aluminio; Datos Crudos, Berger ($C$={berger_al/mu_al:.2f})', zorder=2)
 
     bx.grid(True, which='both', linestyle='--', alpha=0.5)
     bx.legend(loc='upper right', frameon=True)
 
-    bx.set_xlabel(r'Material Thickness [$mm$]', fontweight='bold')
-    bx.set_ylabel(r'Relative Intensity [AU]', fontweight='bold')
+    bx.set_xlabel(r'Grosor [$mm$]', fontweight='bold')
+    bx.set_ylabel(r'Cociente de Intensidades [AU]', fontweight='bold')
+    #bx.set_ylim(0.9,1.1)
 
     bx.grid(True, which='both', linestyle='--', alpha=0.5)
-    bx.legend(loc='upper right', frameon=True)
-    
+    plt.legend(
+    loc='center left', 
+    bbox_to_anchor=(1.05, 0.5, 0.3, 0.2), 
+    mode=None,
+    fontsize=8,
+    frameon=True,
+    labelspacing=1.1,
+    handletextpad=0.8,
+    borderaxespad=0
+    )
+
+    plt.subplots_adjust(left=0.12, right=0.75, bottom=0.15, top=0.80)
     plt.tight_layout()
-    plt.savefig('calibration_curve_'+label+'.png', bbox_inches='tight')
+    plt.savefig('legacy/calibration_curve_'+label+'.png', bbox_inches='tight')
     plt.show()
 
-def plot_quo(csv_file_og, csv_file_sf ,csv_file_al, unit_thickness =0.10, mu = None, mu_al= None, MaxBit = 4095, 
-             xlim = False, label = '',figure=1, caption=''):
-    plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize': 10})
-    df_og = pd.read_csv(csv_file_og)
-    df_sf = pd.read_csv(csv_file_sf)
-    df_al = pd.read_csv(csv_file_al)
+def plot_reference(csv_file, mu_al = False, z0 = 0, berger_al= False, MaxBit = 4095, xlim = False, label = '',figure=1, caption='', only_fit= False):
+    plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize':10})
+    df_al = pd.read_csv(csv_file)
 
-    fig, bx = plt.subplots(1, figsize=(6,4), dpi = 100)
-    plt.suptitle(f'Radiographic Attenuation Curve.',fontweight = 'bold', fontsize = 14)
-    bx.set_title(f'Figure {figure}. {caption}',  pad=10, fontsize = 12)
-    
-    x1 = df_og['Sheet_Count']
-    g1 = x1*unit_thickness
-    y1 = df_og['Mean_Intensity']/MaxBit
-
-    x2 = df_sf['Sheet_Count']
-    g2 = x2*unit_thickness
-    y2 = df_sf['Mean_Intensity']/MaxBit
+    fig, [bx, ax] = plt.subplots(2,1, figsize=(10,10), dpi = 100)
 
     gal = df_al['Thickness [mm]']
+    gal_err = df_al['Delta [mm]']
     yal = df_al['Mean [12bit]']/MaxBit
+    yal_err = df_al['StdDev [12bit]']/MaxBit
     
-    I1 = np.exp(-mu*g1)
-    I2 = np.exp(-mu*g2)
-    Ial = np.exp(-mu_al*gal)
+    bx.errorbar(gal, yal, xerr= gal_err, yerr=yal_err, fmt='ks', markersize=5, capsize=3, 
+                elinewidth=0.6, markeredgecolor='black', markerfacecolor='white', 
+                label='Datos Experimentales', zorder=3)
     
-    bx.plot(g1, y1/I1, color='black', linewidth = 0.8, label=f'Paper Sheets Raw Error ($\mu$={mu:.6f})', zorder=2)   
-    bx.plot(g2, y2/I2, color='red', linewidth = 0.8, linestyle = '--', label=f'Paper Sheets Background Correction Error ($\mu$={mu:.6f})', zorder=2)
-    bx.plot(gal, yal/Ial, color='blue', linewidth = 0.8, linestyle = ':', label=f'Aluminum Error ($\mu$={mu_al:.6f})', zorder=2)
-    plt.suptitle(f'Radiographic Attenuation Curve.',fontweight = 'bold', fontsize = 14)
-    bx.set_title(f'Figure {figure}. {caption}',  pad=10, fontsize = 12)
+    if mu_al:
+        t = np.linspace(0, gal.max(),1000)
+        Ial = beer_lambert_model(gal, mu_al, z0)
+        I = beer_lambert_model(t, mu_al, z0)
+        if not only_fit:
+            bx.plot(t, I, color='red', linewidth = 0.8, label=f'Ley de Beer-Lambert ($\mu$={mu_al:.4f}, $z_0$={z0:.4f})', zorder=2)
+            ax.plot(gal, yal/Ial, color='red', linewidth = 0.8, label=f'Ley de Beer-Lambert ($\mu$={mu_al:.4f}, $z_0$={z0:.4f})', zorder=2)
+        
+        if berger_al:
+            I_berger_al = (1+berger_al*gal)*beer_lambert_model(gal, mu_al, z0)
+            I_berger = (1+berger_al*t)*beer_lambert_model(t, mu_al, z0)
+            bx.plot(t, I_berger, color='green', linewidth = 0.8, linestyle = ':',label=f'Aproximación de Berger ($C$={berger_al/mu_al:.2f})', zorder=2)
+            ax.plot(gal, yal/I_berger_al, color='green', linewidth = 0.8, linestyle = ':', label=f'Aproximación de Berger ($C$={berger_al/mu_al:.2f})', zorder=2)
+
+    model = Model(beer_lambert_model)
+    params = model.make_params()
+
+    params['mu'].set(value=mu_al, min= 0, max=1.0)
+    params['z0'].set(value=z0, min= 0, max=1.0)
+
+    result = model.fit(yal[:-1], params, z=gal[:-1], method='dual_annealing')
+    
+    mu_fit = result.params['mu'].value
+    mu_error = result.params['mu'].stderr
+    z0_fit = result.params['z0'].value
+    z0_error = result.params['z0'].stderr
+
+    I_fit = beer_lambert_model(t, mu_fit, z0_fit)
+    I_fit_al = beer_lambert_model(gal, mu_fit, z0_fit)
+    
+    bx.plot(t, I_fit, color='blue', linewidth = 0.8, label=f'Ajuste Matemático ($\mu$={mu_fit:.4f}, $z_0$={z0_fit:.4f})', zorder=2)
+    ax.plot(gal, yal/I_fit_al, color='blue', linewidth = 0.8, label=f'Ajuste Matemático ($\mu$={mu_fit:.4f}, $z_0$={z0_fit:.4f})', zorder=2)
+    
+    limite = 0.005
+    distancia = np.abs(yal/I_fit_al - 1)
+    indices = np.where(distancia < limite)[0]
+    if indices.size > 0:
+        indice = indices[-1]
+        umbral = gal[indice]
+        bx.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
+        ax.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
+
+    ax.axhspan(1-limite, 1+limite, 
+           color='gray', alpha=0.2, label='Tolerancia $\pm$0.005', zorder=0)
+    
+    plt.suptitle(f'Curva de Atenuación: Aluminio.',fontweight = 'bold', fontsize = 14,y = 0.86)
+    bx.set_title(f'Figura {figure}a. Datos, Simulación y Ajuste Matemático',  pad=10, fontsize = 12)
+    ax.set_title(f'Figura {figure}b. Cociente de Error',  pad=10, fontsize = 12)
+    
+    bx.set_xlabel(r'Grosor [$mm$]', fontweight='bold')
+    bx.set_ylabel(r'Intensidad Relativa [AU]', fontweight='bold')
+
+    ax.set_xlabel(r'Grosor [$mm$]', fontweight='bold')
+    ax.set_ylabel(r'Cociente de Intensidad [AU]', fontweight='bold')
 
     bx.grid(True, which='both', linestyle='--', alpha=0.5)
-    bx.legend(loc='upper right', frameon=True)
+    bx.legend(
+    loc='center left', 
+    bbox_to_anchor=(1.05, 0.5, 0.3, 0.2), 
+    mode=None,
+    fontsize=8,
+    frameon=True,
+    labelspacing=1.1,
+    handletextpad=0.8,
+    borderaxespad=0
+    )
 
-    bx.set_xlabel(r'Material Thickness [$mm$]', fontweight='bold')
-    bx.set_ylabel(r'Relative Intensity [AU]', fontweight='bold')
-
-    bx.grid(True, which='both', linestyle='--', alpha=0.5)
-    bx.legend(loc='upper right', frameon=True)
+    ax.grid(True, which='both', linestyle='--', alpha=0.5)
+    ax.legend(
+    loc='center left', 
+    bbox_to_anchor=(1.05, 0.5, 0.3, 0.2), 
+    mode=None,
+    fontsize=8,
+    frameon=True,
+    labelspacing=1.1,
+    handletextpad=0.8,
+    borderaxespad=0
+    )
     
-    plt.tight_layout()
-    plt.savefig('calibration_curve_'+label+'.png', bbox_inches='tight')
+    plt.subplots_adjust(left=0.12, right=0.75, bottom=0.15, top=0.80, hspace = 0.3)
+    plt.savefig('plots/reference_curve_'+label+'.png', dpi=300, bbox_inches='tight')
     plt.show()
+    
+    with open("reports/reference_curve_"+label+".txt", "w") as f:
+        f.write(result.fit_report())
+        f.write("\n\n--- ANÁLISIS DE UMBRAL ---")
+        f.write(f"\nCentro definido: 1.0")
+        f.write(f"\nTolerancia: 0.005")
+        f.write(f"\nPunto de ruptura detectado en el grosor: {umbral:.4f} mm")
+        f.write(f"\nValor del cociente en ese punto: {yal[indice]/I_fit_al[indice]:.4f}")
+        
+def plot_calibration(csv_file, mu = False, z0 = 0, berger= False, MaxBit = 4095, xlim = False, label = '',figure=1, caption='', only_fit= False):
+    plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize':10})
+    df = pd.read_csv(csv_file)
+
+    fig, [bx, ax] = plt.subplots(2,1, figsize=(10,10), dpi = 100)
+
+    g = df['Thickness_mm']
+    y = df['Mean_Intensity']/MaxBit
+    y_err = df['Std_Dev']/MaxBit
+    
+    bx.errorbar(g, y, yerr=y_err, fmt='ks', markersize=5, capsize=3, 
+                elinewidth=0.6, markeredgecolor='black', markerfacecolor='white', 
+                label='Datos Experimentales', zorder=3)
+    
+    if mu:
+        t = np.linspace(0, g.max(),1000)
+        Ig = beer_lambert_model(g, mu, z0)
+        I = beer_lambert_model(t, mu, z0)
+        if not only_fit:
+            bx.plot(t, I, color='red', linewidth = 0.8, label=f'Ley de Beer-Lambert ($\mu$={mu:.4f}, $z_0$={z0:.4f})', zorder=2)
+            ax.plot(g, y/Ig, color='red', linewidth = 0.8, label=f'Ley de Beer-Lambert ($\mu$={mu:.4f}, $z_0$={z0:.4f})', zorder=2)
+        
+        if berger:
+            I_berger_g = (1+berger*g)*beer_lambert_model(g, mu, z0)
+            I_berger = (1+berger*t)*beer_lambert_model(t, mu, z0)
+            bx.plot(t, I_berger, color='green', linewidth = 0.8, linestyle = ':',label=f'Aproximación de Berger ($C$={berger/mu:.2f})', zorder=2)
+            ax.plot(g, y/I_berger_g, color='green', linewidth = 0.8, linestyle = ':', label=f'Aproximación de Berger ($C$={berger/mu:.2f})', zorder=2)
+
+    model = Model(beer_lambert_model)
+    params = model.make_params()
+
+    params['mu'].set(value=mu, min= 0, max=1.0)
+    params['z0'].set(value=z0, min= 0, max=1.0)
+
+    result = model.fit(y[:5], params, z=g[:5], method='dual_annealing')
+    
+    mu_fit = result.params['mu'].value
+    mu_error = result.params['mu'].stderr
+    z0_fit = result.params['z0'].value
+    z0_error = result.params['z0'].stderr
+
+    I_fit = beer_lambert_model(t, mu_fit, z0_fit)
+    I_fit_g = beer_lambert_model(g, mu_fit, z0_fit)
+    
+    bx.plot(t, I_fit, color='blue', linewidth = 0.8, label=f'Ajuste Matemático ($\mu$={mu_fit:.4f}, $z_0$={z0_fit:.4f})', zorder=2)
+    ax.plot(g, y/I_fit_g, color='blue', linewidth = 0.8, label=f'Ajuste Matemático ($\mu$={mu_fit:.4f}, $z_0$={z0_fit:.4f})', zorder=2)
+    
+    limite = 0.005
+    distancia = np.abs(y/I_fit_g - 1)
+    indices = np.where(distancia < limite)[0]
+    if indices.size > 0:
+        indice = indices[-1]
+        umbral = g[indice]
+        bx.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
+        ax.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
+
+    ax.axhspan(1-limite, 1+limite, 
+           color='gray', alpha=0.2, label='Tolerancia $\pm$0.005', zorder=0)
+    
+    plt.suptitle(f'Curva de Atenuación: Hojas de Papel.',fontweight = 'bold', fontsize = 14,y = 0.86)
+    bx.set_title(f'Figura {figure}a. Datos, Simulación y Ajuste Matemático',  pad=10, fontsize = 12)
+    ax.set_title(f'Figura {figure}b. Cociente de Error',  pad=10, fontsize = 12)
+    
+    bx.set_xlabel(r'Grosor [$mm$]', fontweight='bold')
+    bx.set_ylabel(r'Intensidad Relativa [AU]', fontweight='bold')
+
+    ax.set_xlabel(r'Grosor [$mm$]', fontweight='bold')
+    ax.set_ylabel(r'Cociente de Intensidad [AU]', fontweight='bold')
+
+    bx.grid(True, which='both', linestyle='--', alpha=0.5)
+    bx.legend(
+    loc='center left', 
+    bbox_to_anchor=(1.05, 0.5, 0.3, 0.2), 
+    mode=None,
+    fontsize=8,
+    frameon=True,
+    labelspacing=1.1,
+    handletextpad=0.8,
+    borderaxespad=0
+    )
+
+    ax.grid(True, which='both', linestyle='--', alpha=0.5)
+    ax.legend(
+    loc='center left', 
+    bbox_to_anchor=(1.05, 0.5, 0.3, 0.2), 
+    mode=None,
+    fontsize=8,
+    frameon=True,
+    labelspacing=1.1,
+    handletextpad=0.8,
+    borderaxespad=0
+    )
+    
+    plt.subplots_adjust(left=0.12, right=0.75, bottom=0.15, top=0.80, hspace = 0.3)
+    plt.savefig('plots/calibration_curve_'+label+'.png', dpi=300, bbox_inches='tight')
+    plt.show()
+    
+    with open("reports/calibration_curve_"+label+".txt", "w") as f:
+        f.write(result.fit_report())
+        f.write("\n\n--- ANÁLISIS DE UMBRAL ---")
+        f.write(f"\nCentro definido: 1.0")
+        f.write(f"\nTolerancia: 0.005")
+        f.write(f"\nPunto de ruptura detectado en el grosor: {umbral:.4f} mm")
+        f.write(f"\nValor del cociente en ese punto: {y[indice]/I_fit_g[indice]:.4f}")

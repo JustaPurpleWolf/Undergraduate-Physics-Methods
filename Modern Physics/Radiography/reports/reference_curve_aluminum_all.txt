@@ -1,0 +1,26 @@
+[[Model]]
+    Model(beer_lambert_model)
+[[Fit Statistics]]
+    # fitting method   = dual_annealing
+    # function evals   = 4031
+    # data points      = 5
+    # variables        = 2
+    chi-square         = 1.6884e-05
+    reduced chi-square = 5.6279e-06
+    Akaike info crit   = -58.9929601
+    Bayesian info crit = -59.7740843
+    R-squared          = 0.99833043
+##  Warning: uncertainties could not be estimated:
+    this fitting method does not natively calculate uncertainties
+    and numdifftools is not installed for lmfit to do this. Use
+    `pip install numdifftools` for lmfit to estimate uncertainties
+    with this fitting method.
+[[Variables]]
+    mu:  0.03489085 (init = 0.153495)
+    z0:  0.00000000 (init = 0.01327993)
+
+--- ANÁLISIS DE UMBRAL ---
+Centro definido: 1.0
+Tolerancia: 0.005
+Punto de ruptura detectado en el grosor: 2.3500 mm
+Valor del cociente en ese punto: 1.0020
