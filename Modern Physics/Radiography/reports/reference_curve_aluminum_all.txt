@@ -2,7 +2,7 @@
     Model(beer_lambert_model)
 [[Fit Statistics]]
     # fitting method   = dual_annealing
-    # function evals   = 4031
+    # function evals   = 4037
     # data points      = 5
     # variables        = 2
     chi-square         = 1.6884e-05
@@ -16,7 +16,7 @@
     `pip install numdifftools` for lmfit to estimate uncertainties
     with this fitting method.
 [[Variables]]
-    mu:  0.03489085 (init = 0.153495)
+    mu:  0.03489086 (init = 0.153495)
     z0:  0.00000000 (init = 0.01327993)
 
 --- ANÁLISIS DE UMBRAL ---

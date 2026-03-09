@@ -267,7 +267,7 @@ def plot_reference(csv_file, mu_al = False, z0 = 0, berger_al= False, MaxBit = 4
     plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize':10})
     df_al = pd.read_csv(csv_file)
 
-    fig, [bx, ax] = plt.subplots(2,1, figsize=(10,10), dpi = 100)
+    fig, [bx, ax] = plt.subplots(2,1, figsize=(8,10), dpi = 100)
 
     gal = df_al['Thickness [mm]']
     gal_err = df_al['Delta [mm]']
@@ -373,7 +373,7 @@ def plot_calibration(csv_file, mu = False, z0 = 0, berger= False, MaxBit = 4095,
     plt.rcParams.update({'font.size': 8, 'font.family': 'serif', 'axes.labelsize':10})
     df = pd.read_csv(csv_file)
 
-    fig, [bx, ax] = plt.subplots(2,1, figsize=(10,10), dpi = 100)
+    fig, [bx, ax] = plt.subplots(2,1, figsize=(8,10), dpi = 100)
 
     g = df['Thickness_mm']
     y = df['Mean_Intensity']/MaxBit
@@ -403,7 +403,7 @@ def plot_calibration(csv_file, mu = False, z0 = 0, berger= False, MaxBit = 4095,
     params['mu'].set(value=mu, min= 0, max=1.0)
     params['z0'].set(value=z0, min= 0, max=1.0)
 
-    result = model.fit(y[:5], params, z=g[:5], method='dual_annealing')
+    result = model.fit(y[:-16], params, z=g[:-16], method='dual_annealing')
     
     mu_fit = result.params['mu'].value
     mu_error = result.params['mu'].stderr
@@ -422,8 +422,8 @@ def plot_calibration(csv_file, mu = False, z0 = 0, berger= False, MaxBit = 4095,
     if indices.size > 0:
         indice = indices[-1]
         umbral = g[indice]
-        bx.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
-        ax.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
+        #bx.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
+        #ax.axvline(x=umbral, color='green', linestyle='--', linewidth=0.8, label=f'Corte {umbral:.4f}mm')
 
     ax.axhspan(1-limite, 1+limite, 
            color='gray', alpha=0.2, label='Tolerancia $\pm$0.005', zorder=0)
