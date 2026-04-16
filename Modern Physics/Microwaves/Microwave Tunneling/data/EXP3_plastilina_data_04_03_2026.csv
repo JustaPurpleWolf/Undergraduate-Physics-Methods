@@ -1,4 +1,4 @@
-theta [deg],delta_theta [deg],I [V],delta_I [V]
+theta [deg],delta_theta [deg],I [mV],delta_I [mV]
 270,0.5,0.9,0.05
 272,0.5,1.6,0.05
 274,0.5,2.4,0.05
