@@ -1,0 +1,25 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Fundamentos Teóricos}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Termodinámica del Vapor Atómico}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Presión de Vapor y Densidad Atómica}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Inversión Analítica para la Temperatura}{2}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Espectroscopía de Absorción}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Modelo Atómico de Dos Niveles}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Susceptibilidad Eléctrica}{5}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Coeficiente de Absorción}{8}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}Resultados}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Obtención de Espectros de Absorción}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Correlación Espectral y Análisis de Error}{12}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Fidelidad del Modelo}{12}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Análisis de Residuos}{13}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Evaluación Comparativa entre los Modelos Espectrales}{13}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Análisis de Residuos y Bondad de Ajuste}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Eficiencia Numérica y Tiempo de Cómputo}{13}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Determinación de las Variables Termodinámicas}{13}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Ajuste de Parámetros Libres}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Ajuste por Correlación de Variables}{13}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Transiciones entre Regímenes y Límites del Modelo}{13}{section.2.5}%
+\contentsline {chapter}{\numberline {A}Átomo de Rubidio}{14}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Propiedades Fundamentales}{14}{appendix.A.1}%
+\contentsline {section}{\numberline {A.2}Estructura Fina e Hiperfina}{15}{appendix.A.2}%
+\contentsline {chapter}{Bibliografía}{17}{appendix*.7}%

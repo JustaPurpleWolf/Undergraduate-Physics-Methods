@@ -1,0 +1,164 @@
+\begin{thebibliography}{20}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alzetta et~al.({\natexlab{a}})Alzetta, Gozzini, Moi, and
+  Orriols]{alzettaExperimentalMethodObservation1976}
+G.~Alzetta, A.~Gozzini, L.~Moi, and G.~Orriols.
+\newblock An experimental method for the observation of r.f. transitions and
+  laser beat resonances in oriented {{Na}} vapour.
+\newblock 36\penalty0 (1):\penalty0 5--20, {\natexlab{a}}.
+\newblock ISSN 1826-9877.
+\newblock \doi{10.1007/BF02749417}.
+\newblock URL \url{https://doi.org/10.1007/BF02749417}.
+
+\bibitem[Harris et~al.()Harris, Field, and
+  Imamoğlu]{harrisNonlinearOpticalProcesses1990}
+S.~E. Harris, J.~E. Field, and A.~Imamoğlu.
+\newblock Nonlinear optical processes using electromagnetically induced
+  transparency.
+\newblock 64\penalty0 (10):\penalty0 1107--1110.
+\newblock ISSN 0031-9007.
+\newblock \doi{10.1103/PhysRevLett.64.1107}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.64.1107}.
+
+\bibitem[Xiao et~al.()Xiao, Li, Jin, and
+  Gea-Banacloche]{xiaoMeasurementDispersiveProperties1995}
+Min Xiao, Yong-qing Li, Shao-zheng Jin, and J.~Gea-Banacloche.
+\newblock Measurement of {{Dispersive Properties}} of {{Electromagnetically
+  Induced Transparency}} in {{Rubidium Atoms}}.
+\newblock 74:\penalty0 666--669.
+\newblock \doi{10.1103/PhysRevLett.74.666}.
+
+\bibitem[Hau et~al.()Hau, Harris, Dutton, and
+  Behroozi]{hauLightSpeedReduction1999}
+Lene~Vestergaard Hau, S.~E. Harris, Zachary Dutton, and Cyrus~H. Behroozi.
+\newblock Light speed reduction to 17 metres per second in an ultracold atomic
+  gas.
+\newblock 397\penalty0 (6720):\penalty0 594--598.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/17561}.
+\newblock URL \url{https://doi.org/10.1038/17561}.
+
+\bibitem[Phillips et~al.()Phillips, Fleischhauer, Mair, Walsworth, and
+  Lukin]{phillipsStorageLightAtomic2001}
+D.~F. Phillips, A.~Fleischhauer, A.~Mair, R.~L. Walsworth, and M.~D. Lukin.
+\newblock Storage of {{Light}} in {{Atomic Vapor}}.
+\newblock 86\penalty0 (5):\penalty0 783--786.
+\newblock \doi{10.1103/PhysRevLett.86.783}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.86.783}.
+
+\bibitem[Foot()]{footAtomicPhysics2005}
+C.~J. Foot.
+\newblock \emph{Atomic Physics}.
+\newblock Number 7. Atomic, Optical, and laser physics in Oxford Master Series
+  in Physics. Oxford University Press.
+\newblock ISBN 978-0-19-850695-9 978-0-19-850696-6.
+
+\bibitem[Scully and Zubairy()]{scullyQuantumOptics1997a}
+Marlan~O. Scully and Muhammad~Suhail Zubairy.
+\newblock \emph{Quantum {{Optics}}}.
+\newblock Cambridge University Press.
+\newblock ISBN 978-0-521-43595-6.
+
+\bibitem[Gerry and Knight()]{gerryIntroductoryQuantumOpticsa}
+Christopher Gerry and Peter Knight.
+\newblock Introductory {{Quantum Optics}}.
+
+\bibitem[Fleischhauer et~al.()Fleischhauer, Imamoglu, and
+  Marangos]{fleischhauerElectromagneticallyInducedTransparency2005}
+Michael Fleischhauer, Atac Imamoglu, and Jonathan~P. Marangos.
+\newblock Electromagnetically induced transparency: {{Optics}} in coherent
+  media.
+\newblock 77\penalty0 (2):\penalty0 633--673.
+\newblock ISSN 0034-6861, 1539-0756.
+\newblock \doi{10.1103/RevModPhys.77.633}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.77.633}.
+
+\bibitem[{Robert W. Boyd}()]{robertw.boydNonlinearOptics}
+{Robert W. Boyd}.
+\newblock \emph{Nonlinear Optics}.
+
+\bibitem[Steck()]{steckQuantumAtomOptics2007}
+Daniel~Adam Steck.
+\newblock \emph{Quantum and {{Atom Optics}}}.
+
+\bibitem[Lindblad()]{lindbladGeneratorsQuantumDynamical1976}
+G.~Lindblad.
+\newblock On the generators of quantum dynamical semigroups.
+\newblock 48\penalty0 (2):\penalty0 119--130.
+\newblock ISSN 1432-0916.
+\newblock \doi{10.1007/BF01608499}.
+\newblock URL \url{https://doi.org/10.1007/BF01608499}.
+
+\bibitem[Keaveney()]{keaveneyAtomLightInteractions2014}
+James Keaveney.
+\newblock Atom–{{Light Interactions}} for {{Independent Atoms}}.
+\newblock In James Keaveney, editor, \emph{Collective {{Atom}}–{{Light
+  Interactions}} in {{Dense Atomic Vapours}}}, pages 9--19. Springer
+  International Publishing.
+\newblock ISBN 978-3-319-07100-8.
+\newblock \doi{10.1007/978-3-319-07100-8_2}.
+\newblock URL \url{https://doi.org/10.1007/978-3-319-07100-8_2}.
+
+\bibitem[Demtröder()]{demtroderLaserSpectroscopy1996}
+Wolfgang Demtröder.
+\newblock \emph{Laser {{Spectroscopy}}}.
+\newblock Springer Berlin Heidelberg.
+\newblock ISBN 978-3-662-08262-1 978-3-662-08260-7.
+\newblock \doi{10.1007/978-3-662-08260-7}.
+\newblock URL \url{http://link.springer.com/10.1007/978-3-662-08260-7}.
+
+\bibitem[Gea-Banacloche et~al.()Gea-Banacloche, Li, Jin, and
+  Xiao]{gea-banaclocheElectromagneticallyInducedTransparency1995}
+Julio Gea-Banacloche, Yong-qing Li, Shao-zheng Jin, and Min Xiao.
+\newblock Electromagnetically induced transparency in ladder-type
+  inhomogeneously broadened media: {{Theory}} and experiment.
+\newblock 51\penalty0 (1):\penalty0 576--584.
+\newblock \doi{10.1103/PhysRevA.51.576}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.51.576}.
+
+\bibitem[Boller et~al.()Boller, Imamoğlu, and
+  Harris]{bollerObservationElectromagneticallyInduced1991}
+K.-J. Boller, A.~Imamoğlu, and S.~E. Harris.
+\newblock Observation of electromagnetically induced transparency.
+\newblock 66\penalty0 (20):\penalty0 2593--2596.
+\newblock \doi{10.1103/PhysRevLett.66.2593}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.66.2593}.
+
+\bibitem[{Stephen E. Harris}()]{ElectromagneticallyInducedTransparency1997}
+{Stephen E. Harris}.
+\newblock Electromagnetically {{Induced Transparency}}.
+\newblock \doi{10.1063/1.881806}.
+\newblock URL
+  \url{https://physicstoday.aip.org/features/electromagnetically-induced-transparency}.
+
+\bibitem[Lukin and Imamoğlu()]{lukinControllingPhotonsUsing2001}
+M.~D. Lukin and A.~Imamoğlu.
+\newblock Controlling photons using electromagnetically induced transparency.
+\newblock 413\penalty0 (6853):\penalty0 273--276.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/35095000}.
+\newblock URL \url{https://www.nature.com/articles/35095000}.
+
+\bibitem[Kash()]{kashUltraslowGroupVelocity1999}
+Michael~M. Kash.
+\newblock Ultraslow {{Group Velocity}} and {{Enhanced Nonlinear Optical
+  Effects}} in a {{Coherently Driven Hot Atomic Gas}}.
+\newblock 82\penalty0 (26):\penalty0 5229--5232.
+\newblock \doi{10.1103/PhysRevLett.82.5229}.
+
+\bibitem[Alzetta et~al.({\natexlab{b}})Alzetta, Gozzini, Moi, and
+  Orriols]{alzettaExperimentalMethodObservation1976a}
+G.~Alzetta, A.~Gozzini, L.~Moi, and G.~Orriols.
+\newblock An experimental method for the observation of r.f. transitions and
+  laser beat resonances in oriented {{Na}} vapour.
+\newblock 36\penalty0 (1):\penalty0 5--20, {\natexlab{b}}.
+\newblock ISSN 1826-9877.
+\newblock \doi{10.1007/BF02749417}.
+\newblock URL \url{http://link.springer.com/10.1007/BF02749417}.
+
+\end{thebibliography}

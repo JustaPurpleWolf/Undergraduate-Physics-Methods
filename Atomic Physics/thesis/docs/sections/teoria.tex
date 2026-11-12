@@ -1,0 +1,231 @@
+\chapter{Fundamentos Teóricos}
+\section{Termodinámica del Vapor Atómico}
+El análisis de los espectros atómicos se fundamenta en la codependencia de las variables termodinámicas del vapor, donde la densidad atómica está acoplada con la temperatura de la celda. Por lo tanto, es necesario conocer la correlación entre ambas variables para poder caracterizar el espectro de absorción \cite{demtroderLaserSpectroscopy1996, diegosierracostaDeterminacionDensidadAtomica}.
+\subsection{Presión de Vapor y Densidad Atómica}
+En un contenedor cerrado a una temperatura $T$, el vapor atómico coexiste en equilibrio dinámico con su fase condensada y es descrito por la \textbf{ecuación de Clausius-Clapeyron},
+\begin{equation*}
+    \frac{dP}{dT} = \frac{L}{T \Delta V},
+\end{equation*}
+donde $L = L(T)$ es el calor latente y $\Delta V = V_g - V_c$ es la variación de volúmen entre la fase gaseosa $V_g$ y la fase condensada $V_c$ \cite{kittelThermalPhysics1980, alcockVapourPressureEquations1984}. Como el volúmen del gas es mucho mayor que el volúmen del líquido ($V_g \gg V_c$) y el vapor se comporta como un gas ideal podemos expresar la energía de vaporización por átomo  $\epsilon_L (T)$ mediante su expansión en Taylor \cite{danieladamsteckrubidium85Dlinedata, danieladamsteckrubidium87Dlinedata,demtroderLaserSpectroscopy1996}. Al integrar y truncar a tercer orden obtenemos una aproximación de la presión del vapor \cite{alcockVapourPressureEquations1984, nesmeyanovVapourPressureElements},
+\begin{equation*}
+    \log_{10} P = A - \frac{B}{T} + C \ln T + D T
+\end{equation*}
+A partir de la ecuación del gas ideal podemos despejar la densidad atómica $N$ como función de la temperatura,
+\begin{equation}
+    \boxed{
+    \log_{10} [N(T)] = A - \frac{B}{T} + C \ln T + D T - \log_{10} (k_B T)
+    }
+\end{equation}
+donde $A, B, C$ y $D$ son parámetros experimentales distintos para cada elemento.
+\subsection{Inversión Analítica para la Temperatura}
+Dado que $N(T)$ es una función monótona creciente en el intervalo de operación, podemos definir una función inversa $T(N)$. Despreciando los términos no lineales de orden superior sobre la temperatura ($C \ln T$ y $D T$), el problema inverso $T(N)$ presenta una solución analíca y exacta \cite{alcockVapourPressureEquations1984},
+\begin{equation*}
+    \log_{10} [N(T)] \approx A - \frac{B}{T} - \log_{10} (k_B T).
+\end{equation*}
+Definiendo $\beta = -B \ln(10)$ y $\xi = \beta / T$, la densidad atómica adopta la forma compacta,
+\begin{equation*}
+    N(\xi) \approx \frac{10^{A} \xi e^{\xi}}{\beta k_B}, \quad \xi e^{\xi} = \frac{\beta N k_B}{10^{A}}.
+\end{equation*}
+La solución a esta ecuación trascendental $\xi e^{\xi}$ se expresa mediante la función $W$ de Lambert \cite{corlessLambertWFunction1996}. Como $\xi < -1$ en el rango térmico de operación, la solución pertenece a la rama secundaria $W_{-1}(y)$. De modo que,
+\begin{equation}
+    \boxed{
+    T(N) = - \frac{\beta}{W_{-1}\left(\frac{\beta N k_B}{10^{A}}\right)}.
+    }
+\end{equation}
+\section{Espectroscopía de Absorción}
+\subsection{Modelo Atómico de Dos Niveles}
+% #region Inicio de Subsección
+Consideremos un sistema atómico ideal de dos niveles acoplado a un haz de luz monocromática casi resonante de frecuencia $\omega$. El estado excitado decae espontáneamente al estado base con una tasa característica $\Gamma_0$ y la dinámica del sistema está gobernada por la desintonía $\Delta = \omega - \omega_0$ y la frecuencia de Rabi $\Omega$ \cite{robertw.boydNonlinearOptics, allenOpticalResonanceTwolevel1975,demtroderLaserSpectroscopy1996}.
+
+La evolución temporal de un sistema atómico cerrado se describe mediante la ecuación de Schrödinger dependiente del tiempo \cite{cohen-tannoudjiQuantumMechanics1977, griffithsIntroductionQuantumMechanics2017},
+\begin{equation}
+    i \hbar \pdv{}{t} \Psi(\vec{r}, t) = \hat{H} \Psi(\vec{r}, t)
+\end{equation}
+donde $ \Psi(\vec{r}, t) = \braket{\vec{r}}{\psi(t)}$ es la función de onda del sistema. 
+
+El hamiltoniano total del sistema $\hat{H} = \hat{H}^{(0)} + \hat{H}^{(1)}$ se compone formalmente por dos contribuciones principales. El \textbf{hamiltoniano atómico libre} $\hat{H}^{(0)} = \frac{\hbar \omega_0}{2} \left[\ket{2}\bra{2}-\ket{1}\bra{1}\right]$ describe la energía intrínseca de los niveles cuánticos del átomo no perturbado; y el \textbf{término de interacción} $\hat{H}^{(1)}(t) = - \hat{\vec{\mu}} \cdot \vec{E}(t)$ representa el acoplamiento del átomo con el campo electromagnético $\vec{E}(t)$ del haz de luz coherente, aquí $\hat{\vec{\mu}}$ es el operador de momento dipolar eléctrico del átomo \cite{robertw.boydNonlinearOptics, allenOpticalResonanceTwolevel1975}.
+    
+Dentro del marco de interacción, para eliminar la dependencia temporal de los términos de alta frecuencia no resonantes, se implementa la \textbf{aproximación de onda rotante} (RWA) \cite{robertw.boydNonlinearOptics}. Mediante una transformación unitaria al marco rotante se obtiene un Hamiltoniano de interacción efectivo e independiente del tiempo $\hat{H}_{\text{rot}}$ \cite{scullyQuantumOptics1997,gerryIntroductoryQuantumOptics}.
+\begin{equation}
+\hat{H}_{\text{rot}} = \frac{\hbar}{2}\begin{pmatrix} -\Delta & \Omega \\ \Omega & \Delta \end{pmatrix}.
+\end{equation}
+% #endregion
+\subsubsection*{Formalismo de Lindblad y Ecuaciones de Maxwell-Bloch}
+Dado que el vapor atómico está constituido por un ensamble de un gran número de átomos en equilibrio térmico, el sistema no se puede describir mediante un único vector de estado $\ket{\Psi(t)}$ ya que se encuentra en un estado de mezcla estadístico. Por ello, se adopta el formalismo de la matriz densidad $\rho(t) = \sum_s p(s) \ket{\Psi_s(t)} \bra{\Psi_s(t)}$, donde los $p(s)$ representan las poblaciones fraccionales de los estados $\ket{\Psi_s(t)}$ del sistema.
+
+Diferenciando $\rho(t)$ y aplicando la ecuación de Schrödinger, se obtiene la \textbf{ecuación de Liouville-von Neumann} para la evolución unitaria de la matriz densidad,
+\begin{equation*}
+    \odv{\rho}{t} = - \frac{i}{\hbar} [\hat{H}, \rho]
+\end{equation*}
+Un sistema atómico real es inherentemente abierto debido a la constante interacción con el entorno, lo que genera procesos de decaimiento y decoherencia \cite{footAtomicPhysics2005}. Así, la evolución del sistema descrita por la ecuación de Liouville-von Neumann se complementa con un término disipativo. Dando lugar a la \textbf{ecuación maestra de Lindblad} \cite{lindbladGeneratorsQuantumDynamical1976,keaveneyAtomLightInteractions2014},
+\begin{equation}
+    \odv{}{t} \tilde{\rho}(t) = -\frac{i}{\hbar} [\hat{H}_{rot}, \tilde{\rho}(t)] + \mathcal{L}(\tilde{\rho}(t))
+    \label{eq:maestra_lindblad}
+\end{equation}
+donde $\tilde{\rho}(t)$ es la matriz densidad en el marco rotante y $\mathcal{L}(\tilde{\rho}(t))$ es el superoperador lindbladiano cuya estructura general se define como \cite{lindbladGeneratorsQuantumDynamical1976},
+\begin{equation*}
+    \mathcal{L}(\tilde{\rho}) = \sum_k \Gamma_k \left( \hat{L}_k \tilde{\rho} \hat{L}_k^{\dagger} - \frac{1}{2} \{\hat{L}_k^{\dagger} \hat{L}_k, \tilde{\rho}\} \right)
+\end{equation*}
+Aquí, los operadores de salto $\hat{L}_k$ representan trancisiones de estado inducidas por el entorno y $\Gamma_k$ son las tasas de decaimiento asociadas a cada operador de salto.
+
+Para un sistema atómico de dos niveles, el único proceso relevante es el decaimiento del estado excitado al estado base $\ket{2} \to \ket{1}$. Por lo que lindbladiano se reduce a un único decaimiento $\sigma_- =\ket{1}\bra{2}$ con frecuencia característica $\Gamma_0$ \cite{gerryIntroductoryQuantumOptics, siddonsAbsoluteAbsorptionRubidium2008, keaveneyAtomLightInteractions2014}. Entonces,
+\begin{equation}
+    \mathcal{L}(\tilde{\rho}) = \Gamma_0 \left( \sigma_- \tilde{\rho} \sigma_+ - \frac{1}{2} \{\sigma_+ \sigma_-, \tilde{\rho}\} \right)
+\end{equation}
+donde definimos $\tilde{\rho}_{12}= \rho_{12} e^{i \omega_0 t}$,  $\tilde{\rho}_{21}= \rho_{21} e^{-i \omega_0 t}$ como las coherencias en el marco rotante.
+
+Sustituyendo el hamiltoniano y el lindbladiano en la ecuación \ref{eq:maestra_lindblad} podemos desarrollarla para los elementos de la matriz densidad. Así obtenemos un conjunto de ecuaciones diferenciales acopladas para las poblaciones y coherencias del sistema, conocidas como las \textbf{ecuaciones de Maxwell-Bloch} \cite{robertw.boydNonlinearOptics, siddonsAbsoluteAbsorptionRubidium2008}.
+\begin{subequations}
+\begin{align}
+    \odv{\rho_{11}}{t}  &= \Gamma_0 \rho_{22} + \frac{i \Omega}{2}(\tilde{\rho}_{12}  - \tilde{\rho}_{21}), \label{eq:pob11} \\
+    \odv{\rho_{22}}{t}  &= -\Gamma_0 \rho_{22} + \frac{i \Omega}{2}(\tilde{\rho}_{21}  - \tilde{\rho}_{12}), \label{eq:pob22} \\
+    \odv{\tilde{\rho}_{12}}{t}  &= -(\frac{\Gamma_0}{2}-i\Delta) \tilde{\rho}_{12} + \frac{i \Omega}{2}(\rho_{11} - \rho_{22}), \label{eq:coh12}\\
+    \odv{\tilde{\rho}_{21}}{t}  &= -(\frac{\Gamma_0}{2}+i\Delta) \tilde{\rho}_{21} - \frac{i\Omega}{2}(\rho_{11} - \rho_{22}). \label{eq:coh21}
+\end{align}
+\end{subequations}
+Para el \textbf{estado estacionario} donde las derivadas temporales son nulas ($\odv{}{t}\rho_{ij} = 0$), obtenemos un sistema de ecuaciones algebraicas y homogéneas acopladas para las poblaciones y coherencias del sistema \cite{footAtomicPhysics2005},
+\begin{equation*}
+\begin{split}
+    \Gamma_0 \rho_{22} + \frac{i \Omega}{2}(\tilde{\rho}_{12} - \tilde{\rho}_{21}) = 0, \quad
+     -(\frac{\Gamma_0}{2} + i \Delta) \tilde{\rho}_{12} + \frac{i \Omega}{2}(\rho_{11} - \rho_{22}) = 0.
+\end{split}
+\end{equation*}
+Resolviendo el sistema de ecuaciones obtenemos las poblaciones y coherencias del sistema en estado estacionario \cite{siddonsAbsoluteAbsorptionRubidium2008, diegosierracostaDeterminacionDensidadAtomica},
+\begin{equation}
+\begin{split}
+    \rho_{22} = \frac{\Omega^2}{\Gamma_0^2 + 4 \Delta^2 + 2 \Omega^2  }, \quad \tilde{\rho}_{12} = -\frac{i \Omega (\Gamma_0 + i 2 \Delta)}{\Gamma_0^2 + 4 \Delta^2 + 2 \Omega^2 }
+\end{split}
+\end{equation}
+donde los otros elementos de la matriz densidad pueden ser obtenidos a partir de las condiciones de normalización ($\rho_{11} + \rho_{22} = 1$) y hermiticidad ($\rho_{21} = \rho_{12}^{*}$). \cite{robertw.boydNonlinearOptics}.
+
+Bajo la \textbf{aproximación de gas diluido} y de átomos independientes, la dinámica macroscópica del medio se reduce a modelar la evolución de un átomo representativo del ensamble. Las soluciones obtenidas describen así la respuesta microscópica de dichos átomos al campo electromagnético externo coherentes \cite{allenOpticalResonanceTwolevel1975}. Éstas soluciones son fundamentales para entender fenómenos como la absorción y  la dispersión en medios atómicos \cite{siddonsAbsoluteAbsorptionRubidium2008, fleischhauerElectromagneticallyInducedTransparency2005a}.
+\subsubsection*{Ensanchamiento por Colisiones}
+Las interacciones con partículas circundantes resulta en un ensanchamiento homogéneo de la línea espectral. En general, el ensanchamiento total está determinado por $\Gamma = \Gamma_0 + \Gamma_{coll} + \Gamma_{self}$. Aquí,  $\Gamma_0$ es la anchura natural, $\Gamma_{coll} = \gamma_{buff} P_{buff}$ es el ensanchamiento por un gas amortiguador y $\Gamma_{self} = \beta N$ es debido a colsiones del mismo medio  \cite{keaveneyAtomLightInteractions2014,rotondaroCollisionalBroadeningShift1997}. Para una celda de vapor alcalino puro en vacío, el ensanchamiento se reduce a \cite{siddonsAbsoluteAbsorptionRubidium2008},
+\begin{equation}
+    \boxed{
+    \Gamma_N = \Gamma_0 + \beta N
+    }
+\end{equation}
+Los coeficientes $\beta_1$ y $\beta_2$ para las líneas $D_1$ y $D_2$ están dados por \cite{siddonsAbsoluteAbsorptionRubidium2008, danieladamsteckQuantumAtomOptics2007},
+\begin{equation}
+    \begin{split}
+        \beta_1 = 2 \pi \times  \Gamma_1 \left( \frac{\lambda_1}{2 \pi}\right)^3, \quad \beta_2 = 2 \pi \times \Gamma_2 \sqrt{2} \left( \frac{\lambda_2}{2 \pi}\right)^3
+    \end{split}
+\end{equation}
+donde $\lambda_1$ y $\lambda_2$ son las longitudes de onda correspondientes a cada línea. Debido a la dependencia exponencial de $N(T)$, el autoensanchamiento es despreciable a temperatura ambiente (${\sim}\SI{25}{\degreeCelsius}$), pero a temperaturas elevadas (${\sim}\SI{130}{\degreeCelsius}$) se vuelve el factor dominante, superando incluso al ensanchamiento Doppler. Por ello, incluir $\Gamma_N$ resulta indispensable para modelar con precisión la respuesta del medio a altas temperaturas \cite{siddonsAbsoluteAbsorptionRubidium2008, pizzeyLaserSpectroscopyHot2022}.
+\subsection{Susceptibilidad Eléctrica}
+% #region Inicio de Sección
+La polarización del medio atómico $P$ está principalmente relacionada a los momentos dipolares eléctricos de cada átomo. Debido a la escala atómica (donde $a_0 \ll \lambda$), es posible describir la interacción mediante la \textbf{aproximación dipolar eléctrica}. Bajo esta condición, el campo se considera uniforme a través del átomo, lo que nos permite despreciar los términos de orden superior en el desarrollo multipolar \cite{robertw.boydNonlinearOptics, danieladamsteckQuantumAtomOptics2007,allenOpticalResonanceTwolevel1975}.
+
+Así, para un sistema de $N$ átomos, la polarización macroscópica $\vec{P}$ puede ser calculada a partir del momento dipolar eléctrico promedio de cada átomo $\langle \hat{\vec{\mu}} \rangle$ como \cite{robertw.boydNonlinearOptics, zentileElecSusProgramCalculate2015},
+\begin{equation}
+        \vec{P} = N \langle \hat{\vec{\mu}} \rangle = N (\tilde{\rho}_{12}e^{-i \omega t} \vec{\mu}_{12} + \tilde{\rho}_{21}e^{i \omega t} \vec{\mu}_{12}^*).
+\end{equation}
+Al asumir que el elemento de matriz $\vec{\mu}_{12}$ es real y que $\tilde{\rho}_{21} = \tilde{\rho}_{12}^*$, podemos escribir la polarización macroscópica $P$ del medio atómico como \cite{siddonsAbsoluteAbsorptionRubidium2008},
+\begin{equation*}
+    \vec{P} = N \vec{\mu}_{12} (\tilde{\rho}_{12}e^{-i \omega t}  + \tilde{\rho}_{12}^*e^{i \omega t}).
+\end{equation*}
+Por otro lado, para un medio lineal, homogéneo e isotrópico, la polarización macroscópica se expresa en función de la susceptibilidad eléctrica $\chi$ como $\vec{P} = \epsilon_0 \chi \vec{E}$ \cite{hechtOptics2017}. Dado que la polarización es un observable, tomando la parte real de la respuesta del medio y aplicando la propiedad $\text{Re}[z] = \frac{1}{2}(z + z^*)$ la expresión se reduce a \cite{allenOpticalResonanceTwolevel1975},
+\begin{equation}
+    \vec{P}(t) = \epsilon_0 \text{Re}\left[ E_0 \chi e^{-i\omega t} \right]\hat{e} = \frac{\epsilon_0 E_0}{2}\left( \chi e^{-i\omega t} + \chi^* e^{i\omega t} \right)\hat{e}.
+\end{equation}
+Al igualar ambas expresiones para la polarización se relaciona la susceptibilidad eléctrica $\chi$ con la coherencia atómica $\tilde{\rho}_{12}$ \cite{allenOpticalResonanceTwolevel1975}. Sustituyendo la solución de estado estacionario de $\tilde{\rho}_{12}$, se llega a la expresión final para la susceptibilidad del medio atómico \cite{siddonsAbsoluteAbsorptionRubidium2008, wellerAbsoluteAbsorptionDispersion2012},
+\begin{equation*}
+    \chi = -\frac{2 N \mu_{12}^2}{\epsilon_0 \hbar \Omega} \tilde{\rho}_{12} = \frac{2 N \mu_{12}^2}{\epsilon_0 \hbar} \frac{i (\Gamma + i 2 \Delta)}{\Gamma^2 + 4 \Delta^2 + 2 \Omega^2}.
+\end{equation*}
+Finalmente, para un \textbf{haz de prueba débil} ($\Omega \ll \Gamma$) podemos despreciar el término de saturación $2 \Omega^2$ en el denominador. De ésta forma, obtenemos la susceptibilidad eléctrica en términos de la desintonía $\Delta$ del láser \cite{robertw.boydNonlinearOptics},
+\begin{equation}
+    \chi(\Delta) = \frac{N \mu_{12}^2}{\epsilon_0 \hbar} \frac{i}{\frac{\Gamma}{2} - i\Delta} = \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} f(\Delta).
+\end{equation}
+Veamos que $f(\Delta$) es un perfil Lorentziano $L(x; x_0, \gamma)$ \cite{demtroderLaserSpectroscopy1996, footAtomicPhysics2005},
+\begin{equation*}
+    f(\Delta)  = \frac{1}{\pi} \frac{-\Delta + i \Gamma/2}{(\Gamma/2)^2 + \Delta^2} = -L\left(\frac{\Gamma}{2}; 0, \Delta\right) + i L\left(\Delta; 0, \frac{\Gamma}{2}\right).
+\end{equation*}
+Identificando las partes real e imaginaria de la suceptibilidad eléctrica $\chi = \chi' + i \chi''$, podemos observar los comportamientos clásicos de dispersión y absorción esperados en la susceptibilidad eléctrica,
+\begin{equation}
+\boxed{
+    \chi(\Delta, \Gamma) = \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} \left[-L\left(\frac{\Gamma}{2}; 0, \Delta\right) + i L\left(\Delta; 0, \frac{\Gamma}{2}\right) \right].
+}
+\label{eq:susceptibilidad}
+\end{equation}
+Específicamente, la parte real $\chi' \propto L\left(\frac{\Gamma}{2}; 0, \Delta\right)$, descrita por un perfil de Lorentz dispersivo, gobierna el índice de refracción del medio. Por otro lado, la parte imaginaria $\chi'' \propto L\left(\Delta; 0, \frac{\Gamma}{2}\right)$, asociada a un perfil de Lorentz absorbente, determina la absorción de energía del haz por la nube atómica \cite{siddonsAbsoluteAbsorptionRubidium2008, zentileElecSusProgramCalculate2015, pizzeyLaserSpectroscopyHot2022}.
+% #endregion
+\subsubsection*{Transiciones Atómicas Múltiples}
+La susceptibilidad eléctrica $\chi$ presentada en la ecuación \ref{eq:susceptibilidad} corresponde a un sistema con una única transición. En un medio atómico real, la presencia de la estructura hiperfina da lugar a múltiples transiciones permitidas entre los subniveles de los estados fundamental y excitado \cite{footAtomicPhysics2005}.
+
+Para extender la susceptibilidad, el elemento dipolar $\vec{\mu}_{12}$ debe redefinirse según la estructura hiperfina del átomo. Aplicando el teorema de Wigner-Eckart, el elemento de matriz dipolar entre subniveles magnéticos $\ket{F, m_F} \to \ket{F', m_F'}$ se factoriza en la componente angular $c_{m_F}$ y el elemento de matriz reducido $d = \bra{L}\abs{e\vec{r}} \ket{L'}$ \cite{edmondsAngularMomentumQuantum1996, thompsonAngularMomentumIllustrated2008},
+\begin{equation*}
+    \bra{F,m_F} e \hat{r} \ket{F', m_F'} = c_{m_F} d, \quad \mu_{FF'} = c_{m_F}^2 d^2
+\end{equation*}
+En un vapor atómico no polarizado, la población se distribuye equitativamente entre los $g_I = 2(2I+1)$ subniveles del estado base \cite{footAtomicPhysics2005}. Al promediar sobre estas orientaciones, el momento dipolar efectivo al cuadrado para la transición $F \to F'$ toma la forma $\mu_{FF'}^2 = S_{FF'} d^2$, donde la fuerza de línea relativa $S_{FF'}$ está dada por \cite{zentileElecSusProgramCalculate2015},
+\begin{equation*}
+    S_{F F'} = \frac{1}{g_I} \sum_{m_F} c_{m_F}^2 = \frac{C_F}{g_I}, \quad \text{donde } \sum_{F'} S_{FF'} = 1.
+\end{equation*}
+Entonces, la susceptibilidad eléctrica total $\chi(\Delta)$ se obtiene sumando sobre todas las transiciones hiperfinas permitidas,
+\begin{equation}
+    \chi(\Delta) = \sum_{F, F'} \chi_{FF'}(\Delta-\Delta_{FF'}),\quad \chi_{FF'}(\Delta-\Delta_{FF'})= \frac{C_F^2 d^2 N}{g_I \epsilon_0 \hbar} f(\Delta - \Delta_{FF'}).
+\end{equation}
+donde $\Delta_{FF'}$ representa la desintonía de cada transición hiperfina respecto al centro de línea de la resonancia atómica.
+\subsection{Coeficiente de Absorción}
+% #region Inicio de Subsección}
+A partir del índice de refracción complejo $n = \eta + i\kappa = \sqrt{1 + \chi}$ \cite{hechtOptics2017}, al elevar al cuadrado e igualar la parte imaginaria, se obtiene directamente la relación para la absorción del medio $\chi'' = 2\eta\kappa$ \cite{griffithsIntroductionElectrodynamics2013, demtroderLaserSpectroscopy1996}. Consideremos entonces un campo eléctrico propagándose en dirección $\hat{z}$ a través de un medio con índice de refracción complejo $n = \eta + i \kappa$. La expresión para el campo eléctrico $\vec{E}(z,t)$ dentro del medio es \cite{siddonsAbsoluteAbsorptionRubidium2008, keaveneyElecSusExtensionArbitrary2018},
+\begin{equation*}
+    \vec{E}(z,t) = E_0 e^{i(kz - \omega t)} \hat{e} =  E_0 e^{-i \omega t} e^{i k_0 (\eta + i \kappa) z} \hat{e} 
+\end{equation*}
+donde $k_0 = 2 \pi / \lambda_0$ es el número de onda en el vacío. Luego, la intensidad del campo eléctrico $I(z)$ a lo largo de la dirección de propagación $\hat{z}$ es proporcional al cuadrado del campo eléctrico $I(z) \propto |\vec{E}(z,t)|^2 = E_0^2 e^{- 2 k_0 \kappa z}$. Definiendo el coeficiente de absorción $\alpha$ como el factor de atenuación de la intensidad del campo eléctrico a lo largo de la dirección de propagación $\hat{z}$, obtenemos \cite{demtroderLaserSpectroscopy1996},   
+\begin{equation*}
+    I(z) = I_0 e^{-\alpha z}, \quad \alpha = k_0 \eta \chi''.
+\end{equation*}
+En el caso de un medio atómico diluido, el índice de refracción del medio es cercano a la unidad ($\eta \approx 1$) y la expresión para el coeficiente de absorción $\alpha$ se simplifica a \cite{robertw.boydNonlinearOptics},
+\begin{equation}
+    \alpha(\Delta) = k_0 \chi''(\Delta) = k_0 \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} L\left(\Delta; 0, \frac{\Gamma_0}{2}\right).
+\end{equation}
+Así, podemos obtener la transmisión $\mathscr{T}$ de un haz de luz que atraviesa una nube atómica de longitud $L$ a partir del coeficiente de absorción $\alpha$ como,
+\begin{equation}
+    \boxed{
+        \mathscr{T} = \frac{I(L)}{I_0} =  e^{-\alpha(\Delta) L}, \quad \alpha = k_0 \chi''(\Delta).
+    }
+\end{equation}
+Ésta ecuación es conocida como la \textbf{ley de Beer-Lambert} y describe la atenuación de la intensidad de un haz de luz a medida que atraviesa un medio absorbente \cite{siddonsAbsoluteAbsorptionRubidium2008, footAtomicPhysics2005}. El coeficiente de absorción macroscópico $\alpha$ también puede escribirse en términos de la sección eficaz de absorción $\sigma$ y la densidad de átomos $N$ como $\alpha = N \sigma$.
+% #endregion 
+\subsubsection*{Ensanchamiento Doppler}
+Un átomo que se desplaza con velocidad $v_z$ en la dirección de propagación del haz ($\hat{z}$), experimenta un desplazamiento Doppler dado por $\Delta_D = -\vec{k} \cdot \vec{v} = -k v_z$ \cite{footAtomicPhysics2005}. Esto modifica la frecuencia vista por el átomo a una desintonía efectiva $\Delta' = \Delta - k v_z$ \cite{demtroderLaserSpectroscopy1996}, redefiniendo la absorción $\alpha$ dependiente de la velocidad como \cite{siddonsAbsoluteAbsorptionRubidium2008, pizzeyLaserSpectroscopyHot2022},
+\begin{equation*}
+\begin{split}
+    \alpha(\Delta, v_z) &= k_0 \chi''(\Delta, v_z) = k_0 \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} L\left(\Delta; kv_z, \frac{\Gamma_0}{2}\right)
+\end{split}
+\end{equation*}
+Promediando sobre la distribución de velocidades de Maxwell-Boltzman $f(v_z)dv_z$ \cite{footAtomicPhysics2005, demtroderLaserSpectroscopy1996}
+\begin{equation*}
+    f(v_z) = \sqrt{\frac{m}{2 \pi k_B T}} \exp {- \frac{m v_z^2}{2 k_B T}} = \frac{1}{\sqrt{\pi u^2}}\exp{-\left(\frac{v_z}{u}\right)^2} = G\left(v_z; \frac{u}{\sqrt{2}}\right)
+\end{equation*}
+donde $u = \sqrt{\frac{2k_B T}{m}}$ es la velocidad más probable de los átomos. Integrando sobre todas las posibles velocidades $v_z$ a lo largo de la dirección de propagación del haz de luz \cite{siddonsAbsoluteAbsorptionRubidium2008},
+\begin{equation*}
+    \begin{split}
+        \alpha(\Delta) &= \int_{-\infty}^{\infty} \alpha(\Delta, v_z) f(v_z) dv_z = \frac{\pi N \mu_{12}^2}{u \epsilon_0 \hbar} \int_{-\infty}^{\infty} L\left(\frac{\Delta}{ku}; x', \frac{\Gamma_0}{2ku}\right) G\left(x'; \frac{1}{\sqrt{2}}\right) dx'.
+    \end{split}
+\end{equation*}
+De esta forma, el coeficiente de absorción $\alpha(\Delta)$ del medio atómico se expresa en términos del \textbf{perfil de Voigt} $V(x; \sigma, \gamma)$ como \cite{demtroderLaserSpectroscopy1996}:
+\begin{equation*}
+    \alpha(\Delta) = \frac{\pi N \mu_{12}^2}{u \epsilon_0 \hbar} V\left( \frac{\Delta}{ku}; \frac{1}{\sqrt{2}}, \frac{\Gamma_0}{2ku} \right), \qquad \text{donde } V(x; \sigma, \gamma) = \int_{-\infty}^{\infty} L(x; x', \gamma) G(x'; \sigma) \, dx'.
+\end{equation*}
+
+Esta función se evalúa computacionalmente mediante la parte real de la \textbf{función de Faddeeva} $w(z) = e^{-z^2} \text{erfc}(-iz)$ como $V(x; \sigma, \gamma) = \text{Re}[w(z)] / (\sqrt{2\pi}\sigma)$ \cite{zentileElecSusProgramCalculate2015}, con argumento complejo $z = \frac{x + i\gamma}{\sqrt{2}\sigma}$. Sustituyendo, el coeficiente de absorción adopta la forma compacta,
+\begin{equation}
+    \alpha(\Delta) = \frac{N \mu_{12}^2}{\epsilon_0 \hbar} \frac{\sqrt{\pi}}{u} \text{Re}[w(z)], \qquad \text{con } z = \frac{\Delta + i \frac{\Gamma_0}{2}}{ku}.
+\end{equation}
+\subsubsection*{Espectro de Absorción y Transmitancia Total}
+Para un sistema atómico con múltiples transiciones permitidas, la transmisión $\mathscr{T}$ de un haz de luz que atraviesa una nube atómica de longitud $L$ se escribe entonces como \cite{demtroderLaserSpectroscopy1996},
+\begin{equation}
+    \mathscr{T}(\Delta) = \exp \left[ - L \left( \sum_{F, F'} \alpha_{F, F'}(\Delta) \right) \right].
+\end{equation}
+El coeficiente de absorción para la transición atómica $\ket{F} \to \ket{F'}$ es,
+\begin{equation}
+    \boxed{
+    \alpha_{F, F'}(\Delta) = \frac{C_F^2 d^2 N}{g_I\epsilon_0 \hbar} \frac{\sqrt{\pi}}{u} \text{Re}[w(z)] , \quad z = \frac{\Delta + i \frac{\Gamma_0}{2}}{ku}
+    }
+    \label{eq:absortion}
+\end{equation}
+donde $\Gamma= \Gamma_0 + \beta N(T)$ representa el ancho homogéneo efectivo ajustado por temperatura. Esta expresión constituye la base analítica para el ajuste numérico de los datos experimentales.
+
+Aunque el formalismo desarrollado es de carácter general para sistemas de vapor saturado, se utilizarán los parámetros correspondientes a los isótopos del rubidio, adaptándose al sistema físico utilizado experimentalmente. Los valores numéricos de las propiedades atómicas para los isótopos $^{85}\text{Rb}$ y $^{87}\text{Rb}$ se detallan en el Apéndice \ref{sec:appendixA}.

@@ -1,0 +1,20 @@
+[0] Config.pm:329> INFO - This is Biber 2.22
+[1] Config.pm:332> INFO - Logfile is 'main.blg'
+[762] biber-MSWIN64:342> INFO - === 
+[1077] Biber.pm:421> INFO - Reading 'main.bcf'
+[1487] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[1571] Biber.pm:4487> INFO - Processing section 0
+[1644] Biber.pm:4680> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[1891] bibtex.pm:1713> INFO - LaTeX decoding ...
+[2136] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[3314] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3315] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3315] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[3535] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[3625] bbl.pm:779> INFO - Output to main.bbl
+[3631] Biber.pm:132> WARN - ISBN '978-0-19-850695-9 978-0-19-850696-6' in entry 'footAtomicPhysics2005' is invalid - run biber with '--validate_datamodel' for details.
+[3631] Biber.pm:132> WARN - ISBN '978-1-4419-3257-0 978-1-4757-4931-1' in entry 'blumDensityMatrixTheory1996' is invalid - run biber with '--validate_datamodel' for details.
+[3631] Biber.pm:132> WARN - ISBN '978-0-471-16432-6 978-0-471-16433-3 978-2-7056-5833-5 978-0-471-16434-0 978-2-7056-5834-2 978-0-471-16435-7 978-0-471-56952-7' in entry 'cohen-tannoudjiQuantumMechanics1977' is invalid - run biber with '--validate_datamodel' for details.
+[3631] Biber.pm:132> WARN - ISBN '978-1-108-58728-0 978-1-108-47322-4' in entry 'sakuraiModernQuantumMechanics2020' is invalid - run biber with '--validate_datamodel' for details.
+[3632] Biber.pm:132> WARN - ISBN '978-3-662-08262-1 978-3-662-08260-7' in entry 'demtroderLaserSpectroscopy1996' is invalid - run biber with '--validate_datamodel' for details.
+[3632] Biber.pm:134> INFO - WARNINGS: 5

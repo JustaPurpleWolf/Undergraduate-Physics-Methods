@@ -1,0 +1,747 @@
+\section{Fundamentos Teóricos}
+\subsection{Termodinámica del Vapor Atómico}
+\subsubsection{Presión de Vapor y Densidad Atómica}
+El análisis cuantitativo de los espectros atómicos se fundamenta en la codependencia de las variables termodinámicas del vapor, como son la temperatura y la cantidad de átomos que interactúan. A diferencia de los sistemas ideales donde la densidad se mantiene constante al variar la temperatura, en una celda de vapor alcalino la densidad atómica está acoplada con la temperatura de la celda. Por lo que es necesario conocer la correlaciónentre la densidad atómica y la temperatura para poder caracterizar el espectro de absorción.
+
+En un contenedor cerrado a una temperatura $T$ fija, el vapor atómico coexiste en un equilibrio dinámico con su fase condensada. La presión de vapor $P$ es la presión ejercida por el vapor atómico en equilibrio con su fase condensada y puede ser descrita por la ecuación de Clausius-Clapeyron,
+\begin{equation}
+    \frac{dP}{dT} = \frac{\Delta H}{T \Delta V}
+\end{equation}
+donde $\Delta H$ es la entalpía de vaporización y $\Delta V = V_g - V_c$ es el cambio de volúmen cuando las moléculas pasan del estado condensado $V_c$ al estado gaseoso $V_g$. En una transición de fase a presion constante, el cambio de entalpía es igual al calor absorbido por el sistema $\Delta H = Q = L$, donde $L = L(T)$ es el calor latente. Por lo que podemos escribir la ecuación a partir del calor latente,
+\begin{equation}
+    \frac{dP}{dT} = \frac{L}{T \Delta V}
+\end{equation}
+Como el volúmen del gas es mucho mayor que el volúmen del líquido ($V_g \gg V_c$), podemos aproximar $\Delta V \approx V_g $. Considerando además que el vapor se comporta como un gas ideal, el volúmen del gas estará dado por $V_g = \frac{nk_BT}{P}$, donde $n$ es el número total de átomos y $k_B$ es la constante de Boltzmann. Sustituyendo en la ecuación y despejando a la variable $P$ obtenemos,
+\begin{equation}
+    \frac{dP}{P} = \frac{L}{n k_B} \frac{dT}{T^2}.
+\end{equation}
+O bien en su forma átomica,
+\begin{equation}
+    \frac{dP}{P} = \frac{\epsilon_L}{k_B} \frac{dT}{T^2},
+\end{equation}
+donde $\epsilon_L$ es la energía de vaporización por átomo. Como $\epsilon_L$ depende de la temperatura, la ecuación no puede ser integrada directamente. Sin embargo podemos expandir a $\epsilon_L(T)$ en su serie de Taylor $\epsilon_L(T) = \epsilon_{L0} + \epsilon_{L1}T + \epsilon_{L2}T^2 + \cdots$ y reescribir la ecuación como,
+\begin{equation}
+    \frac{dP}{P} = \left( \frac{\epsilon_{L0}}{k_B T^2} + \frac{\epsilon_{L1}}{k_B T} + \frac{\epsilon_{L2}}{k_B} + \cdots \right) dT
+\end{equation}  
+Al integrar la expresión anterior y truncar a tercer orden obtenemos una aproximación de la presión de vapor,
+\begin{equation}
+    \log_{10} P = A - \frac{B}{T} + C \ln T + D T
+\end{equation}
+A partir de la ecuación del gas ideal $PV = n k_B T$ podemos despejar la densidad atómica $N = \frac{n}{V}$ como función de la temperatura,
+\begin{equation}
+    \boxed{
+    \log_{10} [N(T)] = A - \frac{B}{T} + C \ln T + D T - \log_{10} (k_B T)
+    }
+\end{equation}
+donde $A, B, C$ y $D$ son parámetros experimentales distintos para cada elemento.
+
+\subsubsection{Inversión Analítica para la Temperatura}
+Dado que $N(T)$ es una función monótona creciente en el intervalo de las temperaturas de operación, la relación entre la temperatura y la densidad atómica es biyectiva. Ésto nos permite definir explícitamente una función inversa $T(N)$.
+
+En el rango térmico de las celdas atómicas, los primeros dos términos de la ecuación de presión de vapor que representar la parte entálpica del comportamiento son dominantes frente a las correcciones de orden superior relacionadas a las variaciones de la capacidad calorífica de las fases. Además, al conservar únicamente los términos dominantes $A$ y $B$, la ecuación presenta una solución analíca y exacta para el problema inverso $T(N)$. Por lo tanto $\log_{10} [N(T)] \approx A - \frac{B}{T} - \log_{10} (k_B T)$, elevando a la potencia 10,
+\begin{equation}
+    N(T) \approx \frac{10^{A} e^{-\frac{B \ln(10)}{T}}}{k_B T}.
+\end{equation}
+Definimos $\xi = - \frac{B \ln(10)}{T}$, $T = - \frac{B \ln(10)}{\xi}$. Entonces,
+\begin{equation}
+    N(\xi) \approx \frac{10^{A} e^{\xi}}{k_B} \left( -\frac{\xi}{B \ln(10)} \right).
+\end{equation}
+Despejamos la variable y obtenemos,
+\begin{equation}
+    \xi e^{\xi} = - \frac{N k_B B \ln(10)}{10^{A}}.
+\end{equation}
+Ésta ecuación es de la forma $x e^x = y$, cuya solución es la función de Lambert $x = W(y)$. Por lo que podemos escribir la solución inversa como,
+\begin{equation}
+    T(N) = - \frac{\beta}{W\left(\frac{\beta N k_B}{10^{A}}\right)}
+\end{equation}
+donde $\beta = -B\ln(10)$. Ahora, como la función de Lambert es multivaluada, es necesario elegir la rama correcta para la solución. En general, para las temperaturas de operación de las celdas atómicas y las condiciones experimentales $ \xi = - \frac{B \ln(10)}{T}  < -1$ por lo qiue la solución pertenece a la rama secundaria $W_{-1}(y)$ de la función de Lambert. La solución final para la temperatura en función de la densidad atómica es,
+\begin{equation}
+    \boxed{
+    T(N) = - \frac{\beta}{W_{-1}\left(\frac{\beta N k_B}{10^{A}}\right)}.
+    }
+\end{equation}
+\subsection{Espectroscopía de Absorción}
+
+\subsubsection{Modelo Atómico de Dos Niveles}
+Consideremos a la interacción del sistema como un sistema atómico de dos niveles acoplado a un haz de luz monocromática. Así, por simplicidad consideremos que no hay decaimiento fuera del estado base y que tanto el estado excitado como el estado base están acoplados por luz coherente cerca de resonancia con una frecuencia de Rabi de $\Omega$.
+
+El estado excitado decae con una frecuencia característica $\Gamma_0$, el átomo sólo puede regresar al estado base y la desintonía está  dada por, $\Delta = \omega - \omega_0$.
+
+Debido a que un tratamiento cuántico completo de este sistema es complejo, es necesario realizar algunas aproximaciones:
+
+\begin{itemize}
+    \item \textbf{Aproximación semiclásica:} Debido a la alta cantidad de fotones emitidos por el haz de luz coherente (del orden de $10^{12}$ fotones por segundo para las potencias de $4\mu W$ a $10 \mu W$ utilizadas experimentalmente) y la naturaleza de dicha radiación, consideremos que el sistema atómico cuantizado se encuentra acoplado a un campo electromgnético clásico.
+    \item \textbf{Aproximación dipolar:} Debido a que el radio atómico es despreciable frente a la longitud de onda de la luz incidente ($a_0 \ll \lambda$), es posible describir la interacción materia-radiación mediante la aproximación dipolar eléctrica. Bajo esta condición, el campo eléctrico se considera uniforme a través del volumen del átomo, lo que nos permite despreciar los términos de orden superior en el desarrollo multipolar.
+\end{itemize}
+Puesto que la densidad de la nube atómica es elevada ($\sim 10^{12}$ átomos/$\text{cm}^2$), resulta conveniente adoptar una descripción macroscópica del sistema.
+
+Podemos describir el estado cuántico puro de un sistema a partir de una base ortonormal $\{\ket{i}\}$
+completa, 
+\begin{equation}
+    \ket{\psi} = \sum_i c_i \ket{i}
+\end{equation}
+donde $c_i^2$ representa la probabilidad de encontrar el sistema en el estado $\ket{i}$.
+
+Para describir el estado del sistema atómico, es necesario considerar que éste puede no encontrarse en un estado puro definido por un único vector de estado $\ket{\Psi}$, sino que puede encontrarse en una mezcla de estados. Para describir adecuadamente esta mezcla, es necesario introducir el formalismo de la \textbf{matriz densidad},
+\begin{equation}
+    \rho = \sum_s p(s) \ket{\Psi_s}\bra{\Psi_s}
+\end{equation}
+donde $p(s)$ representa la probabilidad de hallar un átomo del ensamble en el estado $\ket{\Psi_s}$, siempre con la condición de normalización $\text{Tr}(\rho) = 1$.
+
+Para un sistema de $n$ niveles, la matriz densidad es una matriz $n \times n$. Aquí, $\rho_{ii}$ representa la población del nivel $i$ y los elementos fuera de la diagonal $\rho_{ij}$ representan las coherencias entre los niveles $i$ y $j$.
+
+Uno puede calcular el valor esperado de un operador $\hat{A}$ para un estado descrito por $\rho$ a partir de la matriz densidad como,
+\begin{equation}
+    \expval{\hat{A}} = \text{Tr}(\rho \hat{A})
+\end{equation}
+donde $Tr(\hat{A}) = \sum_i \bra{i} \hat{A} \ket{i}$.
+\paragraph{Hamiltoniano}
+La ecuación de Schrödinger para un sistema cerrado dependiente del tiempo está dada por,
+\begin{equation}
+    i \hbar \pdv{t} \Psi(\vec{r}, t) = \hat{H} \Psi(\vec{r}, t)
+\end{equation}
+donde $ \Psi(\vec{r}, t) = \braket{\vec{r}}{\psi(t)}$ es la función de onda del sistema. El Hamiltoniano puede ser representado en su forma matricial por sus elementos, $H_{ij} = \bra{i} \hat{H} \ket{j}$, donde $\{\ket{i}\}$ es una base ortonormal completa.
+
+Bajo la aproximación de campo de prueba débil (weak probe regime), se asume que la intensidad del haz de luz es muy inferior a la intensidad de saturación del sistema atómico ($\Omega \ll \Gamma_0$). En éste régimen, la interacción del átomo con el haz de luz es lo suficientemente débil como para que el sistema atómico permanezca principalmente en su estado base. Consideremos entonces que el Hamiltoniano total está dado por el Hamiltoniano atómico libre $\hat{H}^{(0)}$ y un término de interacción dependiente del tiempo $\hat{H}^{(1)}(t)$, que representa el acoplamiento del átomo con el campo electromagnético del haz de luz coherente.
+
+Escribimos entonces el Hamiltoniano total como,
+\begin{equation}
+    \hat{H} = \hat{H}^{(0)} + \hat{H}^{(1)}(t).
+\end{equation}
+
+Así, para el \textbf{Hamiltoniano atómico} $\hat{H}^{(0)}$ tenemos que las eigenfunciones y eigenenergías están dadas por,
+\begin{equation}
+    \hat{H}^{(0)} \ket{i} = E_i \ket{i}
+\end{equation}
+donde $\ket{i}$ son los estados posibles o niveles de energía en los que el sistema puede encontrarse e
+$i = \{1, 2\}$ representan los estados base y excitado respectivamente.
+
+Por ortonormalidad de la base $\{\ket{i}\}$ sabemos que $\hat{H}^{(0)}$ es diagonal ($\bra{i} \hat{H}^{(0)} \ket{j} = E_i \delta_{ij}$). Estableciendo el cero de energía en el punto medio de la transición ($\hbar \omega_0 = E_2 - E_1$), podemos escribir el Hamiltoniano atómico en su forma matricial como,
+\begin{equation}
+\begin{split}    
+    \hat{H}^{(0)} &= -\frac{\hbar \omega_0}{2} \ket{1}\bra{1} + \frac{\hbar \omega_0}{2} \ket{2}\bra{2}
+    = \frac{\hbar \omega_0}{2} \begin{pmatrix}
+    -1 & 0 \\
+    0 & 1
+    \end{pmatrix}
+    = -\frac{\hbar \omega_0}{2} \hat{\sigma}_z.
+\end{split}
+\end{equation}
+
+Por otro lado, para el \textbf{Hamiltoniano de interacción} $\hat{H}^{(1)}(t)$, bajo la aproximación dipolar, tenemos que,
+\begin{equation}
+    \hat{H}^{(1)}(t) = - \hat{\vec{\mu}} \cdot \vec{E}(t)
+\end{equation}
+donde $\hat{\vec{\mu}}$ es el operador de momento dipolar eléctrico y $\vec{E}(t)$ es el campo eléctrico de interacción.
+
+A nivel microscópico, para un electrón en un átomo, el operador de momento dipolar eléctrico se define como,
+\begin{equation}
+    \hat{\vec{\mu}} = -e \hat{\vec{r}}
+\end{equation}
+donde $-e$ es la carga del electrón y $\hat{\vec{r}}$ es el operador posición del electrón.
+
+Entonces podemos obtener los elementos de matriz del operador dipolar eléctrico como $\vec{\mu}_{ij} = \bra{i} \hat{\vec{\mu}} \ket{j}$ y representar el operador dipolar en su forma matricial como,
+\begin{equation}
+    \hat{\vec{\mu}} = \begin{pmatrix}
+    \vec{\mu}_{11} & \vec{\mu}_{12} \\
+    \vec{\mu}_{21} & \vec{\mu}_{22}
+    \end{pmatrix}.
+\end{equation}
+Dado que los estados $\ket{1}$ y $\ket{2}$ son eigenestados de paridad definida y el operador posición es de paridad impar, al integrar para obtener el valor esperado se obtiene que los elementos diagonales del operador dipolar son nulos, $\vec{\mu}_{11} = \vec{\mu}_{22} = 0$.
+
+Además como $\hat{\vec{\mu}}$ es un operador hermítico, se cumple que $\vec{\mu}_{12} = \vec{\mu}_{21}^*$. Por lo que podemos escribir el operador dipolar en su forma matricial como,
+\begin{equation}
+    \hat{\vec{\mu}} = \begin{pmatrix}
+    0 & \vec{\mu}_{12} \\
+    \vec{\mu}_{12}^* & 0
+    \end{pmatrix}.
+\end{equation}
+
+Que los términos diagonales del operador dipolar sean nulos implica que el átomo en estado estacionario no tiene momento dipolar eléctrico permanente. Éste sólo aparece durante la trancisión entre los estados atómicos.
+
+Ahora, para un haz de luz monocromática polarizado, el campo eléctrico $\vec{E}(t)$ puede ser representado como,
+\begin{equation}
+    \vec{E}(t) = \hat{e} E_0 \cos(\omega t) = \frac{\hat{e} E_0}{2} (e^{i \omega t} + e^{-i \omega t})
+\end{equation}
+donde $\hat{e}$ es un vector unitario que representa la dirección de polarización del campo, $E_0$ es la amplitud del campo eléctrico y $\omega$ es la frecuencia angular de la luz incidente.
+
+Suponiendo que el momento dipolar está alineado con la polarización de la luz incidente y que el elemento de matriz del momento dipolar $\vec{\mu}_{12}$ es real, podemos escribir el Hamiltoniano de interacción en su forma matricial como,
+\begin{equation}
+\begin{split}
+    \hat{H}^{(1)}(t) = - \hat{\vec{\mu}} \cdot \vec{E}(t) 
+    &= - \frac{E_0}{2} (e^{i \omega t} + e^{-i \omega t}) \begin{pmatrix}
+    0 & \vec{\mu}_{12} \cdot \hat{e} \\
+    \vec{\mu}_{12}^* \cdot \hat{e} & 0
+    \end{pmatrix}\\
+    &= - \vec{\mu}_{12} \cdot \hat{e} \frac{E_0}{2} (e^{i \omega t} + e^{-i \omega t}) \begin{pmatrix}
+    0 & 1 \\
+    1 & 0
+    \end{pmatrix}\\
+    &= \frac{\hbar \Omega}{2} (e^{i \omega t} + e^{-i \omega t}) \hat{\sigma}_x\\
+    &= \frac{\hbar \Omega}{2} (e^{i \omega t} + e^{-i \omega t})(\ket{1}\bra{2} + \ket{2}\bra{1})
+\end{split}
+\end{equation}
+donde hemos definido la frecuencia de Rabi como,
+\begin{equation}    
+    \Omega = - \frac{\vec{\mu}_{12} \cdot \hat{e} E_0}{\hbar} = - \frac{e E_0}{\hbar} \bra{1} \hat{\vec{r}} \ket{2}.
+\end{equation}
+y $\hat{\sigma}_x$ es la matriz de Pauli en la dirección $x$. Por conveniencia, consideraremos que $\Omega$ es real ($\Omega^* = \Omega$), lo que es equivalente a fijar la fase global del campo incidente a cero. Ésto nos permitirá simplificar la estructura de nuestras ecuaciones sin alterar las observables físicas del sistema.
+\paragraph{Aproximación de onda rotante}
+Resulta conveniente movernos al \textbf{marco de interacción}, donde el Hamiltoniano de interacción adquiere una forma más sencilla. En éste marco de referencia, los operadores de transición adquieren su propia oscilación natural a la frecuencia de transición atómica $\omega_0$. Definimos entonces al operador unitario $U_0$ como,
+\begin{equation}
+    U_0(t) = e^{\frac{i}{\hbar} \hat{H}^{(0)} t} = e^{\frac{i \omega_0 t}{2} \left[ \ket{2}\bra{2}-\ket{1}\bra{1}\right]} = \begin{pmatrix}
+    e^{\frac{i \omega_0 t}{2}} & 0 \\
+    0 & e^{-\frac{i \omega_0 t}{2}}
+    \end{pmatrix}.
+\end{equation}
+Para un operador $\hat{A}$, su transformación por un operador unitario $\hat{U}(t)$ está dada por,
+\begin{equation}
+    \hat{A}^{(I)}(t) = \hat{U}(t) \hat{A} \hat{U}^{\dagger}(t) + i \hbar \left(\pdv{\hat{U}(t)}{t}\right) \hat{U}^{\dagger}(t).
+\end{equation}
+Veamos que, 
+\begin{equation}
+    \pdv{U_0(t)}{t} = \left(\frac{i \hat{H}^{(0)}}{\hbar} \right) e^{\frac{i}{\hbar} \hat{H}^{(0)} t} = \frac{i}{\hbar} \hat{H}^{(0)} U_0(t).
+\end{equation}
+Dado que el operador $U_0(t)$ conmuta con $\hat{H}^{(0)}$ ($[U_0(t), \hat{H}^{(0)}] = 0$), para el Hamiltoniano en el marco de interacción tenemos,
+\begin{equation}
+\begin{split}
+    \hat{H}_{int} (t)&= U_0(t) \hat{H} U_0^{\dagger}(t) + i \hbar \left(\pdv{U_0(t)}{t}\right) U_0^{\dagger}(t)\\
+    &= U_0(t) [\hat{H}^{(1)}(t)+ \hat{H}^{(0)} ] U_0^{\dagger}(t)  - \hat{H}^{(0)} 
+    = U_0(t) \hat{H}^{(1)}(t) U_0^{\dagger}(t).
+\end{split}
+\end{equation}
+Sustituyendo obtenemos cuatro términos de fase oscilatorios,
+\begin{equation}
+\begin{split}
+    \hat{H}_{int} (t) &= U_0(t) \frac{\hbar \Omega}{2} (e^{i \omega t} + e^{-i \omega t})(\ket{1}\bra{2} + \ket{2}\bra{1}) U_0^{\dagger}(t)\\
+    &= \frac{\hbar \Omega}{2} (e^{i \omega t} + e^{-i \omega t})(\ket{1}\bra{2} e^{i \omega_0 t} + \ket{2}\bra{1} e^{-i \omega_0 t})\\
+    &= \frac{\hbar \Omega}{2} [(e^{-i (\omega - \omega_0) t} + e^{i (\omega + \omega_0) t}) \ket{1}\bra{2} + (e^{-i (\omega + \omega_0) t}  + e^{i (\omega - \omega_0) t}) \ket{2}\bra{1}].
+\end{split}
+\end{equation}
+Cerca de resonancia, la frecuencia $\omega$ del haz de luz es aproximadamente igual a la frecuencia de transición atómica $\omega_0$ ($\omega \approx \omega_0$). Por lo que los términos oscilatorios con frecuencia $\omega + \omega_0$ varían mucho más rápido que los términos con frecuencia $\omega - \omega_0$.
+
+\begin{itemize}
+    \item \textbf{Términos lentos.} Los términos oscilatorios con frecuencia $\omega - \omega_0$ varían lentamente en el tiempo cerca de resonancia pues la frecuencia es cercana a cero. Éstos términos contribuyen significativamente a la dinámica del sistema y son los que provocan la absorción y emisión.
+    \item \textbf{Términos rápidos.} Los términos oscilatorios con frecuencia $\omega + \omega_0$ varían rápidamente en el tiempo cerca de resonancia pues la frecuencia es cercana a $2 \omega_0$. Para las escalas de tiempo atómicas, éstos términos promedian a cero y no contribuyen significativamente a la dinámica del sistema.
+\end{itemize}
+
+Bajo la \textbf{aproximación de onda rotante} (RWA, por sus siglas en inglés), podemos despreciar los términos oscilatorios rápidos y quedarnos sólo con los términos lentos. Así, el Hamiltoniano en el marco de interacción bajo la RWA queda descrito por,
+\begin{equation}
+\begin{split}
+    \hat{H}_{\text{RWA}} (t) &= \frac{\hbar \Omega}{2}[e^{i(\omega - \omega_0) t} \ket{2}\bra{1} + e^{-i(\omega - \omega_0) t} \ket{1}\bra{2}]
+    = \frac{\hbar \Omega}{2}(e^{i \Delta t} \sigma_+ + e^{-i \Delta t}\sigma_-).
+\end{split}
+\end{equation}
+O en su forma matricial,
+\begin{equation}
+    \boxed{\hat{H}_{\text{RWA}} (t) = \frac{\hbar \Omega}{2}\begin{pmatrix}
+    0 & e^{-i \Delta t} \\
+    e^{i \Delta t} & 0
+    \end{pmatrix}}
+\end{equation}
+donde $\sigma_+ = \ket{2}\bra{1}$ y $\sigma_- = \ket{1}\bra{2}$ son los operadores de subida y bajada respectivamente, $\Delta = \omega - \omega_0$ es la desintonía entre la frecuencia de la luz incidente y la frecuencia de transición atómica y $\Omega$ es la frecuencia de Rabi.
+
+\paragraph{Marco rotante}
+Para tener un marco de referencia donde el Hamiltoniano de interacción sea independiente del tiempo, es conveniente movernos al \textbf{marco rotante}.  Bajo esta representación, el Hamiltoniano original se transforma en un operador independiente del tiempo $\hat{H}_{rot}$, dependiente de la desintonía $\Delta$ y la frecuencia de Rabi $\Omega$. De forma similar al marco de interacción, definimos el operador unitario $U_{\text{rot}}$ como,
+\begin{equation}
+    U_{\text{rot}}(t) = e^{\frac{i}{\hbar} \hat{H}_{\text{RWA}} t} = e^{i \frac{\Delta t}{2} \hat{\sigma}_z} = \begin{pmatrix}
+    e^{i \frac{\Delta t}{2}} & 0 \\
+    0 & e^{-i \frac{\Delta t}{2}}
+    \end{pmatrix}.
+\end{equation}
+Aplicando la transformación al Hamiltoniano en el marco de interacción obtenemos,
+\begin{equation}
+\begin{split}
+    \hat{H}_{\text{rot}} = U_{\text{rot}}(t) \hat{H}_{\text{RWA}} U_{\text{rot}}^{\dagger}(t) + i \hbar \left(\pdv{U_{\text{rot}}(t)}{t}\right) U_{\text{rot}}^{\dagger}(t)
+    = -\frac{\hbar \Delta}{2} \hat{\sigma}_z + \frac{\hbar \Omega}{2} \hat{\sigma}_x.
+\end{split}
+\end{equation}
+O bien, en su forma matricial,
+\begin{equation}
+\boxed{
+\hat{H}_{\text{rot}} =\frac{\hbar}{2} \begin{pmatrix}
+    -\Delta & \Omega \\
+    \Omega & \Delta
+    \end{pmatrix}.
+}
+\end{equation}
+
+\paragraph{Ecuación de Lindblad}
+Para sistemas que presentan decoherencia o mezclas estadísticas, resulta conveniente utilizar el formalismo de la matriz densidad $\rho(t)$. En este caso, la ecuación de Schrödinger dependiente del tiempo es equivalente a la \textbf{ecuación de Liouville-von Neumann},
+\begin{equation}
+    i \hbar \dv{t} \rho(t) = [\hat{H}, \rho(t)]
+\end{equation}
+donde $[\hat{A}, \hat{B}] = \hat{A} \hat{B} - \hat{B} \hat{A}$ es el conmutador entre los operadores $\hat{A}$ y $\hat{B}$.
+
+Sin embargo, un sistema atómico real es inherentemente abierto, ya que está en constante interacción con su entorno, lo que conduce a procesos de decaimiento y decoherencia. Para ello, se añade un término disipativo adicional a la ecuación de Liouville-von Neumann, dando lugar a la \textbf{ecuación maestra de Lindblad},
+\begin{equation}
+    \dv{t} \rho(t) = -\frac{i}{\hbar} [\hat{H}, \rho(t)] + \mathcal{L}(\rho(t))
+\end{equation}
+donde $\mathcal{L}(\rho)$ es el superoperador Lindbladiano que describe los procesos de decaimiento y decoherencia en el sistema.
+
+Por conveniencia, trabajaremos con el Hamiltoniano en el marco rotante $\hat{H}_{rot}$, por lo que la ecuación maestra de Lindblad se puede escribir como,
+\begin{equation}
+    \dv{t} \tilde{\rho}(t) = -\frac{i}{\hbar} [\hat{H}_{rot}, \tilde{\rho}(t)] + \mathcal{L}(\tilde{\rho}(t))
+\end{equation}
+donde $\tilde{\rho}(t) = U_{\text{rot}}(t) \rho(t) U_{\text{rot}}^{\dagger}(t)$ es la matriz densidad en el marco rotante, dada por,
+\begin{equation}
+\begin{split}
+    \tilde{\rho}(t) = \begin{pmatrix}
+    e^{i \frac{\Delta t}{2}} & 0 \\
+    0 & e^{-i \frac{\Delta t}{2}}
+    \end{pmatrix} \begin{pmatrix}
+    \rho_{11} & \rho_{12} \\
+    \rho_{21} & \rho_{22}
+    \end{pmatrix}\begin{pmatrix}
+    e^{-i \frac{\Delta t}{2}} & 0 \\
+    0 & e^{i \frac{\Delta t}{2}}
+    \end{pmatrix} =\begin{pmatrix}
+        \rho_{11} & \rho_{12}e^{i \omega_0 t} \\
+        \rho_{21}e^{-i \omega_0 t} & \rho_{22}
+    \end{pmatrix}.
+\end{split}
+\end{equation}    
+
+Ahora, para describir a los procesos de decaimiento y coherencia en el sistema se uitiliza el operador Lindbladiano $\mathcal{L}(\tilde{\rho})$ definido como,
+\begin{equation}
+    \mathcal{L}(\tilde{\rho}) = \sum_k \gamma_k \left( \hat{L}_k \tilde{\rho} \hat{L}_k^{\dagger} - \frac{1}{2} \{\hat{L}_k^{\dagger} \hat{L}_k, \tilde{\rho}\} \right)
+\end{equation}
+donde los operadores de salto $\hat{L}_k$ representan los cambios discretos en el estado inducidos por el entorno, $\gamma_k$ son las tasas de decaimiento asociadas a cada operador de salto y $\{ \hat{A}, \hat{B} \} = \hat{A} \hat{B} + \hat{B} \hat{A}$ es el anticonmutador entre los operadores $\hat{A}$ y $\hat{B}$.
+
+Para el sistema de dos niveles que estamos considerando, el único proceso relevante es el decaimiento del estado excitado $\ket{2}$ al estado base $\ket{1}$. Por lo que el único operador de salto a considerar es,
+    \begin{equation}
+        \hat{L} =  \sigma_- =\ket{1}\bra{2} = \begin{bmatrix}
+        0 & 1 \\
+        0 & 0
+        \end{bmatrix}
+    \end{equation}
+con $(\sigma_-)^\dagger = \sigma_+$. Éste operador reduce la población del estado excitado y aumenta la población del estado base. Entonces el Lindbladiano del sistema, asociado al decaimiento espontáneo a una frecuencia de decaimiento característica $\Gamma_0$ es,
+\begin{equation}
+    \mathcal{L}(\tilde{\rho}) = \Gamma_0 \left( \sigma_- \tilde{\rho} \sigma_+ - \frac{1}{2} \{\sigma_+ \sigma_-, \tilde{\rho}\} \right)= \Gamma_0 \begin{pmatrix}
+    \rho_{22} & -\frac{1}{2} \tilde{\rho}_{12} \\
+    -\frac{1}{2} \tilde{\rho}_{21} & -\rho_{22}
+    \end{pmatrix}
+\end{equation}
+donde definimos $\tilde{\rho}_{12}= \rho_{12} e^{i \omega_0 t}$,  $\tilde{\rho}_{21}= \rho_{21} e^{-i \omega_0 t}$.
+
+\paragraph{Ecuaciones de Maxwell-Bloch}
+Sustituyendo el Hamiltoniano en el marco rotante y el Lindbladiano en la ecuación maestra de Lindblad, podemos desarrollarla para los elementos de la matriz densidad. Así, obtenemos un conjunto de ecuaciones diferenciales fuertemente acopladas para las poblaciones y coherencias del sistema, conocidas como las \textbf{ecuaciones de Maxwell-Bloch}.
+\begin{subequations}
+\begin{align}
+    \dv{t} \rho_{11} &= \Gamma_0 \rho_{22} + \frac{i \Omega}{2}(\tilde{\rho}_{12}  - \tilde{\rho}_{21}), \label{eq:pob11} \\
+    \dv{t} \rho_{22} &= -\Gamma_0 \rho_{22} + \frac{i \Omega}{2}(\tilde{\rho}_{21}  - \tilde{\rho}_{12}), \label{eq:pob22} \\
+    \dv{t} \tilde{\rho}_{12} &= -(\frac{\Gamma_0}{2}-i\Delta) \tilde{\rho}_{12} + \frac{i \Omega}{2}(\rho_{11} - \rho_{22}), \label{eq:coh12}\\
+    \dv{t} \tilde{\rho}_{21} &= -(\frac{\Gamma_0}{2}+i\Delta) \tilde{\rho}_{21} - \frac{i\Omega}{2}(\rho_{11} - \rho_{22}). \label{eq:coh21}
+\end{align}
+\end{subequations}
+Consideremos la ecuación \eqref{eq:pob11} para el estado base $\rho_{11}$. Como dentro del sistema la población total se conserva ($\rho_{11} + \rho_{22} = 1$), tenemos para las derivadas poblacionales que $\dv{t} \rho_{11} = - \dv{t} \rho_{22}$ . Entonces,
+\begin{equation}
+\boxed{
+    \dv{t} \rho_{11} = - \dv{t} \rho_{22} = \Gamma_0 \rho_{22} + \frac{i \Omega}{2}(\tilde{\rho}_{12} - \tilde{\rho}_{21}).
+}
+\end{equation}
+De la misma forma, consideremos la ecuación \eqref{eq:coh12} para la coherencias $\tilde{\rho}_{12}$. Ahora, como $\rho$ ($\tilde{\rho}$) es hermítico, se cumple que  $\rho_{12} = \rho_{21}^{*}$ ($\tilde{\rho}_{12} = \tilde{\rho}_{21}^{*}$) y $\dv{t} \rho = - \dv{t} \rho_{21}^*$ ($\dv{t} \tilde{\rho}_{12} = -\dv{t} \tilde{\rho}_{21}^{*}$). Entonces,
+\begin{equation}
+\boxed{
+    \dv{t} \tilde{\rho}_{12} = - \dv{t} \tilde{\rho}_{21}^{*} = -(\frac{\Gamma_0}{2} + i \Delta) \tilde{\rho}_{12} + \frac{i \Omega}{2}(\rho_{11} - \rho_{22}).
+}
+\end{equation}
+Así, para el \textbf{estado estacionario}, donde las derivadas temporales son nulas ($\dv{t} \rho_{ij} = 0$) obtenemos un sistema de ecuaciones algebraicas y homogéneas acopladas para las poblaciones y coherencias del sistema,
+\begin{equation}
+\begin{split}
+    \Gamma_0 \rho_{22} + \frac{i \Omega}{2}(\tilde{\rho}_{12} - \tilde{\rho}_{21}) &= 0 \\
+    -(\frac{\Gamma_0}{2} + i \Delta) \tilde{\rho}_{12} + \frac{i \Omega}{2}(\rho_{11} - \rho_{22}) &= 0.
+\end{split}
+\end{equation}
+Aplicando las condiciones de normalización ($\rho_{11} + \rho_{22} = 1$) y hermiticidad ($\rho_{21} = \rho_{12}^{*}$), el sistema de ecuaciones para el estado estacionario queda dado por,
+\begin{equation}
+\begin{split}
+    \Gamma_0 \rho_{22} + \Omega \text{Im}[\tilde{\rho}_{12}] &= 0 \\
+    -(\frac{\Gamma_0}{2} + i \Delta) \tilde{\rho}_{12} + \frac{i \Omega}{2}(1 - 2\rho_{22}) &= 0.
+\end{split}
+\end{equation}
+Resolviendo el sistema de ecuaciones obtenemos las poblaciones y coherencias del sistema en estado estacionario,
+\begin{equation}
+\begin{split}
+    \rho_{22} &= \frac{\Omega^2}{\Gamma_0^2 + 4 \Delta^2 + 2 \Omega^2  } \\
+    \tilde{\rho}_{12} &= -\frac{i \Omega (\Gamma_0 + i 2 \Delta)}{\Gamma_0^2 + 4 \Delta^2 + 2 \Omega^2 }
+\end{split}
+\end{equation}
+donde los otros elementos de la matriz densidad pueden ser obtenidos a partir de las condiciones de normalización y hermiticidad como $\rho_{11} = 1 - \rho_{22}$ y $\tilde{\rho}_{21} = \tilde{\rho}_{12}^*$.
+
+Las soluciones obtenidas para las poblaciones $\rho_{ii}$ y coherencias $\tilde{\rho}_{ij}$ en estado estacionario constituyen la respuesta del sistema de dos niveles a un campo electromagnético externo coherente. Estas soluciones son fundamentales para entender fenómenos como la absorción, la dispersión y la transparencia electromagnética en medios atómicos.
+
+\subsubsection{Susceptibilidad Eléctrica}
+Podemos describir la respuesta óptica del sistema atómico a un campo electromagnético externo a través de la \textbf{susceptibilidad eléctrica} $\chi$, la cual es una propiedad macroscópica del medio. Ésta describe la forma en la que el medio atómico se polariza en presencia de un campo eléctrico. Además, la susceptibilidad eléctrica contiene la información tanto de la absorción como de la dispersión del medio sobre los haces de luz que lo atraviesan.
+
+La polarización del medio atómico $P$ observada macroscopicamente está principalmente relacionada a los momentos dipolares eléctricos individuales de cada átomo. Debido a la escala atómica (donde $\lambda \gg a_0$), los siguientes términos de la expansión multipolar, como son el  dipolo magnético o el cuadrupolo eléctrico, son de órdenes de magnitud menores y pueden ser despreciados al realizar la expansión multipolar. 
+
+Así, para un sistema de $N$ átomos, la polarización macroscópica $\vec{P}$ del medio atómico puede ser calculada a partir del momento dipolar eléctrico promedio de cada átomo $\langle \hat{\vec{\mu}} \rangle$ como,
+\begin{equation}
+    \begin{split}
+        \vec{P} &= N \langle \hat{\vec{\mu}} \rangle = N \text{Tr}[\rho \hat{\vec{\mu}}]\\
+        &= N \text{Tr} \left[ \begin{pmatrix}
+        \rho_{11} & \rho_{12} \\
+        \rho_{21} & \rho_{22} 
+        \end{pmatrix} \begin{pmatrix}
+        0 & \vec{\mu}_{12} \\
+        \vec{\mu}_{12}^* & 0
+        \end{pmatrix} \right]
+        =  N \text{Tr} \left[ \begin{pmatrix}
+        \rho_{12}\vec{\mu}_{12}^* & \rho_{11}\vec{\mu}_{12} \\
+        \rho_{22} \vec{\mu}_{12}^* & \rho_{21}\vec{\mu}_{12}
+        \end{pmatrix} \right] \\
+        &=  N (\rho_{12} \vec{\mu}_{12} + \rho_{21} \vec{\mu}_{12}^*)
+        = N (\tilde{\rho}_{12}e^{-i \omega t} \vec{\mu}_{12} + \tilde{\rho}_{21}e^{i \omega t} \vec{\mu}_{12}^*).
+    \end{split}
+\end{equation}
+Considerando que el elemento de matriz del momento dipolar eléctrico $\vec{\mu}_{12}$ es real y que $\tilde{\rho}_{21} = \tilde{\rho}_{12}^*$, podemos escribir la polarización macroscópica $P$ del medio atómico como,
+\begin{equation}
+\boxed{
+    \vec{P} = N \vec{\mu}_{12} (\tilde{\rho}_{12}e^{-i \omega t}  + \tilde{\rho}_{12}^*e^{i \omega t}).
+}
+\end{equation}
+Por otro lado, si consideramos que el medio es lineal, homogéneo e isotrópico, la polarización macroscópica $P$ del medio atómico también puede ser escrita en función de la susceptibilidad eléctrica $\chi$ y el campo eléctrico aplicado $E$ como,
+\begin{equation}
+    \vec{P} = (\epsilon- \epsilon_0) \vec{E} = \epsilon_0 \chi \vec{E}.
+\end{equation}
+Ésto es,
+\begin{equation}
+    \vec{P}(t) = \frac{\epsilon_0 \chi E_0 }{2}(e^{i \omega t} + e^{-i \omega t})\hat{e} = \epsilon_0 \chi E_0 \hat{e} \text{Re}[e^{-i \omega t}].
+\end{equation}
+Dado que la polarización $P$ es una cantidad física observable, debe ser real. Por lo que sólo el término real de la expresión anterior contribuye a la polarización macroscópica del medio atómico. 
+\begin{equation}
+    \vec{P}(t) = \epsilon_0 \text{Re}[E_0 \chi e^{-i \omega t}] \hat{e}.
+\end{equation}
+Asumiendo $E_0$ real y usando la propiedad $\text{Re}[z] = \frac{1}{2}(z + z^*)$ para un número complejo $z$ obtenemos,
+\begin{equation}
+\boxed{
+    \vec{P}(t) = \frac{\epsilon_0 E_0}{2} (\chi e^{-i \omega t} + \chi^* e^{i \omega t}) \hat{e}.
+}
+\end{equation}
+Al igualar ambas expresiones para la polarización $P$ y tomar el producto punto con $\vec{\mu}_{12}$ obtenemos,
+\begin{equation}
+\begin{split}
+    N (\vec{\mu}_{12} \cdot \vec{\mu}_{12}) (\tilde{\rho}_{12}e^{-i \omega t}  + \tilde{\rho}_{12}^*e^{i \omega t}) &= \frac{\epsilon_0 E_0}{2} (\chi e^{-i \omega t} + \chi^* e^{i \omega t}) (\vec{\mu}_{12} \cdot \hat{e})\\
+    N \mu_{12}^2 (\tilde{\rho}_{12}e^{-i \omega t}  + \tilde{\rho}_{12}^*e^{i \omega t}) &= \frac{\epsilon_0 E_0}{2} (\chi e^{-i \omega t} + \chi^* e^{i \omega t}) (-\frac{\Omega \hbar}{E_0})\\
+    N \mu_{12}^2 (\tilde{\rho}_{12}e^{-i \omega t}  + \tilde{\rho}_{12}^*e^{i \omega t}) &= -\frac{\epsilon_0 \Omega \hbar}{2} (\chi e^{-i \omega t} + \chi^* e^{i \omega t}).
+\end{split}
+\end{equation}
+Igualando términos oscilatorios con frecuencia $e^{-i \omega t}$ y $e^{i \omega t}$ y despejando la susceptibilidad eléctrica $\chi$ obtenemos,
+\begin{equation}
+    \chi = -\frac{2 N \mu_{12}^2}{\epsilon_0 \hbar \Omega} \tilde{\rho}_{12}.
+\end{equation}
+Sustituyendo con la expresión obtenida para la coherencia $\tilde{\rho}_{12}$ en estado estacionario, obtenemos la expresión final para la susceptibilidad eléctrica del medio atómico,
+\begin{equation}
+\boxed{
+    \chi = \frac{2 N \mu_{12}^2}{\epsilon_0 \hbar} \frac{i (\Gamma_0 + i 2 \Delta)}{\Gamma_0^2 + 4 \Delta^2 + 2 \Omega^2}.
+}\end{equation}
+Finalmente, para un haz de prueba débil ($\Omega \ll \Gamma_0$) podemos despreciar el término de saturación $2 \Omega^2$ en el denominador, quedando la expresión para la susceptibilidad eléctrica como,
+\begin{equation}
+    \chi = \frac{2 N \mu_{12}^2}{\epsilon_0 \hbar} \frac{i (\Gamma_0 + i 2 \Delta)}{\Gamma_0^2 + 4 \Delta^2} 
+    = \frac{N \mu_{12}^2}{\epsilon_0 \hbar} \frac{2i (\Gamma_0 + i 2 \Delta)}{(\Gamma_0 + i 2 \Delta)(\Gamma_0 - i 2 \Delta)}
+    = \frac{N \mu_{12}^2}{\epsilon_0 \hbar} \frac{i}{\frac{\Gamma_0}{2} - i\Delta}.
+\end{equation}
+De ésta forma, obtenemos la susceptibilidad eléctrica en términos de la desintonía $\Delta$ del láser,
+\begin{equation}
+\boxed{
+    \chi(\Delta) = \frac{N \mu_{12}^2}{\epsilon_0 \hbar} \frac{i}{\frac{\Gamma_0}{2} - i\Delta} = \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} f(\Delta)
+}\end{equation}
+en donde $f(\Delta)$ es un factor de forma de línea. Veamos que $f(\Delta$) es un perfil Lorenziano (distribución de Cauchy-Lorentz),
+\begin{equation}
+    f(\Delta) = \frac{1}{\pi} \frac{i}{\frac{\Gamma_0}{2} - i\Delta} = \frac{1}{\pi} \frac{-\Delta + i \frac{\Gamma_0}{2}}{(\frac{\Gamma_0}{2})^2 + \Delta^2} = -L\left(\frac{\Gamma_0}{2}; 0, \Delta\right) + i L\left(\Delta; 0, \frac{\Gamma_0}{2}\right).
+\end{equation}
+Identificando las partes real e imaginaria de la suceptibilidad eléctrica $\chi = \chi' + i \chi''$, podemos observar los comportamientos clásicos de dispersión y absorción esperados en la susceptibilidad eléctrica,
+\begin{equation}
+    \chi(\Delta, \Gamma_0) = \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} \left[-L\left(\frac{\Gamma_0}{2}; 0, \Delta\right) + i L\left(\Delta; 0, \frac{\Gamma_0}{2}\right) \right].
+\end{equation}
+Específicamente, la parte real $\chi' \propto L\left(\frac{\Gamma_0}{2}; 0, \Delta\right)$, descrita por un perfil de Lorentz dispersivo, gobierna el índice de refracción del medio. Por otro lado, la parte imaginaria $\chi'' \propto L\left(\Delta; 0, \frac{\Gamma_0}{2}\right)$, asociada a un perfil de Lorentz absorbente, determina la absorción de energía del haz por la nube atómica.
+ 
+\subsubsection{Coeficiente de Absorción}
+Partimos de la definición de la permitividad eléctrica relativa $\epsilon / \epsilon_0$ en función de la susceptibilidad eléctrica $\chi$,
+\begin{equation}
+    \frac{\epsilon}{\epsilon_0} = 1 + \chi.
+\end{equation}
+Dado que el medio presenta absorción, tanto la permitividad como la susceptibilidad son cantidades complejas. Por otro lado, el índice de refracción complejo $n$ se define a partir del índice de refracción $\eta$ y el índice de atenuación $\kappa$ como,
+\begin{equation}
+    n = \eta + i \kappa = \sqrt{\frac{\epsilon}{\epsilon_0}} = \sqrt{1 + \chi}.
+\end{equation}
+Al elevar al cuadrado ambos lados de la ecuación anterior e igualando ésta expresión con la definición de la permitividad relativa obtenemos,
+\begin{equation}
+    n^2 = (\eta + i \kappa)^2 = \eta^2 - \kappa^2 + 2 i \eta \kappa = 1 + \chi.
+\end{equation}
+Puesto que la susceptibilidad puede expresarse en sus componentes real e imaginaria ($\chi = \chi' + i \chi''$), podemos igualar los elementos imaginarios en ambos miembros de la ecuación. De aquí, se deriva directamente la expresión para la absorción del medio,
+\begin{equation}
+    \chi'' = 2 \eta \kappa.
+\end{equation}
+Consideremos entonces un campo eléctrico propagándose en dirección $\hat{z}$ a través de un medio con índice de refracción complejo $n = \eta + i \kappa$. La expresión para el campo eléctrico $\vec{E}(z,t)$ dentro del medio es,
+\begin{equation}
+    \vec{E}(z,t) = E_0 e^{i(kz - \omega t)} \hat{e} = E_0 e^{-i \omega t} e^{i k z} \hat{e}.
+\end{equation}
+O bien, en términos del índice de refracción complejo $n$,
+\begin{equation}
+    \vec{E}(z,t) = E_0 e^{-i \omega t} e^{i k_0 (\eta + i \kappa) z} \hat{e} = E_0 e^{-i \omega t} e^{i k_0 \eta z} e^{- k_0 \kappa z} \hat{e}
+\end{equation}
+donde $k_0 = \omega / c = 2 \pi / \lambda_0$ es el número de onda en el vacío. Luego, la intensidad del campo eléctrico $I(z)$ a lo largo de la dirección de propagación $\hat{z}$ es proporcional al cuadrado del campo eléctrico,
+\begin{equation}
+    I(z) \propto |\vec{E}(z,t)|^2 = E_0^2 e^{- 2 k_0 \kappa z}.
+\end{equation}
+Definiendo el coeficiente de absorción $\alpha$ como el factor de atenuación de la intensidad del campo eléctrico a lo largo de la dirección de propagación $\hat{z}$, obtenemos,   
+\begin{equation}
+    I(z) = I_0 e^{-\alpha z}, \quad \alpha = 2 k_0 \kappa.
+\end{equation}
+Finalmente, sustituyendo la expresión para el índice de atenuación $\kappa$ en función de la parte imaginaria de la susceptibilidad eléctrica $\chi''$ obtenemos la expresión para el coeficiente de absorción $\alpha$ del medio atómico,
+\begin{equation}
+        \alpha(\Delta) = k_0 \eta \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} L\left(\Delta; 0, \frac{\Gamma_0}{2}\right).
+\end{equation}
+En el caso de un medio atómico diluido, la densidad de átomos es lo suficientemente baja como para que las interacciones entre ellos sean despreciables. En este régimen, el índice de refracción del medio es cercano a la unidad ($\eta \approx 1$) y la expresión para el coeficiente de absorción $\alpha$ se puede simplificar a,
+\begin{equation}
+    \alpha(\Delta) = k_0 \chi''(\Delta) = k_0 \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} L\left(\Delta; 0, \frac{\Gamma_0}{2}\right).
+\end{equation}
+Así, podemos obtener la transmisión $\mathscr{T}$ de un haz de luz que atraviesa una nube atómica de longitud $L$ a partir del coeficiente de absorción $\alpha$ como,
+\begin{equation}
+    \boxed{
+        \mathscr{T} = \frac{I(L)}{I_0} =  e^{-\alpha(\Delta) L}, \quad \alpha = k_0 \chi''(\Delta).
+    }
+\end{equation}
+Ésta ecuación es conocida como la \textbf{ley de Beer-Lambert} y describe la atenuación exponencial de la intensidad de un haz de luz a medida que atraviesa un medio absorbente, en función del coeficiente de absorción $\alpha$ del medio y la longitud $L$ del mismo. 
+
+El coeficiente de absorción macroscópico $\alpha$ también puede escribirse en términos de la sección eficaz de absorción $\sigma$ y la densidad de átomos $N$ como $\alpha = N \sigma$. 
+
+\paragraph{Ensanchamiento Doppler}
+Consideremos un átomo con una velocidad $v_z$ a lo largo de la dirección de propagación $\hat{z}$ del haz de luz. Debido al efecto Doppler, el átomo experimentará una frecuencia de luz incidente diferente a la frecuencia del láser. Lo que provoca que la frecuencia absorbida por el átomo esté desfasada respecto a la frecuencia del láser por,
+\begin{equation}
+\Delta_D = -\vec{k} \cdot \vec{v} = -k v_z
+\end{equation}
+donde $\vec{k}$ es el vector de onda del haz de luz. Lo que significa que sólo cuando los átomos tengan una componente de velocidad $v_z$ distinta de cero, la frecuencia de luz incidente experimentada por el átomo será alterada por el efecto Doppler.
+
+En este sentido, la desintonía efectiva $\Delta'$ que experimenta un átomo con una velocidad $v_z$ a lo largo de la dirección de propagación del haz de luz es,
+\begin{equation}
+    \Delta' = \Delta - k v_z.
+\end{equation}
+
+Así, la susceptibilidad eléctrica $\chi$ de un átomo con una velocidad $v_z$ a lo largo de la dirección de propagación del haz de luz se puede escribir como,
+\begin{equation}
+    \chi(\Delta, v_z) = \frac{N \mu_{12}^2}{\epsilon_0 \hbar} \frac{i}{\frac{\Gamma_0}{2} - i(\Delta - k v_z)}.
+\end{equation}
+Y el coeficiente de absorción $\alpha$ de un átomo con una velocidad $v_z$ a lo largo de la dirección de propagación del haz de luz se puede escribir como,
+\begin{equation}
+\begin{split}
+    \alpha(\Delta, v_z) &= k_0 \chi''(\Delta, v_z) = k_0 \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} L\left(\Delta; kv_z, \frac{\Gamma_0}{2}\right)\\
+\end{split}
+\end{equation}
+Dado que la distribución de velocidades de los átomos es gaussiana, la susceptibilidad eléctrica $\chi$ y el coeficiente de absorción $\alpha$ del medio atómico se pueden obtener promediando sobre la distribución de velocidades de los átomos. 
+
+La probabilidad de que un átomo tenga una velocidad entre $v_z$ y $dv_z$ sobre la dirección $\hat{z}$ está dada por $f(v_z)dv_z$ donde, 
+\begin{equation}
+    f(v_z) = \sqrt{\frac{m}{2 \pi k_B T}} \exp {- \frac{m v_z^2}{2 k_B T}} = \frac{1}{\sqrt{\pi u^2}}\exp{-\left(\frac{v_z}{u}\right)^2} = G\left(v_z; \frac{u}{\sqrt{2}}\right)
+\end{equation}
+donde  $T$ es la temperatura, $k_B$ es la constante de Boltzmann, $m$ es la masa atómica y $u = \sqrt{\frac{2k_B T}{m}}$ es la velocidad más probable de los átomos. 
+
+Integrando sobre todas las posibles velocidades $v_z$ a lo largo de la dirección de propagación del haz de luz,
+\begin{equation}
+    \begin{split}
+        \alpha(\Delta) &= \int_{-\infty}^{\infty} \alpha(\Delta, v_z) f(v_z) dv_z = k_0 \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} \int_{-\infty}^{\infty} L\left(\Delta; k v_z, \frac{\Gamma_0}{2}\right) G \left(v_z;\frac{u}{\sqrt{2}}\right) dv_z.
+    \end{split}
+\end{equation}
+Definimos la variable $x' = \frac{v_z}{u}$, entonces $dv_z = u dx'$ y la expresión para el coeficiente de absorción $\alpha$ del medio atómico se puede escribir como,
+\begin{equation}
+    \begin{split}
+        \alpha(\Delta) &= k_0 \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} \int_{-\infty}^{\infty} \frac{1}{\pi} \frac{\frac{\Gamma_0}{2}}{(\Delta - k u x')^2 + (\frac{\Gamma_0}{2})^2} \frac{1}{\sqrt{\pi}} e^{-x'^2} dx'\\
+        &= \frac{k_0}{k u} \frac{\pi N \mu_{12}^2}{\epsilon_0 \hbar} \int_{-\infty}^{\infty} L\left(\frac{\Delta}{ku}; x', \frac{\Gamma_0}{2ku}\right) G\left(x'; \frac{1}{\sqrt{2}}\right) dx'
+    \end{split}
+\end{equation}
+Dado que el rango de frecuencias del barrido de la desintonía $\Delta$ de las trancisiones en el átomo ($\sim GHz$) es de órdenes de magnitud inferior a la frecuencia central de resonancia ($\sim THz$), la variación de la longitud de onda es despreciable. Por lo que podemos aproximar el número de onda por el número de onda en el vacío ($k \approx k_0$). 
+
+De esta forma, la expresión para el coeficiente de absorción $\alpha$ del medio atómico se puede escribir como,
+\begin{equation}
+    \boxed{
+        \alpha(\Delta) = \frac{\pi N \mu_{12}^2}{u \epsilon_0 \hbar} V\left(\frac{\Delta}{ku}; \frac{1}{\sqrt{2}}, \frac{\Gamma_0}{2ku}\right)
+    }
+\end{equation}
+donde,
+\begin{equation}
+    V(x; \sigma, \gamma) = \int_{-\infty}^{\infty} L(x; x', \gamma) G(x'; \sigma) dx'
+\end{equation} 
+es el perfil de Voigt, dado por la convolución entre un perfil de Lorentz $L(x; x', \gamma)$ y un perfil de Gauss $G(x'; \sigma)$. El perfil de Voigt se reduce a un perfil de Lorentz cuando el ensanchamiento Doppler es despreciable ($ku \ll \Gamma_0$) y se reduce a un perfil de Gauss cuando el ensanchamiento natural es despreciable ($\Gamma_0 \ll ku$). Ésta función puede ser evaluada numéricamente como,
+\begin{equation}
+    V(x; \sigma, \gamma) = \frac{\text{Re}[w(z)]}{\sqrt{2 \pi} \sigma}
+\end{equation}
+donde $w(z) = e^{-z^2}\text{erfc}(-iz)$ es la función de Faddeeva evaluada en el número complejo $z = \frac{x + i \gamma}{\sqrt{2} \sigma}$, y $\text{erfc}(z) = \frac{2}{\sqrt{\pi}} \int_{z}^{\infty} e^{-t^2} dt$ es la función de error complementaria.
+Sustituyendo la expresión para el perfil de Voigt en la expresión para el coeficiente de absorción $\alpha$ del medio atómico obtenemos,
+\begin{equation}
+    \boxed{
+        \alpha(\Delta) = \frac{N \mu_{12}^2 }{\epsilon_0 \hbar} \frac{\sqrt{\pi}}{u} \text{Re}[w(z)] , \quad z = \frac{\Delta + i \frac{\Gamma_0}{2}}{ku}.
+    }
+\end{equation}
+ésta forma de la expresión para el coeficiente de absorción $\alpha$ del medio atómico nos será útil para los ajustes numéricos de los datos experimentales obtenidos en el laboratorio.
+
+\paragraph{Ensanchamiento por Interacción Atómica}
+El ensanchamiento por interacción en medios atómicos ocurre a partir de las perturbaciones en los niveles de energía de un átomo debido a las interacciones con partículas circundantes, lo que resulta en el acortamiento del tiempo de vida de los estados excitados y, por ende, en un aumento del ancho de línea espectral. De forma general, el ensanchamiento es homogéneo y preserva la forma de línea lorenziana del perfil de absorción cuya anchura total $\Gamma_{total}$ es la suma de la anchura natural $\Gamma_0$ y las contribuciones por colisiones,
+\begin{equation}
+    \Gamma = \Gamma_0 + \Gamma_{coll} + \Gamma_{self}
+\end{equation}
+donde $\Gamma_{coll} = \gamma_{buffer} P_{buffer}$ es el ensanchamiento por colisiones con un gas amortiguador con coeficiente de ensanchamiento $\gamma_{buffer}$ a presión $P_{buffer}$, y $\Gamma_{self} = \beta N$ es el ensanchamiento por colisiones entre átomos del mismo medio con coeficiente de autoensanchamiento $\beta$ y densidad de átomos $N$.
+
+Para el caso específico de una celda de alcalino puro en condiciones de vacío, el término asociado al gas amortiguador se anula reduciendo el ensanchamiento por colisiones exclusivamente a la interacción dipolo-dipolo entre los átomos del medio. En éste régimen, el ensanchamiento queda definido por,
+\begin{equation}
+    \Gamma_N = \Gamma_0 + \beta N
+\end{equation}
+donde el coeficiente de autoensanchamiento $\beta$ para las líneas $D1$ y $D2$ de los alcalinos querda determinado por las expresiones,
+\begin{equation}
+    \begin{split}
+        \beta_1 = 2 \pi \times  \Gamma_1 \left( \frac{\lambda_1}{2 \pi}\right)^3, \\
+        \beta_2 = 2 \pi \times \Gamma_2 \sqrt{2} \left( \frac{\lambda_2}{2 \pi}\right)^3
+    \end{split}
+\end{equation}
+donde $\Gamma_1$ y $\Gamma_2$ son las anchuras naturales de las líneas $D1$ y $D2$ respectivamente, y $\lambda_1$ y $\lambda_2$ son las longitudes de onda correspondientes a cada línea. 
+
+Dado  que la densidad atómica $N$ depende de la temperatura $T$ de forma exponencial, la contribución del autoensanchaamiento resulta insignificante en regimenes de temperatura cercanos a la temperatura ambiente ($\sim 25 \degree C$). Sin embargo, a temperaturas elevadas ($\sim 130 \degree C$), el autoensanchamiento resulta ser el factor dominante en el ensanchamiento total $\Gamma$ del medio atómico, superando incluso al ensanchamiento Doppler. Por lo tanto, considerar a $\Gamma_N$ en el perfil de absorción del medio atómico es fundamental para modelar con precisión la respuesta óptica del medio atómico a altas temperaturas.
+
+\subsubsection{Transiciones Atómicas Múltiples}
+El espectro de absorción presentado anteriormente corresponde a un sistema de dos niveles con una única transición atómica determinada por el elemento de matriz del momento dipolar eléctrico $\vec{\mu}_{12}$ que interacúa con el campo electromagnético de un haz de luz monocromático y linealmente polarizado. 
+
+En realidad, los presentan una estructura atómica más compleja que un sistema de dos niveles con múltiples niveles de energía y transiciones atómicas permitidas entre ellos. Cada transición atómica está caracterizada por un elemento de matriz del momento dipolar eléctrico $\vec{\mu}_{ij}$ que describe la interacción entre los estados $i$ y $j$.
+
+En este caso, para un sistema atómico con múltiples transiciones atómicas conocidas, la susceptibilidad eléctrica $\chi$ del medio atómico se puede escribir como la suma de las contribuciones de cada transición atómica permitida. Si la i-ésima trancisión tiene una desintonía $\Delta_i$ respecto al centro de la línea atómica, entonces la susceptibilidad eléctrica total $\chi(\Delta)$ del medio atómico se puede expresar como,
+\begin{equation}
+    \chi(\Delta) = \sum_i \chi_i(\Delta- \Delta_i)
+\end{equation}
+
+\subsubsection{Factores de Intensidad Relativa}
+\paragraph{Elementos de la Matriz Dipolar}
+La intensidad de la interacción entre el átomo y el campo electromagnético depende de la sección eficaz de absorción $\sigma$ de la transición atómica, determinada por el elemento de matriz del momento dipolar eléctrico. Los estados atómicos hiperfinos quedan determinados por el momento angular atómico total $F$ y la proyección del momento angular $m_F$, de tal forma que el elementos dipolar de la transición atómica entre los estados $\ket{F, m_F} \to \ket{F', m_F'}$ es $\bra{F,m_F} \hat{\vec{\mu}} \ket{F', m_F'}$. Donde $\hat{\vec{\mu}} = e \hat{r}$ es el operador del momento dipolar eléctrico, $e$ es la carga del electrón y $\hat{r}$ es el operador de posición en la base esférica.
+
+A partir del teorema de Wigner-Eckart, podemos factorizar la dependecia angular y obtener un elemento de matriz reducida independiente de la proyección del momento angular. Por tanto, el elemento de matriz del momento dipolar eléctrico $\bra{F,m_F} e \hat{r} \ket{F', m_F'}$ puede escribirse como,
+\begin{equation}
+    \bra{F,m_F} e \hat{r} \ket{F', m_F'} = c_{m_F} \bra{L}|e\vec{r}| \ket{L'} = c_{m_F} d
+\end{equation}
+donde $L, L'$ son los momentos angulares orbitales de los estados atómicos, $d = \bra{L}|e\vec{r}| \ket{L'}$ es el elemento de matriz reducido y $c_{m_F}$ es un factor de intensidad relativo que depende de la proyección del momento angular $m_F$ y de la polarización del campo electromagnético.
+
+Cada transición atómica tiene su propio factor de intensidad relativo $c_{m_F}$ y la intensidad de la trancisión atómica es proporcional al cuadrado del elemento de matriz del momento dipolar eléctrico, $c_{m_F}^2 d^2$. Debido a la degeneración en $F$ la intensidad total sobre la trancisión $\ket{F, m_F} \to \ket{F', m_F'}$ será la suma de las intensidadades para cada transición atómica permitida $C_F^2 = \sum c_{m_F}^2$.
+
+\paragraph{Degeneración del Estado Base}
+Para un vapor atómico no polarizado en estado de equilibrio térmico, la población $N$ de los estados atómicos $\ket{F, m_F}$ está distribuida uniformemente entre los $g_I = 2(2I + 1)$ subniveles del estado base. La intensidad relativa de la transición atómica $\ket{F} \to \ket{F'}$, denotada como $S_{F F'}$, se obtiene a partir de la suma de los factores de intensidad relativa $C_F^2$ multiplicada por la fracción de población en cada subestado del estado base,
+\begin{equation}
+    S_{F F'} = \frac{C_F^2}{g_I}= \frac{1}{g_I} \sum_{m_F} c_{m_F}^2.
+\end{equation}
+De esta forma, los coeficientes $S_{FF'}$ satisfacen la condición de normalización $\sum_{F'} S_{FF'} = 1$ para cada estado base $F$.
+
+\subsubsection{Espectro de Absorción}
+Para un sistema atómico con múltiples transiciones atómicas permitidas, la transmisión $\mathscr{T}$ de un haz de luz que atraviesa una nube atómica de longitud $L$ se escribe entonces como,
+\begin{equation}
+    \mathscr{T}(\Delta) = \exp \left[ - L \left( \sum_{F, F'} \alpha_{F, F'}(\Delta) \right) \right].
+\end{equation}
+El coeficiente de absorción para la transición atómica $\ket{F} \to \ket{F'}$ es,
+\begin{equation}
+    \boxed{
+    \alpha_{F, F'}(\Delta) = \frac{C_F^2 d^2 N}{g_I\epsilon_0 \hbar} \frac{\sqrt{\pi}}{u} \text{Re}[w(z)] , \quad z = \frac{\Delta + i \frac{\Gamma_0}{2}}{ku}
+    }
+\end{equation}
+donde $u = \sqrt{\frac{2k_B T}{m}}$ es la velocidad más probable, $k = \frac{2 \pi}{\lambda_0}$ es el número de onda y $g_I =2(2 I+1)$ es el factor de degeneración del estado inicial.
+
+\subsection{Átomo de Rubidio}
+El rubidio Rb es un metal alcalino utilizado ampliamente en física atómica espectroscopía y metrología cuántica debido a su estructura electrónica monovalente. Es ésta propiedad es la que permite una descripción detallada de sus propiedades ópticas y cuánticas a partir de modelos sencillos, como el sistema de dos niveles, en comparación con otros elementos de la tabla periódica.
+\subsubsection{Propiedades Fundamentales}
+El rubidio Rb tiene un número atómico $Z = 37$ y es un metal alcalino con un único electrón en su capa de valencia. Su configuración electrónica en el estado fundamental es,
+\begin{equation}
+    [\text{Kr}]\,5s^1 = 1s^2\,2s^2\,2p^6\,3s^2\,3p^6\,3d^{10}\,4s^2\,4p^6\,5s^1
+\end{equation}
+Esta estructura consta de un núcleo rodeado por una nube de 36 electrones (la configuración del gas noble Kriptón) y un único electrón de valencia en el orbital $5s$.
+
+En estado natural, el rubidio está compuesto por una mezcla entre dos isótopos estables: el \textbf{rubidio-85} $^{85}Rb$ que representa el $72.17\%$ de la abundancia natural, posee una masa atómica de $84.911 u$ y un espín nuclear de $I = 5/2$; y el \textbf{rubidio-87} $^{87}Rb$ que representa el $27.83\%$ de la abundancia natural, posee una masa atómica de $86.909 u$ y un espín nuclear de $I = 3/2$. Además el rubido es extremadamente reactivo y se oxida de forma instantánea con el aire, por lo que se almacena en vacío o bien en fluidos inertes.
+\paragraph{Comportamiento Termodinámico}
+El punto de fusión del rubidio es de $T_{fus} = 39.31 \SI{25}{\degreeCelsius}$ ($\approx 312.26$ K). En un contenedor sellado a una temperatura $T$, el rubidio establece un equilibrio entre su estado condensado y su estado gaseoso. Debido a su bajo punto de fusión, la trancisión hacia la fase gaseosa ocurre por sublimación ($T < T_{fus}$) o bien por evaporación ($T \geq T_{fus}$). En ambos casos, el comportamiento termodinámico del vapor puede describirse mediante la ecuación de Clausis-Clapeyron donde los coeficientes experimentales son bien conocidos y son presentados en la tabla \ref{tab:rb_pressure_params},
+
+% Tabla de Parámetros del Rubidio para Calusius-Capeyron
+\begin{table}[htbp]
+  \centering
+  \caption{Parámetros experimentales del rubidio para la ecuación de presión en atmósferas $\text{atm}$ (para obtener los equivalentes en $\text{Torr}$ basta con sumar $2.881$ al parámetro $A$).}
+    \begin{tabular}{cccccrr}
+    \toprule
+    \textbf{Estado} &
+      \textbf{A } &
+      \textbf{B} &
+      \textbf{C} &
+      \textbf{D} &
+      \multicolumn{1}{c}{\boldmath{}\textbf{$T_{min}$}\unboldmath{}} &
+      \multicolumn{1}{c}{\boldmath{}\textbf{$T_{max}$}\unboldmath{}}
+      \\
+    \midrule
+    Sólido &
+      4.857 &
+      -4215.0 &
+      0.0 &
+      0.0 &
+      298.00 K&
+      312.46 K
+      \\
+    \midrule
+    Líquido &
+      4.312 &
+      -4040.0 &
+      0.0 &
+      0.0 &
+      312.46 K&
+      550.00 K
+      \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:rb_pressure_params}%
+\end{table}%
+
+\subsubsection{Estructura Fina e Hiperfina}
+El Hamiltoniano para $N$ electrones en un potencial Coulombiano con carga $+Ze$ estará dada por, 
+\begin{equation}
+    \hat{H} = \sum_{i=1}^N \left\{ - \frac{\hbar^2}{2m} \nabla_i^2 - \frac{Ze/4 \pi \epsilon_0}{r_i} + \sum_{j>i}^N\left( \frac{e^2/ 4 \pi \epsilon_0}{r_{ij}}\right)\right\}.
+\end{equation}
+Debido a que las cargas en la nube electrónica como en el núcleo generan capas y subcapas cerradas con simetría esférica podemos suponer que gran parte de la repulsión entre los electrones está dada por un potencal central $S(r)$. Así el potencial depende únicamente de la coordenada radial,
+\begin{equation}
+    V_{CF} (r) = - \frac{Ze^2/4 \pi \epsilon_0}{r} + S(r)
+\end{equation}
+Bajo ésta \textbf{aproximación de potencial central}, el Hamiltoniano estará dado por,
+\begin{equation}
+    \hat{H}_{CF} = \sum_{i=1}^N \left\{-\frac{\hbar^2}{2m} \nabla_i^2 + V_{CF}(r_i)\right\}
+\end{equation}
+De ésta forma la ecuación de Schrödinger para $N$ electrones $\hat{H} \Psi = E_{total} \Psi$ es separable en $N$ ecuaciones independientes entre sí $\Psi = \psi_1 \psi_2 ... \psi_N$ de la forma,
+\begin{equation}
+    \left( - \frac{\hbar^2}{2m} \nabla_n^2 + V_{CF}(r_n) \right) \psi_n = E_n \psi_n
+\end{equation}
+donde $E_{total} = E_1 + E_2 + ...+ E_N$. 
+
+Las soluciones a ésta ecuación están dadas por $\psi_{n_i l_i m_i}(\vec{r}) = R_{n_i l_i}(r) Y_{l_i m_i}(\theta, \phi)$ donde la distribución radial $R_{n_i l_i}(r)$ se obtiene a partir de los polinomios de Laguerre y la forma angular del orbital $Y_{l_i m_i}(\theta, \phi)$ está dada por los armónicos esféricos.
+
+\paragraph{Estructura Fina}
+El momento angular orbital $\vec{L}$ y el espín $\vec{S}$ interactúan entre sí. A ésta interacción se le asocia un término de corrección de primer orden en el Hamiltoniano de la forma 
+\begin{equation}
+\hat{H}_{FS} = \beta_{FS} \vec{L} \cdot \vec{S}
+\end{equation}
+con energías de acoplamiento espín-órbita $E_FS = \beta_{FS} \left\langle \vec{L} \cdot \vec{S} \right\rangle$. 
+
+Para resolver el acoplamiento se introduce el momento angular electrónico total $\vec{J} = \vec{L} + \vec{S}$, acotado por $\abs{L-S} \leq J \leq L + S$. De forma que $\vec{L} \cdot  \vec{S} = \frac{1}{2} \left(J^2 - L^2 -S^2\right)$ y sus eigenvalores vienen dados por $\left\langle \vec{L} \cdot \vec{S} \right\rangle = \frac{\hbar^2}{2} \left[J(J+1) - L(L+1) - S(S+1)\right]$.
+
+Distinguimos cada uno de éstos niveles a partir dde la siguiente notación $^{2S +1}L_j$, donde $2S+1$ es la multiplicidad del espín, $L$ el momento angular total descrito por las letras $S, P, D, ...$ respectivamente para $L = 0,1,2,..$.
+
+Para el \textbf{estado fundamental} ($L=0$), el único valor posible para $J$ es $J= 1/2$. No ocurren desdoblamientos y el nivel  del estado base se denota como $5^2S^{1/2}$. Para el \textbf{primer estado excitado} ($L = 1$), las combinaciones para $L=1$ y $S=1/2$ permiten dos valores posibles para $J$, $J = L+ S = \frac{3}{2}$ o $J = L - S = \frac{1}{2}$.
+
+Ésta diferencia rompe la degeneración del nivel $5p$, separándolo en lo subniveles $5^2P_{1/2}$ y $5^2P_{3/2}$. Éstas trancisiones originan el doblete de líneas $D$.
+\begin{equation}
+    \begin{split}
+        D_1: 5^2S_{1/2} \longrightarrow 5^2P_{1/2}, \quad \lambda_1 \approx 794.98 \text{ nm}\\
+        D_2: 5^2S_{1/2} \longrightarrow 5^2P_{3/2}, \quad \lambda_2 \approx 780.24 \text{ nm}
+    \end{split}
+\end{equation}
+
+\paragraph{Estructura Hiperfina}
+Existe una interacción de menor magnitud dada por la interacción entre el momento angular total $J$ y el espín del núcleo atómico $I$. El Hamiltoniano de ésta interacción hiperfina se expresa como la suma de un término dipolar magético y un término cuadrupolar eléctrico,
+\begin{equation}
+    \hat{H}_{HFS} = A_{HFS} \vec{I} \cdot \vec{J} + B_{HFS} \frac{3(\vec{I} \cdot \vec{J})^2 + \frac{3}{2}(\vec{I} \cdot \vec{J}) - I(I+1)J(J+1)}{2I(2I-1)J(2J-1)}
+\end{equation}
+donde $A_{HFS}$ es la constante de acoplamiento dipolar magnetico y $B_{HFS}$ es la constante de acoplamiento cuadrupolar eléctrico.
+
+Para resolver $\hat{H}_{HFS}$ se define el momento angular total del átomo $\vec{F} = \vec{J} + \vec{I}$, cuyos valores posibles van de $\abs{J-I} \leq F  \leq J + I$. De forma que $\left\langle \vec{I} \cdot \vec{J} \right\rangle = \frac{K}{2}$ con $K = F(F+1) - J(J+1) - I(I+1)$. Por tanto, la corrección de energía hiperfina $\Delta E_{HFS}$ para un subnivel $F$ estará dada por,
+\begin{equation}
+    \Delta E_{HFS} (F) = \frac{1}{2}A_{HFS}K + B_{HFS} \frac{\frac{3}{2}K(K+1) -2I(I+1)J(J+1)}{4I(1I-1)J(2J-1)}
+\end{equation}
+Como el espín nuclear $I$, el desdoblamiento de subniveles en la estructura hiperfina varía respecto a cada isótopo. Para diferenciarlas entre sí se utilizan los distintos valores de $F$ que cada subestado puede tomar.
+\nocite{*}

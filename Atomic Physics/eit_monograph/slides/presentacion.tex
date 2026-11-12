@@ -1,0 +1,77 @@
+\documentclass[aspectratio=169]{beamer}
+
+% --- Configuración del Tema Base ---
+\usetheme{Madrid}
+\usecolortheme{whale} % Base estructural elegante
+\useinnertheme{rounded} % Bloques con esquinas redondeadas
+
+% --- Definición de la Paleta de Colores Personalizada "Magneto-Óptica" ---
+\definecolor{AzulMagnetico}{HTML}{0B2545} % Azul oscuro profundo para barras principales
+\definecolor{RojoLaser}{HTML}{D62246}     % Rojo intenso para resaltar términos y alertas
+\definecolor{GrisMagnetita}{HTML}{333333} % Gris oscuro para texto secundario y estructuras
+\definecolor{AzulClaroBloque}{HTML}{EEF4F8}% Fondo suave para los bloques de ecuaciones/alertas
+
+\definecolor{AzulPrusia}{HTML}{003153} % Tu color primario / fondo de cajas
+\definecolor{RojoLaser}{HTML}{D9381E}  % Tu color de acento
+
+% 2. CORRECCIÓN CRÍTICA DE CONTRASTE PARA EL TÍTULO
+% Forzar que el fondo de la barra de título sea Azul Prusia
+\setbeamercolor{titlelike}{bg=AzulPrusia} 
+% Forzar que el texto del título principal sea blanco
+\setbeamercolor{title}{fg=white, bg=AzulPrusia} 
+
+% 3. Ajuste para los subtítulos (en caso de que uses)
+\setbeamercolor{subtitle}{fg=white!90!AzulPrusia}
+
+% 4. Corrección para los títulos de las diapositivas (Frametitles)
+% Esto evita que las letras de los títulos de cada diapositiva se pierdan con su fondo
+\setbeamercolor{frametitle}{fg=white, bg=AzulPrusia}
+
+% 5. Ajuste para los bloques normales (Entornos \begin{block})
+% El título del bloque en blanco y su fondo en Azul Prusia
+\setbeamercolor{block title}{fg=white, bg=AzulPrusia}
+\setbeamercolor{block body}{bg=white!95!AzulPrusia, fg=black}
+
+% --- Asignación de Colores a Elementos de Beamer ---
+\setbeamercolor{palette primary}{bg=AzulMagnetico, fg=white}
+\setbeamercolor{palette secondary}{bg=GrisMagnetita, fg=white}
+\setbeamercolor{palette tertiary}{bg=AzulMagnetico, fg=white}
+\setbeamercolor{titlelike}{parent=palette primary, fg=AzulMagnetico}
+
+% Ajuste específico para los bloques (block, alertblock, exampleblock)
+\setbeamercolor{block title}{bg=AzulMagnetico, fg=white}
+\setbeamercolor{block body}{bg=AzulClaroBloque, fg=black}
+
+\setbeamercolor{block title alerted}{bg=RojoLaser, fg=white}
+\setbeamercolor{block body alerted}{bg=AzulClaroBloque, fg=black}
+
+% Color de las viñetas (items) y estructura de texto
+\setbeamercolor{structure}{fg=AzulMagnetico}
+\setbeamercolor{item projected}{bg=AzulMagnetico, fg=white}
+
+% --- Mejoras Visuales Extra ---
+\setbeamertemplate{navigation symbols}{} % Elimina los incómodos iconos de navegación inferiores
+\setbeamertemplate{caption}[numbered]    % Numera las figuras automáticamente
+
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage[spanish]{babel}
+\usepackage{geometry, float}
+\usepackage{enumitem}
+\usepackage{physics, amsfonts, amsthm, amsmath, amssymb, gensymb}
+\usepackage{graphicx, tabularx, multirow, multicol, array, fancyhdr}
+\usepackage{caption, subcaption, booktabs}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{xcolor, colortbl, tcolorbox, ragged2e}
+\usepackage{schemata, bigstrut}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tikz}
+\decimalpoint
+\definecolor{p1}{HTML}{EAEDEF}
+
+
+\begin{document}
+
+\input{sections/cover}
+\end{document}

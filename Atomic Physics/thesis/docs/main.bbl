@@ -1,0 +1,2072 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{demtroderLaserSpectroscopy1996}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=59654c899d48eff28a4d8063e886fb5f}{%
+           family={Demtröder},
+           familyi={D\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{fullhash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{fullhashraw}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{bibnamehash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{authorbibnamehash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{authornamehash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{authorfullhash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{authorfullhashraw}{59654c899d48eff28a4d8063e886fb5f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-08262-1 978-3-662-08260-7}
+      \field{langid}{english}
+      \field{title}{Laser {{Spectroscopy}}}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-662-08260-7
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\ZUILJFX7\Demtröder - 1996 - Laser Spectroscopy.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-662-08260-7
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-662-08260-7
+      \endverb
+    \endentry
+    \entry{diegosierracostaDeterminacionDensidadAtomica}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=6b7b0049442cf6fd2132afd1c1e02d81}{%
+           family={{Diego Sierra Costa}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \strng{fullhash}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \strng{fullhashraw}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \strng{bibnamehash}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \strng{authorbibnamehash}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \strng{authornamehash}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \strng{authorfullhash}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \strng{authorfullhashraw}{6b7b0049442cf6fd2132afd1c1e02d81}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Determinación de La Densidad Atómica En Función de La Temperatura}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\AMGVLS9N\2018_Diego_Sierra_Costa_licenciatura.pdf
+      \endverb
+    \endentry
+    \entry{kittelThermalPhysics1980}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=2c6d8b1aea5118299879670708080fe1}{%
+           family={Kittel},
+           familyi={K\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8f9e9e5575ab915655eb9b355168377b}{%
+           family={Kroemer},
+           familyi={K\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco}%
+      }
+      \list{publisher}{1}{%
+        {W. H. Freeman}%
+      }
+      \strng{namehash}{2a709a01e54e914958907ce72e70b2a8}
+      \strng{fullhash}{2a709a01e54e914958907ce72e70b2a8}
+      \strng{fullhashraw}{2a709a01e54e914958907ce72e70b2a8}
+      \strng{bibnamehash}{2a709a01e54e914958907ce72e70b2a8}
+      \strng{authorbibnamehash}{2a709a01e54e914958907ce72e70b2a8}
+      \strng{authornamehash}{2a709a01e54e914958907ce72e70b2a8}
+      \strng{authorfullhash}{2a709a01e54e914958907ce72e70b2a8}
+      \strng{authorfullhashraw}{2a709a01e54e914958907ce72e70b2a8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2d ed}
+      \field{isbn}{978-0-7167-1088-2}
+      \field{langid}{english}
+      \field{pagetotal}{473}
+      \field{title}{Thermal Physics}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\3BVSVFKI\Kittel y Kroemer - 1980 - Thermal physics.pdf
+      \endverb
+      \keyw{Statistical thermodynamics}
+    \endentry
+    \entry{alcockVapourPressureEquations1984}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7df72d55c2d8a7d0bc569d2f14c3ec60}{%
+           family={Alcock},
+           familyi={A\bibinitperiod},
+           given={C.\bibnamedelimi B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=c3dee5e04ca7643e29fc2be59a9b5042}{%
+           family={Itkin},
+           familyi={I\bibinitperiod},
+           given={V.\bibnamedelimi P.},
+           giveni={V\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=873e382e821841722793639250195fc0}{%
+           family={Horrigan},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{5d943a9c3c47b3e9144d36682ccffff0}
+      \strng{fullhash}{5d943a9c3c47b3e9144d36682ccffff0}
+      \strng{fullhashraw}{5d943a9c3c47b3e9144d36682ccffff0}
+      \strng{bibnamehash}{5d943a9c3c47b3e9144d36682ccffff0}
+      \strng{authorbibnamehash}{5d943a9c3c47b3e9144d36682ccffff0}
+      \strng{authornamehash}{5d943a9c3c47b3e9144d36682ccffff0}
+      \strng{authorfullhash}{5d943a9c3c47b3e9144d36682ccffff0}
+      \strng{authorfullhashraw}{5d943a9c3c47b3e9144d36682ccffff0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Vapour pressure equations are presented for the metallic elements up to curium. For each element a precise four-term equation and a more practically-based equation have been derived from a new evaluation of thermochemical data for the condensed and gaseous elements. It is intended that the equations should be used for ideal gases in the pressure range 10−15–10−3 atm, which covers the experimentally accessible range. The “precise” equations reproduce the data to better than ±1\% and the “practical” equations provide better than ±5\% accuracy.}
+      \field{day}{1}
+      \field{issn}{0008-4433}
+      \field{journaltitle}{Canadian Metallurgical Quarterly}
+      \field{month}{7}
+      \field{number}{3}
+      \field{shorttitle}{Vapour {{Pressure Equations}} for the {{Metallic Elements}}}
+      \field{title}{Vapour {{Pressure Equations}} for the {{Metallic Elements}}: 298–{{2500K}}}
+      \field{urlday}{16}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{23}
+      \field{year}{1984}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{309\bibrangedash 313}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1179/cmq.1984.23.3.309
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1179/cmq.1984.23.3.309
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1179/cmq.1984.23.3.309
+      \endverb
+    \endentry
+    \entry{danieladamsteckrubidium85Dlinedata}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=409cb63cbd3aa117157ffe6f51ad7dbb}{%
+           family={{Daniel Adam Steck}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{fullhash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{fullhashraw}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{bibnamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorbibnamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authornamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorfullhash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorfullhashraw}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Rubidium 85 {{D Line Data}}}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\7KPFU6VP\rubidium85numbers.pdf
+      \endverb
+    \endentry
+    \entry{danieladamsteckrubidium87Dlinedata}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=409cb63cbd3aa117157ffe6f51ad7dbb}{%
+           family={{Daniel Adam Steck}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{fullhash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{fullhashraw}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{bibnamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorbibnamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authornamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorfullhash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorfullhashraw}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Rubidium 87 {{D}} Line {{Data}}}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\62Z63IA9\rubidium87numbers.pdf
+      \endverb
+    \endentry
+    \entry{nesmeyanovVapourPressureElements}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Vapour {{Pressure}} of the {{Elements}}. {{By An}}. {{N}}. {{Nesmeyanov}}, {{Translated}} and {{Edited}} by {{J}}. {{I}}. {{Carasso}} | {{Inorganic Chemistry}} | {{ACS Publications}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pubs.acs.org/inocaj/article-abstract/3/8/1205/216163/Vapour-Pressure-of-the-Elements-By-An-N-Nesmeyanov?redirectedFrom=PDF
+      \endverb
+      \verb{url}
+      \verb https://pubs.acs.org/inocaj/article-abstract/3/8/1205/216163/Vapour-Pressure-of-the-Elements-By-An-N-Nesmeyanov?redirectedFrom=PDF
+      \endverb
+    \endentry
+    \entry{corlessLambertWFunction1996}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=b98964fee3e15db31cea4fc5ea02dbf8}{%
+           family={Corless},
+           familyi={C\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d9f4420225cc8ef191b10bdb7001f1d4}{%
+           family={Gonnet},
+           familyi={G\bibinitperiod},
+           given={G.\bibnamedelimi H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a3b312a9819eec0269854bca16e6a212}{%
+           family={Hare},
+           familyi={H\bibinitperiod},
+           given={D.\bibnamedelimi E.\bibnamedelimi G.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=6c920045bcf3d52fc14f7f7857a5a8fa}{%
+           family={Jeffrey},
+           familyi={J\bibinitperiod},
+           given={D.\bibnamedelimi J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c7986b8f9a74e8a99dd8346c98b35f3e}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={D.\bibnamedelimi E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{caa487100ae85dbc584f0aacffea6981}
+      \strng{fullhash}{3156928040563a1e15f2102a0d876cf4}
+      \strng{fullhashraw}{3156928040563a1e15f2102a0d876cf4}
+      \strng{bibnamehash}{caa487100ae85dbc584f0aacffea6981}
+      \strng{authorbibnamehash}{caa487100ae85dbc584f0aacffea6981}
+      \strng{authornamehash}{caa487100ae85dbc584f0aacffea6981}
+      \strng{authorfullhash}{3156928040563a1e15f2102a0d876cf4}
+      \strng{authorfullhashraw}{3156928040563a1e15f2102a0d876cf4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The LambertW function is defined to be the multivalued inverse of the functionw →wew. It has many applications in pure and applied mathematics, some of which are briefly described here. We present a new discussion of the complex branches ofW, an asymptotic expansion valid for all branches, an efficient numerical procedure for evaluating the function to arbitrary precision, and a method for the symbolic integration of expressions containingW.}
+      \field{day}{1}
+      \field{issn}{1572-9044}
+      \field{journaltitle}{Advances in Computational Mathematics}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{1}
+      \field{shortjournal}{Adv Comput Math}
+      \field{title}{On the {{LambertW}} Function}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{5}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{329\bibrangedash 359}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/BF02124750
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02124750
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02124750
+      \endverb
+      \keyw{Applied Mathematic,Arbitrary Precision,Asymptotic Expansion,Numerical Procedure,Symbolic Integration}
+    \endentry
+    \entry{robertw.boydNonlinearOptics}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=c5198b4554de9549df41236e2cff233e}{%
+           family={{Robert W. Boyd}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5198b4554de9549df41236e2cff233e}
+      \strng{fullhash}{c5198b4554de9549df41236e2cff233e}
+      \strng{fullhashraw}{c5198b4554de9549df41236e2cff233e}
+      \strng{bibnamehash}{c5198b4554de9549df41236e2cff233e}
+      \strng{authorbibnamehash}{c5198b4554de9549df41236e2cff233e}
+      \strng{authornamehash}{c5198b4554de9549df41236e2cff233e}
+      \strng{authorfullhash}{c5198b4554de9549df41236e2cff233e}
+      \strng{authorfullhashraw}{c5198b4554de9549df41236e2cff233e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nonlinear Optics}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\66HL9UWT\Boyd, Robert W - Nonlinear optics (2020, Elsevier Science & Technology_ Academic Press) - libgen.li.pdf
+      \endverb
+    \endentry
+    \entry{allenOpticalResonanceTwolevel1975}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7f94d241a9caa6322de2242ccb4876ea}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={L.\bibnamedelimi (Leslie)},
+           giveni={L\bibinitperiod\bibinitdelim (\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {New York, Wiley}%
+      }
+      \strng{namehash}{7f94d241a9caa6322de2242ccb4876ea}
+      \strng{fullhash}{7f94d241a9caa6322de2242ccb4876ea}
+      \strng{fullhashraw}{7f94d241a9caa6322de2242ccb4876ea}
+      \strng{bibnamehash}{7f94d241a9caa6322de2242ccb4876ea}
+      \strng{authorbibnamehash}{7f94d241a9caa6322de2242ccb4876ea}
+      \strng{authornamehash}{7f94d241a9caa6322de2242ccb4876ea}
+      \strng{authorfullhash}{7f94d241a9caa6322de2242ccb4876ea}
+      \strng{authorfullhashraw}{7f94d241a9caa6322de2242ccb4876ea}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{xiii, 233 p. 23 cm; "A Wiley-Interscience publication."; Includes bibliographical references}
+      \field{isbn}{978-0-471-02327-2}
+      \field{langid}{english}
+      \field{pagetotal}{266}
+      \field{title}{Optical Resonance and Two-Level Atoms}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{1975}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://archive.org/details/opticalresonance0000alle
+      \endverb
+      \verb{url}
+      \verb http://archive.org/details/opticalresonance0000alle
+      \endverb
+      \keyw{Lasers}
+    \endentry
+    \entry{cohen-tannoudjiQuantumMechanics1977}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b424d6eadf894bf83fcb843c19382d7a}{%
+           family={Cohen-Tannoudji},
+           familyi={C\bibinithyphendelim T\bibinitperiod},
+           given={Claude},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {New York : Wiley}%
+      }
+      \strng{namehash}{b424d6eadf894bf83fcb843c19382d7a}
+      \strng{fullhash}{b424d6eadf894bf83fcb843c19382d7a}
+      \strng{fullhashraw}{b424d6eadf894bf83fcb843c19382d7a}
+      \strng{bibnamehash}{b424d6eadf894bf83fcb843c19382d7a}
+      \strng{authorbibnamehash}{b424d6eadf894bf83fcb843c19382d7a}
+      \strng{authornamehash}{b424d6eadf894bf83fcb843c19382d7a}
+      \strng{authorfullhash}{b424d6eadf894bf83fcb843c19382d7a}
+      \strng{authorfullhashraw}{b424d6eadf894bf83fcb843c19382d7a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{2 volumes (xv, 1524 pages) : 25 cm; Beginning students of quantum mechanics frequently experience difficulties separating essential underlying principles from the specific examples to which these principles have been historically applied. Nobel-Prize-winner Claude Cohen-Tannoudji and his colleagues have written this book to eliminate precisely these difficulties. Fourteen chapters provide a clarity of organization, careful attention to pedagogical details, and a wealth of topics and examples which make this work a textbook as well as a timeless reference, allowing to tailor courses to meet students' specific needs. Each chapter starts with a clear exposition of the problem which is then treated, and logically develops the physical and mathematical concept. These chapters emphasize the underlying principles of the material, undiluted by extensive references to applications and practical examples which are put into complementary sections. The book begins with a qualitative introduction to quantum mechanical ideas using simple optical analogies and continues with a systematic and thorough presentation of the mathematical tools and postulates of quantum mechanics as well as a discussion of their physical content. Applications follow, starting with the simplest ones like e.g. the harmonic oscillator, and becoming gradually more complicated (the hydrogen atom, approximation methods, etc.). The complementary sections each expand this basic knowledge, supplying a wide range of applications and related topics as well as detailed expositions of a large number of special problems and more advanced topics, integrated as an essential portion of the text; Translation of Mecanique quantique; "A Wiley-Interscience publication."; Volume I. Chapter I. Waves and particles. Introduction to the fundamental ideas of quantum mechanics -- Complements of chapter I -- Chapter II. The mathematical tools of quantum mechanics -- Complements of chapter II -- Chapter III. The postulates of quantum mechanics -- Complements of chapter III -- Chapter IV. Application of postulates to simple cases: spin 1/2 and two-level systems -- Complements of chapter IV -- Chapter V. The one-dimensional harmonic oscillator -- Complements of chapter V -- Chapter VI. General properties of angular momentum in quantum mechanics -- Complements of chapter VI -- Chapter VII. Particle in a central potential. The hydrogen atom -- Complements of chapter VII -- Volume II. Chapter VIII. An elementary approach to the quantum theory of scattering by a poetential -- Complements of chapter VIII -- Chapter IX. Electron spin -- Complements of chapter IX -- Chapter X. Addition of angular momenta -- Chapter XI. Stationary perturbation theory -- Complements of chapter XI -- Chapter XII. An application of perturbation theory: the fine and hyperfine structure of the hydrogen atom -- Complements of chapter XII -- Chapter XIII. Approximation methods for time-dependent problems -- Complements of Chapter XIII -- Chapter XIV. Systems of identical particles -- Complements of chapter XIV; Includes bibliographical references (pages 1499-1515) and index}
+      \field{isbn}{978-0-471-16432-6 978-0-471-16433-3 978-2-7056-5833-5 978-0-471-16434-0 978-2-7056-5834-2 978-0-471-16435-7 978-0-471-56952-7}
+      \field{langid}{english}
+      \field{pagetotal}{658}
+      \field{title}{Quantum Mechanics}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{1977}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://archive.org/details/quantummechanics0000cohe_m0v3
+      \endverb
+      \verb{url}
+      \verb http://archive.org/details/quantummechanics0000cohe_m0v3
+      \endverb
+      \keyw{Quantum theory}
+    \endentry
+    \entry{griffithsIntroductionQuantumMechanics2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This bestselling undergraduate quantum mechanics textbook is now available in a re-issued, affordable edition from Cambridge University Press. The text first teaches students how to do quantum mechanics, and then provides them with a more insightful discussion of what it means. The author avoids the temptation to include every possible relevant topic, instead presenting students with material that they can easily focus on in a complete treatment with few distractions and diversions. Fundamental principles are covered, quantum theory is presented, and special techniques are developed for attacking realistic problems. The innovative two-part coverage is entertaining and informative, organizing topics under basic theory and assembling an arsenal of approximation schemes with illustrative applications linked closely to the text.}
+      \field{isbn}{978-1-107-17986-8}
+      \field{langid}{english}
+      \field{pagetotal}{481}
+      \field{title}{Introduction to {{Quantum Mechanics}}}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \keyw{Science / Physics / General,Science / Physics / Quantum Theory}
+    \endentry
+    \entry{scullyQuantumOptics1997}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=e2b9a1ef92a63fbed2ee52859eec36eb}{%
+           family={Scully},
+           familyi={S\bibinitperiod},
+           given={Marlan\bibnamedelima O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=74c7a1577b927dce66bead2c7cf804b9}{%
+           family={Zubairy},
+           familyi={Z\bibinitperiod},
+           given={M.\bibnamedelimi Suhail},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{28a89f955e8350b12300b9231d5cd292}
+      \strng{fullhash}{28a89f955e8350b12300b9231d5cd292}
+      \strng{fullhashraw}{28a89f955e8350b12300b9231d5cd292}
+      \strng{bibnamehash}{28a89f955e8350b12300b9231d5cd292}
+      \strng{authorbibnamehash}{28a89f955e8350b12300b9231d5cd292}
+      \strng{authornamehash}{28a89f955e8350b12300b9231d5cd292}
+      \strng{authorfullhash}{28a89f955e8350b12300b9231d5cd292}
+      \strng{authorfullhashraw}{28a89f955e8350b12300b9231d5cd292}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The field of quantum optics has witnessed significant theoretical and experimental developments in recent years. This book provides an in-depth and wide-ranging introduction to the subject, emphasising throughout the basic principles and their applications. The book begins by developing the basic tools of quantum optics, and goes on to show the application of these tools in a variety of quantum optical systems, including lasing without inversion, squeezed states and atom optics. The final four chapters are devoted to a discussion of quantum optical tests of the foundations of quantum mechanics, and to particular aspects of measurement theory. Assuming only a background of standard quantum mechanics and electromagnetic theory, and containing many problems and references, this book will be invaluable to graduate students of quantum optics, as well as to researchers in this field.}
+      \field{isbn}{978-0-521-43595-6}
+      \field{title}{Quantum {{Optics}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1017/CBO9780511813993
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\IFB2673Y\08DC53888452CBC6CDC0FD8A1A1A4DD7.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/books/quantum-optics/08DC53888452CBC6CDC0FD8A1A1A4DD7
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/books/quantum-optics/08DC53888452CBC6CDC0FD8A1A1A4DD7
+      \endverb
+    \endentry
+    \entry{gerryIntroductoryQuantumOptics}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=23786b712dd26ddb2f6595241e379d9d}{%
+           family={Gerry},
+           familyi={G\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3c9863d3b3a4eb3d67f64a9ad1145651}{%
+           family={Knight},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6819c3136cc4236226f5169823410c1e}
+      \strng{fullhash}{6819c3136cc4236226f5169823410c1e}
+      \strng{fullhashraw}{6819c3136cc4236226f5169823410c1e}
+      \strng{bibnamehash}{6819c3136cc4236226f5169823410c1e}
+      \strng{authorbibnamehash}{6819c3136cc4236226f5169823410c1e}
+      \strng{authornamehash}{6819c3136cc4236226f5169823410c1e}
+      \strng{authorfullhash}{6819c3136cc4236226f5169823410c1e}
+      \strng{authorfullhashraw}{6819c3136cc4236226f5169823410c1e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Introductory {{Quantum Optics}}}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\6W8MCHHH\Gerry y Knight - Introductory Quantum Optics.pdf
+      \endverb
+    \endentry
+    \entry{footAtomicPhysics2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=af294c7a976ab05e62b737bd2eb260c8}{%
+           family={Foot},
+           familyi={F\bibinitperiod},
+           given={C.\bibnamedelimi J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford ; New York}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{af294c7a976ab05e62b737bd2eb260c8}
+      \strng{fullhash}{af294c7a976ab05e62b737bd2eb260c8}
+      \strng{fullhashraw}{af294c7a976ab05e62b737bd2eb260c8}
+      \strng{bibnamehash}{af294c7a976ab05e62b737bd2eb260c8}
+      \strng{authorbibnamehash}{af294c7a976ab05e62b737bd2eb260c8}
+      \strng{authornamehash}{af294c7a976ab05e62b737bd2eb260c8}
+      \strng{authorfullhash}{af294c7a976ab05e62b737bd2eb260c8}
+      \strng{authorfullhashraw}{af294c7a976ab05e62b737bd2eb260c8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-19-850695-9 978-0-19-850696-6}
+      \field{langid}{english}
+      \field{number}{7. Atomic, Optical, and laser physics}
+      \field{pagetotal}{331}
+      \field{series}{Oxford Master Series in Physics}
+      \field{title}{Atomic Physics}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\BMGU94S2\Foot - 2005 - Atomic physics.pdf
+      \endverb
+      \keyw{Atoms,Nuclear physics}
+    \endentry
+    \entry{lindbladGeneratorsQuantumDynamical1976}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=8609a7b7f64b229bc22357f5fa109079}{%
+           family={Lindblad},
+           familyi={L\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8609a7b7f64b229bc22357f5fa109079}
+      \strng{fullhash}{8609a7b7f64b229bc22357f5fa109079}
+      \strng{fullhashraw}{8609a7b7f64b229bc22357f5fa109079}
+      \strng{bibnamehash}{8609a7b7f64b229bc22357f5fa109079}
+      \strng{authorbibnamehash}{8609a7b7f64b229bc22357f5fa109079}
+      \strng{authornamehash}{8609a7b7f64b229bc22357f5fa109079}
+      \strng{authorfullhash}{8609a7b7f64b229bc22357f5fa109079}
+      \strng{authorfullhashraw}{8609a7b7f64b229bc22357f5fa109079}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The notion of a quantum dynamical semigroup is defined using the concept of a completely positive map. An explicit form of a bounded generator of such a semigroup onB(ℋ) is derived. This is a quantum analogue of the Lévy-Khinchin formula. As a result the general form of a large class of Markovian quantum-mechanical master equations is obtained.}
+      \field{day}{1}
+      \field{issn}{1432-0916}
+      \field{journaltitle}{Communications in Mathematical Physics}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shortjournal}{Commun.Math. Phys.}
+      \field{title}{On the Generators of Quantum Dynamical Semigroups}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{48}
+      \field{year}{1976}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{119\bibrangedash 130}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/BF01608499
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01608499
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01608499
+      \endverb
+      \keyw{Complex System,Explicit Form,Neural Network,Nonlinear Dynamics,Statistical Physic}
+    \endentry
+    \entry{keaveneyAtomLightInteractions2014}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=765867a57b559d63b4738a7fa6aa6746}{%
+           family={Keaveney},
+           familyi={K\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=765867a57b559d63b4738a7fa6aa6746}{%
+           family={Keaveney},
+           familyi={K\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{fullhash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{fullhashraw}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{bibnamehash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{authorbibnamehash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{authornamehash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{authorfullhash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{authorfullhashraw}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{editorbibnamehash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{editornamehash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{editorfullhash}{765867a57b559d63b4738a7fa6aa6746}
+      \strng{editorfullhashraw}{765867a57b559d63b4738a7fa6aa6746}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The purpose of this chapter is to introduce from a fundamental level the model for atom-light interactions that is used in much of the rest of this work. We will introduce a fully quantitative model of the atom-light interaction in thermal alkali-metal vapour that can be used to make predictions for and be compared to experimental spectroscopic data.}
+      \field{booktitle}{Collective {{Atom}}–{{Light Interactions}} in {{Dense Atomic Vapours}}}
+      \field{isbn}{978-3-319-07100-8}
+      \field{langid}{english}
+      \field{title}{Atom–{{Light Interactions}} for {{Independent Atoms}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{9\bibrangedash 19}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1007/978-3-319-07100-8_2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-319-07100-8_2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-319-07100-8_2
+      \endverb
+      \keyw{Alkali Metal Atom,Doppler Width,Local Field Effect,Optical Bloch Equation,Rotating Wave Approximation}
+    \endentry
+    \entry{siddonsAbsoluteAbsorptionRubidium2008}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=93344f195d5f7981514396b50b98e861}{%
+           family={Siddons},
+           familyi={S\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=646b965f0f271c60e5262fac3877613d}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Charles\bibnamedelima S},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=a00dcaaf3026893fb6cab9f233048bdb}{%
+           family={Ge},
+           familyi={G\bibinitperiod},
+           given={Chang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3c875abb568a64f9e47f66570833b837}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Ifan\bibnamedelima G},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f58a90b765f8dd703b013a722bad499}
+      \strng{fullhash}{ba9a0ce6846673cc98a63f7edab3e78f}
+      \strng{fullhashraw}{ba9a0ce6846673cc98a63f7edab3e78f}
+      \strng{bibnamehash}{1f58a90b765f8dd703b013a722bad499}
+      \strng{authorbibnamehash}{1f58a90b765f8dd703b013a722bad499}
+      \strng{authornamehash}{1f58a90b765f8dd703b013a722bad499}
+      \strng{authorfullhash}{ba9a0ce6846673cc98a63f7edab3e78f}
+      \strng{authorfullhashraw}{ba9a0ce6846673cc98a63f7edab3e78f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We study the Doppler-broadened absorption of a weak monochromatic probe beam in a thermal rubidium vapour cell on D lines. A detailed model of the susceptibility is developed which takes into account the absolute linestrengths of the allowed electric dipole transitions and the motion of the atoms parallel to the probe beam. All transitions from both hyperfine levels of the ground term of both isotopes are incorporated. The absorption and refractive index as a function of frequency are expressed in terms of the complementary error function. The absolute absorption profiles are compared with experiment, and are found to be in excellent agreement provided a sufficiently weak probe beam with an intensity under one-thousandth of the saturation intensity is used. The importance of hyperfine pumping for open transitions is discussed in the context of achieving the weak-probe limit. Theory and experiment show excellent agreement, with an rms error better than 0.2\% for the D2 line at 16.5 ◦C.}
+      \field{day}{14}
+      \field{issn}{0953-4075, 1361-6455}
+      \field{journaltitle}{Journal of Physics B: Atomic, Molecular and Optical Physics}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{15}
+      \field{shortjournal}{J. Phys. B: At. Mol. Opt. Phys.}
+      \field{shorttitle}{Absolute Absorption on Rubidium {{D}} Lines}
+      \field{title}{Absolute Absorption on Rubidium {{D}} Lines: Comparison between Theory and Experiment}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{41}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{155004}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/0953-4075/41/15/155004
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Personal\\Zotero\\storage\\GP4A75UX\\Siddons et al. - 2008 - Absolute absorption on rubidium D lines comparison between theory and experiment.pdf;C\:\\Users\\Personal\\Zotero\\storage\\RL97XQ9K\\0805.html
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/0953-4075/41/15/155004
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/0953-4075/41/15/155004
+      \endverb
+    \endentry
+    \entry{fleischhauerElectromagneticallyInducedTransparency2005a}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f9dbb076ff61a20eb5e4115bdc56c0f1}{%
+           family={Fleischhauer},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4da12bd5a5a0184125a32a76b131abdb}{%
+           family={Imamoglu},
+           familyi={I\bibinitperiod},
+           given={Atac},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f6556317cc8763368b794972d387550f}{%
+           family={Marangos},
+           familyi={M\bibinitperiod},
+           given={Jonathan\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{4697156076c0a5d6ffee7073c239b275}
+      \strng{fullhash}{4697156076c0a5d6ffee7073c239b275}
+      \strng{fullhashraw}{4697156076c0a5d6ffee7073c239b275}
+      \strng{bibnamehash}{4697156076c0a5d6ffee7073c239b275}
+      \strng{authorbibnamehash}{4697156076c0a5d6ffee7073c239b275}
+      \strng{authornamehash}{4697156076c0a5d6ffee7073c239b275}
+      \strng{authorfullhash}{4697156076c0a5d6ffee7073c239b275}
+      \strng{authorfullhashraw}{4697156076c0a5d6ffee7073c239b275}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Coherent preparation by laser light of quantum states of atoms and molecules can lead to quantum interference in the amplitudes of optical transitions. In this way the optical properties of a medium can be dramatically modified, leading to electromagnetically induced transparency and related effects, which have placed gas-phase systems at the center of recent advances in the development of media with radically new optical properties. This article reviews these advances and the new possibilities they offer for nonlinear optics and quantum information science. As a basis for the theory of electromagnetically induced transparency the authors consider the atomic dynamics and the optical response of the medium to a continuous-wave laser. They then discuss pulse propagation and the adiabatic evolution of field-coupled states and show how coherently prepared media can be used to improve frequency conversion in nonlinear optical mixing experiments. The extension of these concepts to very weak optical fields in the few-photon limit is then examined. The review concludes with a discussion of future prospects and potential new applications.}
+      \field{day}{12}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{7}
+      \field{number}{2}
+      \field{shortjournal}{Rev. Mod. Phys.}
+      \field{shorttitle}{Electromagnetically Induced Transparency}
+      \field{title}{Electromagnetically Induced Transparency: {{Optics}} in Coherent Media}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{77}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{633\bibrangedash 673}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.77.633
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\97RAYLIN\RevModPhys.77.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.77.633
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.77.633
+      \endverb
+    \endentry
+    \entry{rotondaroCollisionalBroadeningShift1997}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=50606f4d760f378372c2467b51283af4}{%
+           family={Rotondaro},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=5c008e06f36d649c9b89207049d84eda}{%
+           family={Perram},
+           familyi={P\bibinitperiod},
+           given={Glen\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf62d0ec778df71badac22d2935687dc}
+      \strng{fullhash}{bf62d0ec778df71badac22d2935687dc}
+      \strng{fullhashraw}{bf62d0ec778df71badac22d2935687dc}
+      \strng{bibnamehash}{bf62d0ec778df71badac22d2935687dc}
+      \strng{authorbibnamehash}{bf62d0ec778df71badac22d2935687dc}
+      \strng{authornamehash}{bf62d0ec778df71badac22d2935687dc}
+      \strng{authorfullhash}{bf62d0ec778df71badac22d2935687dc}
+      \strng{authorfullhashraw}{bf62d0ec778df71badac22d2935687dc}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The collision induced broadening and line shifts for the Rb D1 (52P12-52S12) and D2 (52P32-52S12) transitions at low buffer gas pressure (0–300 torr) and T = 394 K were obtained from high resolution laser absorption spectra. The shifts, δ, and broadening, γL for H2, D2, N2, CH4 and CF4 are in MHz per torr δ(52P12) = −2.17, −2.22, −7.41, −7.92, −5.41; δ(52P32) = −3.83, −4.09, −5.79, −7.0, −5.73; γL(52P12) = 17.3, 14.1, 16.3, 29.1, 18.7; γL(52P32) = 26.4, 20.6, 18.3, 26.2, 17.3, respectively. Similar results are reported for rare gas collision partners. These values have been further interpreted using the impact approximation for collisional broadening to obtain the parameters for the Leonard Jones interaction potentials. The rates for pressure broadening are clearly correlated with polarizability of the collision partner.}
+      \field{day}{1}
+      \field{issn}{0022-4073}
+      \field{journaltitle}{Journal of Quantitative Spectroscopy and Radiative Transfer}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shortjournal}{Journal of Quantitative Spectroscopy and Radiative Transfer}
+      \field{title}{Collisional Broadening and Shift of the Rubidium {{D1}} and {{D2}} Lines by Rare Gases, {{H2}}, {{D2}}, {{N2}}, {{CH4}} and {{CF4}}.}
+      \field{urlday}{17}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{57}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{497\bibrangedash 507}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/S0022-4073(96)00147-1
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\M8N2TMDE\S0022407396001471.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0022407396001471
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0022407396001471
+      \endverb
+    \endentry
+    \entry{danieladamsteckQuantumAtomOptics2007}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=409cb63cbd3aa117157ffe6f51ad7dbb}{%
+           family={{Daniel Adam Steck}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{fullhash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{fullhashraw}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{bibnamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorbibnamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authornamehash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorfullhash}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \strng{authorfullhashraw}{409cb63cbd3aa117157ffe6f51ad7dbb}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum and {{Atom Optics}}}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\4YB6FH9C\quantum-optics-notes.pdf
+      \endverb
+    \endentry
+    \entry{pizzeyLaserSpectroscopyHot2022}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=47a3e8ed342b9fb473557a48fdc97886}{%
+           family={Pizzey},
+           familyi={P\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9e3738fe6fa4e83bcce0f7465cebca08}{%
+           family={Briscoe},
+           familyi={B\bibinitperiod},
+           given={J\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=159ec7f247fc0593e4eb87c642138d6f}{%
+           family={Logue},
+           familyi={L\bibinitperiod},
+           given={F\bibnamedelima D},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0143269b90b2edb61fab6f6b36ac6e28}{%
+           family={Ponciano-Ojeda},
+           familyi={P\bibinithyphendelim O\bibinitperiod},
+           given={F\bibnamedelima S},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=4bcfc5e7149c6f01038bf395522a693e}{%
+           family={Wrathmall},
+           familyi={W\bibinitperiod},
+           given={S\bibnamedelima A},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=19b3294d88ff2553c7f7c4cf35e267da}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={I\bibnamedelima G},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{d759d08fdb20bce28fb136d7a1383253}
+      \strng{fullhash}{c7c35a30d336cab8b63a1c0aeea68e95}
+      \strng{fullhashraw}{c7c35a30d336cab8b63a1c0aeea68e95}
+      \strng{bibnamehash}{d759d08fdb20bce28fb136d7a1383253}
+      \strng{authorbibnamehash}{d759d08fdb20bce28fb136d7a1383253}
+      \strng{authornamehash}{d759d08fdb20bce28fb136d7a1383253}
+      \strng{authorfullhash}{c7c35a30d336cab8b63a1c0aeea68e95}
+      \strng{authorfullhashraw}{c7c35a30d336cab8b63a1c0aeea68e95}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The spectroscopy of hot atomic vapours is a hot topic. Many of the work-horse techniques of contemporary atomic physics were first demonstrated in hot vapours. Alkali-metal atomic vapours are ideal media for quantum-optics experiments as they combine: a large resonant optical depth; long coherence times; and well-understood atom–atom interactions. These features aid with the simplicity of both the experimental set up and the theoretical framework. The topic attracts much attention as these systems are ideal for studying both fundamental physics and has numerous applications, especially in sensing electromagnetic fields and quantum technology. This tutorial reviews the necessary theory to understand the Doppler broadened absorption spectroscopy of alkali-metal atoms, and explains the data taking and processing necessary to compare theory and experiment. The aim is to provide a gentle introduction to novice scientists starting their studies of the spectroscopy of thermal vapours while also calling attention to the application of these ideas in the contemporary literature. In addition, the work of expert practitioners in the field is highlighted, explaining the relevance of three extensively-used software packages that complement the presentation herein.}
+      \field{issn}{1367-2630}
+      \field{journaltitle}{New Journal of Physics}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{12}
+      \field{shortjournal}{New J. Phys.}
+      \field{shorttitle}{Laser Spectroscopy of Hot Atomic Vapours}
+      \field{title}{Laser Spectroscopy of Hot Atomic Vapours: From ’scope to Theoretical Fit}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{24}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{125001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/ac9cfe
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\DBWLPXEV\Pizzey et al. - 2022 - Laser spectroscopy of hot atomic vapours from ’scope to theoretical fit.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/1367-2630/ac9cfe
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/1367-2630/ac9cfe
+      \endverb
+    \endentry
+    \entry{zentileElecSusProgramCalculate2015}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=3c703d3bb98defdb339093a6c0e5bd05}{%
+           family={Zentile},
+           familyi={Z\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=765867a57b559d63b4738a7fa6aa6746}{%
+           family={Keaveney},
+           familyi={K\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4ee2b2d6ece04c293b88625d08d79ec6}{%
+           family={Weller},
+           familyi={W\bibinitperiod},
+           given={Lee},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9d957a165cce58974aa818eaf391226d}{%
+           family={Whiting},
+           familyi={W\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=646b965f0f271c60e5262fac3877613d}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Charles\bibnamedelima S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3c875abb568a64f9e47f66570833b837}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Ifan\bibnamedelima G.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{19eb589ca3d68cb06d8fb0f767356889}
+      \strng{fullhash}{bcf63440e0828b46c870180689aae349}
+      \strng{fullhashraw}{bcf63440e0828b46c870180689aae349}
+      \strng{bibnamehash}{19eb589ca3d68cb06d8fb0f767356889}
+      \strng{authorbibnamehash}{19eb589ca3d68cb06d8fb0f767356889}
+      \strng{authornamehash}{19eb589ca3d68cb06d8fb0f767356889}
+      \strng{authorfullhash}{bcf63440e0828b46c870180689aae349}
+      \strng{authorfullhashraw}{bcf63440e0828b46c870180689aae349}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present a computer program and underlying model to calculate the electric susceptibility of a gas, which is essential to predict its absorptive and dispersive properties. Our program focusses on alkali-metal vapours where we use a matrix representation of the atomic Hamiltonian in the completely uncoupled basis in order to calculate transition frequencies and strengths. The program calculates various spectra for a weak-probe laser beam in an atomic medium with an applied axial magnetic field. This allows many optical devices to be designed, such as Faraday rotators/filters, optical isolators and circular polarisation filters. Fitting routines are also provided with the program which allows the user to perform optical metrology by fitting to experimental data.}
+      \field{eprintclass}{physics}
+      \field{eprinttype}{arXiv}
+      \field{issn}{00104655}
+      \field{journaltitle}{Computer Physics Communications}
+      \field{month}{4}
+      \field{shortjournal}{Computer Physics Communications}
+      \field{shorttitle}{{{ElecSus}}}
+      \field{title}{{{ElecSus}}: {{A}} Program to Calculate the Electric Susceptibility of an Atomic Ensemble}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{189}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{162\bibrangedash 174}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2014.11.023
+      \endverb
+      \verb{eprint}
+      \verb 1409.1873
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Personal\\Zotero\\storage\\3UFRSH3C\\Zentile et al. - 2015 - ElecSus A program to calculate the electric susceptibility of an atomic ensemble.pdf;C\:\\Users\\Personal\\Zotero\\storage\\XIBLFLX5\\1409.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1409.1873
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1409.1873
+      \endverb
+      \keyw{Physics - Atomic Physics,Physics - Optics,Quantum Physics}
+    \endentry
+    \entry{hechtOptics2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9a6efa2d012e3aaa08e4b6a8cf6a8b4c}{%
+           family={Hecht},
+           familyi={H\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education, Incorporated}%
+      }
+      \strng{namehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{fullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{fullhashraw}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{bibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorbibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authornamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorfullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorfullhashraw}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For courses in Optics A Contemporary Approach to Optics with Practical Applications and New Focused Pedagogy Hecht Optics balances theory and instrumentation and provides students with the necessary classical background through a lively and clear narrative. Optics, Fifth Edition is distinguished by three core imperatives: up-to-date content in line with the ever-evolving technological advances in the Optics field; a modern approach to discourse including studies on photons, phasors, and theory; and improvements and revisions to the previous edition's pedagogy including over one hundred new worked examples. Sustaining market leadership for over twenty years, Optics, Fifth Edition continues to demonstrate range and balance in subject matter. The text is grounded in traditional methodology, while providing an early introduction to the powerful perspective of the Fourier theory, which is crucial to present-day analysis. Electron and neutron diffraction patterns are pictured alongside the customary photon images, and every piece of art has been scrutinized for accuracy and altered where appropriate to improve clarity.}
+      \field{eprinttype}{googlebooks}
+      \field{isbn}{978-0-13-397722-6}
+      \field{langid}{english}
+      \field{pagetotal}{714}
+      \field{title}{Optics}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb ZarLoQEACAAJ
+      \endverb
+      \keyw{Science / Physics / General,Science / Physics / Optics & Light}
+    \endentry
+    \entry{wellerAbsoluteAbsorptionDispersion2012}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=4ee2b2d6ece04c293b88625d08d79ec6}{%
+           family={Weller},
+           familyi={W\bibinitperiod},
+           given={Lee},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c71f59c11533775c7365c96ce6ae13c6}{%
+           family={Kleinbach},
+           familyi={K\bibinitperiod},
+           given={Kathrin\bibnamedelima S},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3c703d3bb98defdb339093a6c0e5bd05}{%
+           family={Zentile},
+           familyi={Z\bibinitperiod},
+           given={Mark\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e2c41615ce13c343ccc426345ab95964}{%
+           family={Knappe},
+           familyi={K\bibinitperiod},
+           given={Svenja},
+           giveni={S\bibinitperiod}}}%
+        {{hash=646b965f0f271c60e5262fac3877613d}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Charles\bibnamedelima S},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3c875abb568a64f9e47f66570833b837}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Ifan\bibnamedelima G},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{d1b91078321b71ea42721d15febebe30}
+      \strng{fullhash}{2660dedf558c2fc018f8496cec85084f}
+      \strng{fullhashraw}{2660dedf558c2fc018f8496cec85084f}
+      \strng{bibnamehash}{d1b91078321b71ea42721d15febebe30}
+      \strng{authorbibnamehash}{d1b91078321b71ea42721d15febebe30}
+      \strng{authornamehash}{d1b91078321b71ea42721d15febebe30}
+      \strng{authorfullhash}{2660dedf558c2fc018f8496cec85084f}
+      \strng{authorfullhashraw}{2660dedf558c2fc018f8496cec85084f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Here we report on measurements of the absolute absorption and dispersion properties of an isotopically pure 87Rb vapour for magnetic fields up to and including 0.6 T. We discuss the various regimes that arise when the hyperfine and Zeeman interactions have different magnitudes, and show that we enter the hyperfine Paschen–Back regime for fields greater than 0.33 T on the Rb D2 line. The experiment uses a compact 1 mm3 microfabricated vapour cell that makes it easy to maintain a uniform and large magnetic field with a small and inexpensive magnet. We find excellent agreement between the experimental results and numerical calculations of the weak probe susceptibility where the line positions and strengths are calculated by matrix diagonalization.}
+      \field{issn}{0953-4075}
+      \field{journaltitle}{Journal of Physics B: Atomic, Molecular and Optical Physics}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{21}
+      \field{shortjournal}{J. Phys. B: At. Mol. Opt. Phys.}
+      \field{title}{Absolute Absorption and Dispersion of a Rubidium Vapour in the Hyperfine {{Paschen}}–{{Back}} Regime}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{45}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{215005}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/0953-4075/45/21/215005
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\THBUJ8YM\Weller et al. - 2012 - Absolute absorption and dispersion of a rubidium vapour in the hyperfine Paschen–Back regime.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/0953-4075/45/21/215005
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/0953-4075/45/21/215005
+      \endverb
+    \endentry
+    \entry{edmondsAngularMomentumQuantum1996}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=5303b5f8c2610a841c2bbff254f03f7f}{%
+           family={Edmonds},
+           familyi={E\bibinitperiod},
+           given={A.\bibnamedelimi R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{5303b5f8c2610a841c2bbff254f03f7f}
+      \strng{fullhash}{5303b5f8c2610a841c2bbff254f03f7f}
+      \strng{fullhashraw}{5303b5f8c2610a841c2bbff254f03f7f}
+      \strng{bibnamehash}{5303b5f8c2610a841c2bbff254f03f7f}
+      \strng{authorbibnamehash}{5303b5f8c2610a841c2bbff254f03f7f}
+      \strng{authornamehash}{5303b5f8c2610a841c2bbff254f03f7f}
+      \strng{authorfullhash}{5303b5f8c2610a841c2bbff254f03f7f}
+      \strng{authorfullhashraw}{5303b5f8c2610a841c2bbff254f03f7f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book offers a concise introduction to the angular momentum, one of the most fundamental quantities in all of quantum mechanics. Beginning with the quantization of angular momentum, spin angular momentum, and the orbital angular momentum, the author goes on to discuss the Clebsch-Gordan coefficients for a two-component system. After developing the necessary mathematics, specifically spherical tensors and tensor operators, the author then investigates the 3-j, 6-j, and 9-j symbols. Throughout, the author provides practical applications to atomic, molecular, and nuclear physics. These include partial-wave expansions, the emission and absorption of particles, the proton and electron quadrupole moment, matrix element calculation in practice, and the properties of the symmetrical top molecule.}
+      \field{eprinttype}{googlebooks}
+      \field{isbn}{978-0-691-02589-6}
+      \field{langid}{english}
+      \field{pagetotal}{164}
+      \field{title}{Angular {{Momentum}} in {{Quantum Mechanics}}}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 0BSOg0oHhZ0C
+      \endverb
+      \keyw{Science / Physics / Atomic & Molecular,Science / Physics / General,Science / Physics / Nuclear,Science / Physics / Quantum Theory}
+    \endentry
+    \entry{thompsonAngularMomentumIllustrated2008}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=517a93f90f18d65dcaf2462caa48b1d2}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={William\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{517a93f90f18d65dcaf2462caa48b1d2}
+      \strng{fullhash}{517a93f90f18d65dcaf2462caa48b1d2}
+      \strng{fullhashraw}{517a93f90f18d65dcaf2462caa48b1d2}
+      \strng{bibnamehash}{517a93f90f18d65dcaf2462caa48b1d2}
+      \strng{authorbibnamehash}{517a93f90f18d65dcaf2462caa48b1d2}
+      \strng{authornamehash}{517a93f90f18d65dcaf2462caa48b1d2}
+      \strng{authorfullhash}{517a93f90f18d65dcaf2462caa48b1d2}
+      \strng{authorfullhashraw}{517a93f90f18d65dcaf2462caa48b1d2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Develops angular momentum theory in a pedagogically consistent way, starting from the geometrical concept of rotational invariance. Uses modern notation and terminology in an algebraic approach to derivations. Each chapter includes examples of applications of angular momentum theory to subjects of current interest and to demonstrate the connections between various scientific fields which are provided through rotations. Includes Mathematica and C language programs.}
+      \field{day}{26}
+      \field{eprinttype}{googlebooks}
+      \field{isbn}{978-3-527-61783-8}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{pagetotal}{479}
+      \field{shorttitle}{Angular {{Momentum}}}
+      \field{title}{Angular {{Momentum}}: {{An Illustrated Guide}} to {{Rotational Symmetries}} for {{Physical Systems}}}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 0NMjkQnQN6oC
+      \endverb
+      \keyw{Science / Physics / General,Science / Physics / Nuclear}
+    \endentry
+    \entry{griffithsIntroductionElectrodynamics2013}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhashraw}{a00328547222c4a2a201442ee59dccfd}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fourth edition}
+      \field{isbn}{978-0-321-85656-2}
+      \field{langid}{english}
+      \field{pagetotal}{599}
+      \field{title}{Introduction to Electrodynamics}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\MF2YIYYP\Griffiths - 2013 - Introduction to electrodynamics.pdf
+      \endverb
+      \keyw{Electrodynamics,Textbooks}
+    \endentry
+    \entry{keaveneyElecSusExtensionArbitrary2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=765867a57b559d63b4738a7fa6aa6746}{%
+           family={Keaveney},
+           familyi={K\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=646b965f0f271c60e5262fac3877613d}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Charles\bibnamedelima S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3c875abb568a64f9e47f66570833b837}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Ifan\bibnamedelima G.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{36c35c65ca463b1042d8f4b504345f63}
+      \strng{fullhash}{36c35c65ca463b1042d8f4b504345f63}
+      \strng{fullhashraw}{36c35c65ca463b1042d8f4b504345f63}
+      \strng{bibnamehash}{36c35c65ca463b1042d8f4b504345f63}
+      \strng{authorbibnamehash}{36c35c65ca463b1042d8f4b504345f63}
+      \strng{authornamehash}{36c35c65ca463b1042d8f4b504345f63}
+      \strng{authorfullhash}{36c35c65ca463b1042d8f4b504345f63}
+      \strng{authorfullhashraw}{36c35c65ca463b1042d8f4b504345f63}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present a major update to ElecSus, a computer program and underlying model to calculate the electric susceptibility of an alkali-metal atomic vapour. Knowledge of the electric susceptibility of a medium is essential to predict its absorptive and dispersive properties. In this version we implement several changes which significantly extend the range of applications of ElecSus, the most important of which is support for non-axial magnetic fields (i.e. fields which are not aligned with the light propagation axis). Supporting this change requires a much more general approach to light propagation in the system, which we have now implemented. We exemplify many of these new applications by comparing ElecSus to experimental data. In addition, we have developed a graphical user interface front-end which makes the program much more accessible, and have improved on several other minor areas of the program structure. Program summary Program Title: ElecSus Program Files doi: http://dx.doi.org/10.17632/h7cj8bz4bd.1 Licensing provisions: Apache License, Version 2.0 Programming language: Python External routines/libraries: SciPy library~[1] 0.15.0 or later, NumPy~[1], matplotlib~[2], sympy~[3], lmfit 0.9.5 or later~[4], wxpython (required for GUI only) Nature of problem: Calculating the weak-probe electric susceptibility of an alkali-metal vapour. The electric susceptibility can be used to calculate spectra such as transmission and Stokes parameters. Measurements of experimental parameters can be made by fitting the theory to data. Solution method: The transition frequencies and wavelengths are calculated using a matrix representation of the Hamiltonian in the completely uncoupled basis. A suite of fitting methods are provided in order to allow user supplied experimental data to be fit to the theory, thereby allowing experimental parameters to be extracted. Restrictions: Results are only valid in the weak-probe regime. [1] T. E. Oliphant, Comput. Sci. Eng. 9, 10 (2007). http://www.scipy.org/ [2] J. D. Hunter, Comput. Sci. Eng. 9, 10 (2007). http://matplotlib.org/ [3] A. Meurer et. al, PeerJ Comp. Sci. 3, e103 (2017) http://www.sympy.org/ [4] M. Newville et al., LMFIT: Non-Linear Least-Square Minimization and Curve-Fitting for Python, Zenodo (2014). DOI:10.5281/zenodo.11813 https://lmfit.github.io/lmfit-py/}
+      \field{day}{1}
+      \field{issn}{0010-4655}
+      \field{journaltitle}{Computer Physics Communications}
+      \field{month}{3}
+      \field{shortjournal}{Computer Physics Communications}
+      \field{shorttitle}{{{ElecSus}}}
+      \field{title}{{{ElecSus}}: {{Extension}} to Arbitrary Geometry Magneto-Optics}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{224}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{311\bibrangedash 324}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2017.12.001
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Personal\\Zotero\\storage\\ZNSMW7N7\\Keaveney et al. - 2018 - ElecSus Extension to arbitrary geometry magneto-optics.pdf;C\:\\Users\\Personal\\Zotero\\storage\\E2EH4HC6\\S0010465517304009.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0010465517304009
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0010465517304009
+      \endverb
+      \keyw{Atom-light interaction,Electric field propagation,Faraday effect,Magneto-optics,Polarimetry,Spectroscopy,Stokes parameters,Voigt effect}
+    \endentry
+    \entry{bevingtonDataReductionError2003}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=3af7fac3e5ffc763bb2cfa87639c0823}{%
+           family={Bevington},
+           familyi={B\bibinitperiod},
+           given={Philip\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=2eac1b7bdc675e68adcd0c934422c86a}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={D.\bibnamedelimi Keith},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \strng{fullhash}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \strng{fullhashraw}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \strng{bibnamehash}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \strng{authorbibnamehash}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \strng{authornamehash}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \strng{authorfullhash}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \strng{authorfullhashraw}{0c1cf78c11001c2873f6ac5cbc682fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The purpose of this book is to provide an introduction to the concepts of statistical analysis of data for students at the undergraduate and graduate level, and to provide tools for data reduction and error analysis commonly required in the physical sciences. The presentation is developed from a practical point of view, including enough derivation to justify the results, but emphasizing methods of handling data more than theory. The text provides a variety of numerical and graphical techniques. Computer programs that support these techniques will be available on an accompanying website in both Fortran and C++.}
+      \field{eprinttype}{googlebooks}
+      \field{isbn}{978-0-07-119926-1}
+      \field{langid}{english}
+      \field{pagetotal}{320}
+      \field{title}{Data {{Reduction}} and {{Error Analysis}} for the {{Physical Sciences}}}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{eprint}
+      \verb JYaZPwAACAAJ
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\UXBNDY75\Bevington y Robinson - 2003 - Data Reduction and Error Analysis for the Physical Sciences.pdf
+      \endverb
+      \keyw{Mathematics / Applied,Mathematics / Probability & Statistics / General,Mathematics / Probability & Statistics / Multivariate Analysis}
+    \endentry
+    \entry{blochMagneticResonanceNonrotating1940}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=0e6a07ef2ccba1965a86d5d3b61e7e26}{%
+           family={Bloch},
+           familyi={B\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d89a730b3d272f6e991bb8230dd9a1b1}{%
+           family={Siegert},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \strng{fullhash}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \strng{fullhashraw}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \strng{bibnamehash}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \strng{authorbibnamehash}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \strng{authornamehash}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \strng{authorfullhash}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \strng{authorfullhashraw}{d7d7dd6f66f41c8170ce87bfb4bec2e8}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A treatment of the magnetic resonance is given for a particle with spin ½ in a constant field 𝐻0 and under the action of an arbitrary alternating field with circular frequency 𝜔 perpendicular to 𝐻0. A method of finding a solution, valid at any time, is given which converges the better the smaller the deviations from a rotating field or the larger 𝐻0. It is shown that in the lowest order correction the shape of the resonance curve is unchanged but that it is shifted by a percentage amount 𝐻1216 𝐻02 where 𝐻1 is the effective amplitude of the oscillating field. This also involves a correction in the values of the magnetic moments thus obtained towards smaller values which however in all practical cases is negligibly small.}
+      \field{day}{15}
+      \field{journaltitle}{Physical Review}
+      \field{month}{3}
+      \field{number}{6}
+      \field{shortjournal}{Phys. Rev.}
+      \field{title}{Magnetic {{Resonance}} for {{Nonrotating Fields}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{57}
+      \field{year}{1940}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{522\bibrangedash 527}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1103/PhysRev.57.522
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\PWILX7ND\PhysRev.57.html
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.57.522
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.57.522
+      \endverb
+    \endentry
+    \entry{blumDensityMatrixTheory1996}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=43632c8d368e6b596394c0195324342e}{%
+           family={Blum},
+           familyi={B\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{43632c8d368e6b596394c0195324342e}
+      \strng{fullhash}{43632c8d368e6b596394c0195324342e}
+      \strng{fullhashraw}{43632c8d368e6b596394c0195324342e}
+      \strng{bibnamehash}{43632c8d368e6b596394c0195324342e}
+      \strng{authorbibnamehash}{43632c8d368e6b596394c0195324342e}
+      \strng{authornamehash}{43632c8d368e6b596394c0195324342e}
+      \strng{authorfullhash}{43632c8d368e6b596394c0195324342e}
+      \strng{authorfullhashraw}{43632c8d368e6b596394c0195324342e}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4419-3257-0 978-1-4757-4931-1}
+      \field{langid}{english}
+      \field{title}{Density {{Matrix Theory}} and {{Applications}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-1-4757-4931-1
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-1-4757-4931-1
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-1-4757-4931-1
+      \endverb
+      \keyw{Matrix,Matrix Theory,molecular physics,quantum theory,scattering}
+    \endentry
+    \entry{ElectromagneticallyInducedTransparency1997}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=bf021ef1e7e916fdbc30b42f064a802b}{%
+           family={{Stephen E. Harris}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf021ef1e7e916fdbc30b42f064a802b}
+      \strng{fullhash}{bf021ef1e7e916fdbc30b42f064a802b}
+      \strng{fullhashraw}{bf021ef1e7e916fdbc30b42f064a802b}
+      \strng{bibnamehash}{bf021ef1e7e916fdbc30b42f064a802b}
+      \strng{authorbibnamehash}{bf021ef1e7e916fdbc30b42f064a802b}
+      \strng{authornamehash}{bf021ef1e7e916fdbc30b42f064a802b}
+      \strng{authorfullhash}{bf021ef1e7e916fdbc30b42f064a802b}
+      \strng{authorfullhashraw}{bf021ef1e7e916fdbc30b42f064a802b}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{One can make opaque resonant transitions transparent to laser radiation, often with most of the atoms remaining in the ground state.}
+      \field{day}{1}
+      \field{hour}{4}
+      \field{journaltitle}{PHYSICS TODAY}
+      \field{langid}{english}
+      \field{minute}{0}
+      \field{month}{7}
+      \field{second}{0}
+      \field{title}{Electromagnetically {{Induced Transparency}}}
+      \field{urlday}{11}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1063/1.881806
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\Personal\\Zotero\\storage\\8U89HIK3\\PTO.v50.i7.36_1.online.pdf;C\:\\Users\\Personal\\Zotero\\storage\\CRTLPDKB\\electromagnetically-induced-transparency.html
+      \endverb
+      \verb{urlraw}
+      \verb https://physicstoday.aip.org/features/electromagnetically-induced-transparency
+      \endverb
+      \verb{url}
+      \verb https://physicstoday.aip.org/features/electromagnetically-induced-transparency
+      \endverb
+    \endentry
+    \entry{jaynesComparisonQuantumSemiclassical1963}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=750189cbf905cceea863a5e1aed9afaf}{%
+           family={Jaynes},
+           familyi={J\bibinitperiod},
+           given={E.T.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=656c9ef427ca2931e16ff0bc07279924}{%
+           family={Cummings},
+           familyi={C\bibinitperiod},
+           given={F.W.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \strng{fullhash}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \strng{fullhashraw}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \strng{bibnamehash}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \strng{authorbibnamehash}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \strng{authornamehash}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \strng{authorfullhash}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \strng{authorfullhashraw}{cc9f717b0ab3876e759aa6ecae1f4fc6}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper has two purposes: 1) to clarify the relationship between the quantum theory of radiation, where the electromagnetic field-expansion coefficients satisfy commutation relations, and the semiclassical theory, where the electromagnetic field is considered as a definite function of time rather than as an operator; and 2) to apply some of the results in a study of amplitude and frequency stability in a molecular beam maser. In 1), it is shown that the semiclassical theory, when extended te take into account both the effect of the field on the molecules and the effect of the molecules on the field, reproduces almost quantitatively the same laws of energy exchange and coherence properties as the quantized field theory, even in the limit of one or a few quanta in the field mode. In particular, the semiclassical theory is shown to lead to a prediction of spontaneous emission, with the same decay rate as given by quantum electrodynamics, described by the Einstein A coefficients. In 2), the semiclassical theory is applied to the molecular beam maser. Equilibrium amplitude and frequency of oscillation are obtained for an arbitrary velocity distribution of focused molecules, generalizing the results obtained previously by Gordon, Zeiger, and Townes for a singel-velocity beam, and by Lamb and Helmer for a Maxwellian beam. A somewhat surprising result is obtained; which is that the measurable properties of the maser, such as starting current, effective molecular Q, etc., depend mostly on the slowest 5 to 10 per cent of the molecules. Next we calculate the effect of amplitude and frequency of oscillation, of small systematic perturbations. We obtain a prediction that stability can be improved by adjusting the system so that the molecules emit all their energy h Ω to the field, then reabsorb part of it, before leaving the cavity. In general, the most stable operation is obtained when the molecules are in the process of absorbing energy from the radiation as they leave the cavity, most unstable when they are still emitting energy at that time. Finally, we consider the response of an oscillating maser to randomly time-varying perturbations. Graphs are given showing predicted response to a small superimposed signal of a frequency near the oscillation frequency. The existence of "noise enhancing" and "noise quieting" modes of operation found here is a general property of any oscillating system in which amplitude is limited by nonlinearity.}
+      \field{issn}{1558-2256}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Comparison of Quantum and Semiclassical Radiation Theories with Application to the Beam Maser}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{51}
+      \field{year}{1963}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{89\bibrangedash 109}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1109/PROC.1963.1664
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/1443594
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/1443594
+      \endverb
+      \keyw{Coherence,Electromagnetic fields,Electromagnetic radiation,Energy exchange,Frequency,Masers,Noise level,Quantum mechanics,Stability,Tellurium}
+    \endentry
+    \entry{nohCalculationAbsorptionCoefficient2010a}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=7c48d7dd2a80d46d7c604546cb7c9b7d}{%
+           family={Noh},
+           familyi={N\bibinitperiod},
+           given={Heung-Ryoul},
+           giveni={H\bibinithyphendelim R\bibinitperiod}}}%
+        {{hash=d34fb6d5511fb6cd27a57c183148bdc6}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Seo\bibnamedelima Ro},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=955073dd75ebdd1c15ace09348354b12}{%
+           family={Noh},
+           familyi={N\bibinitperiod},
+           given={Heung-Sik},
+           giveni={H\bibinithyphendelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc12aea1258b6255dde455b6b8c8b4da}
+      \strng{fullhash}{fc12aea1258b6255dde455b6b8c8b4da}
+      \strng{fullhashraw}{fc12aea1258b6255dde455b6b8c8b4da}
+      \strng{bibnamehash}{fc12aea1258b6255dde455b6b8c8b4da}
+      \strng{authorbibnamehash}{fc12aea1258b6255dde455b6b8c8b4da}
+      \strng{authornamehash}{fc12aea1258b6255dde455b6b8c8b4da}
+      \strng{authorfullhash}{fc12aea1258b6255dde455b6b8c8b4da}
+      \strng{authorfullhashraw}{fc12aea1258b6255dde455b6b8c8b4da}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{issn}{0374-4884}
+      \field{issue}{1(1)}
+      \field{journaltitle}{Journal of the Korean Physical Society}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{shortjournal}{J. Korean Phy. Soc.}
+      \field{title}{Calculation of the Absorption Coefficient for a {{Doppler}}-Broadened Multilevel Atom}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{56}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{195\bibrangedash 198}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.3938/jkps.56.195
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\5Q8NDFSH\Noh et al. - 2010 - Calculation of the absorption coefficient for a Doppler-broadened multilevel atom.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jkps.or.kr/journal/DOIx.php?id=10.3938/jkps.56.195
+      \endverb
+      \verb{url}
+      \verb http://www.jkps.or.kr/journal/DOIx.php?id=10.3938/jkps.56.195
+      \endverb
+    \endentry
+    \entry{olverNISTHandbookMathematical2010}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=33fac8c6ae1f083c4b260b92b5f116b0}{%
+           family={Olver},
+           familyi={O\bibinitperiod},
+           given={Frank\bibnamedelima W.},
+           giveni={F\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=561b5e46228936fa50eaac378e86d1e7}{%
+           family={Lozier},
+           familyi={L\bibinitperiod},
+           given={Daniel\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=6d18e40f4f1dc590eac3031edc781835}{%
+           family={Boisvert},
+           familyi={B\bibinitperiod},
+           given={Ronald},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2990ead6f49dc03f149a073952a8750d}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Charles\bibnamedelima W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{3f007263f76fef24fd20e6ddc8b9a9e6}
+      \strng{fullhash}{16c01a9881ee91d958cf8c43b33f1fd1}
+      \strng{fullhashraw}{16c01a9881ee91d958cf8c43b33f1fd1}
+      \strng{bibnamehash}{3f007263f76fef24fd20e6ddc8b9a9e6}
+      \strng{authorbibnamehash}{3f007263f76fef24fd20e6ddc8b9a9e6}
+      \strng{authornamehash}{3f007263f76fef24fd20e6ddc8b9a9e6}
+      \strng{authorfullhash}{16c01a9881ee91d958cf8c43b33f1fd1}
+      \strng{authorfullhashraw}{16c01a9881ee91d958cf8c43b33f1fd1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The NIST Handbook of Mathematical Functions supplies validated reference information in 36 chapters on a wide selection of important mathematical functions, covering the properties necessary for their use in scientific applications, together with general accounts of the mathematical methods necessary for advanced work with the functions.}
+      \field{day}{12}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{title}{The {{NIST Handbook}} of {{Mathematical Functions}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\EKD2L6WF\nist-handbook-mathematical-functions.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nist.gov/publications/nist-handbook-mathematical-functions
+      \endverb
+      \verb{url}
+      \verb https://www.nist.gov/publications/nist-handbook-mathematical-functions
+      \endverb
+    \endentry
+    \entry{omontIrreducibleComponentsDensity1977}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d7b88410366b2dbda62ea1ddc7b4747a}{%
+           family={Omont},
+           familyi={O\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \strng{fullhash}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \strng{fullhashraw}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \strng{bibnamehash}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \strng{authorbibnamehash}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \strng{authornamehash}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \strng{authorfullhash}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \strng{authorfullhashraw}{d7b88410366b2dbda62ea1ddc7b4747a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{issn}{0079-6727}
+      \field{journaltitle}{Progress in Quantum Electronics}
+      \field{month}{1}
+      \field{shortjournal}{Progress in Quantum Electronics}
+      \field{title}{Irreducible Components of the Density Matrix. {{Application}} to Optical Pumping}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{5}
+      \field{year}{1977}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{69\bibrangedash 138}
+      \range{pages}{70}
+      \verb{doi}
+      \verb 10.1016/0079-6727(79)90003-X
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\LM8LXGIV\007967277990003X.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/007967277990003X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/007967277990003X
+      \endverb
+    \endentry
+    \entry{sakuraiModernQuantumMechanics2020}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=f7fe4eaf1ee9c40c20b04441f82e92e6}{%
+           family={Sakurai},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b87d786f54d3cf33fabdda13f1df174d}{%
+           family={Napolitano},
+           familyi={N\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{e581c5d3f07348069c1c428801961418}
+      \strng{fullhash}{e581c5d3f07348069c1c428801961418}
+      \strng{fullhashraw}{e581c5d3f07348069c1c428801961418}
+      \strng{bibnamehash}{e581c5d3f07348069c1c428801961418}
+      \strng{authorbibnamehash}{e581c5d3f07348069c1c428801961418}
+      \strng{authornamehash}{e581c5d3f07348069c1c428801961418}
+      \strng{authorfullhash}{e581c5d3f07348069c1c428801961418}
+      \strng{authorfullhashraw}{e581c5d3f07348069c1c428801961418}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Modern Quantum Mechanics is a classic graduate level textbook, covering the main concepts from quantum mechanics in a clear, organized and engaging manner. The original author, J. J. Sakurai, was a renowned particle theorist. This third edition, revised by Jim Napolitano, introduces topics that extend its value into the twenty-first century, such as modern mathematical techniques for advanced quantum mechanical calculations, while at the same time retaining fundamental topics such as neutron interferometer experiments, Feynman path integrals, correlation measurements, and Bell's inequalities. A solutions manual is available.}
+      \field{day}{17}
+      \field{edition}{3}
+      \field{isbn}{978-1-108-58728-0 978-1-108-47322-4}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{Modern {{Quantum Mechanics}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1017/9781108587280
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\7TCDYD4L\65fb4c16648d2b93f82fe3271c3381c211f2f532.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9781108587280/type/book
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9781108587280/type/book
+      \endverb
+    \endentry
+    \entry{virtanenSciPy10Fundamental2020}{article}{}{}
+      \name{author}{34}{}{%
+        {{hash=18703a2bb6a62484483c193a212da2f8}{%
+           family={Virtanen},
+           familyi={V\bibinitperiod},
+           given={Pauli},
+           giveni={P\bibinitperiod}}}%
+        {{hash=646fbfe08374cc41c2f9bd971d8c4725}{%
+           family={Gommers},
+           familyi={G\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=35bb9c71f55048509a3e9018c349ed73}{%
+           family={Haberland},
+           familyi={H\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fbb0c40f5d70be8ce47ce9daafdf5749}{%
+           family={Reddy},
+           familyi={R\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9fd9ed8466bbb96364ae008f2a665e6e}{%
+           family={Cournapeau},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=09a667aa6a26526bfcccb2676a494e55}{%
+           family={Burovski},
+           familyi={B\bibinitperiod},
+           given={Evgeni},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3d6efaaa3d9682e20787eb06ff70a3d7}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Pearu},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4c7e4c94b846fa41e2fc0a88e0dc656d}{%
+           family={Weckesser},
+           familyi={W\bibinitperiod},
+           given={Warren},
+           giveni={W\bibinitperiod}}}%
+        {{hash=7447cb057596bc2645d3980bb04f5c78}{%
+           family={Bright},
+           familyi={B\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{useprefix=true,hash=9a5a65a789013a8d1e8035ec28df9b6e}{%
+           family={Walt},
+           familyi={W\bibinitperiod},
+           given={Stéfan\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=626cc151613864abeb653c0d8172d98c}{%
+           family={Brett},
+           familyi={B\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=57849e8550281b202bd611bf6f11e14b}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b053969d2c6a9ec8689980fb6463cd56}{%
+           family={Millman},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi Jarrod},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=fbaf80580622bd40577f4a6d38021c0a}{%
+           family={Mayorov},
+           familyi={M\bibinitperiod},
+           given={Nikolay},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7bcf847eaccba039f7a4523540673aea}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelimb R.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4b3d26f886661aa723985bcfd835ba18}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9ad1d38817acd2f00cb7f324ec7d37ea}{%
+           family={Kern},
+           familyi={K\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8d336f110675c46226ece1db501ce712}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=65b1934a87acb0abe09c469aaf11c326}{%
+           family={Carey},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9989e8a18827e34b15112d671f52bd35}{%
+           family={Polat},
+           familyi={P\bibinitperiod},
+           given={İlhan},
+           giveni={İ\bibinitperiod}}}%
+        {{hash=b8b88d61c79de60e6e1b5d44e03f5dec}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bf4be16325cb4f641345ca394443fd18}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=0fd9a0e34f1b2adda41357c948d14986}{%
+           family={VanderPlas},
+           familyi={V\bibinitperiod},
+           given={Jake},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c6a95a8ced3b86b4e7e60a74bc6ebf5a}{%
+           family={Laxalde},
+           familyi={L\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=85242652d69220e83cf71ceb8d90a8cb}{%
+           family={Perktold},
+           familyi={P\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5bca159e697db439e23b8947dfa4b614}{%
+           family={Cimrman},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=70b659f5067a8a2efbee66f770681598}{%
+           family={Henriksen},
+           familyi={H\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=fa5163c76600eb11a4d07a28f0701cb0}{%
+           family={Quintero},
+           familyi={Q\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=db2b4761cc46be347b418e68660c9554}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=7d86aea5ad1f2b4e27f2f014c71712c2}{%
+           family={Archibald},
+           familyi={A\bibinitperiod},
+           given={Anne\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3876f7c3dbbb1a17823dcd135d07cfc6}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Antônio\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bab4e5caee2d67831e464ce575022b37}{%
+           family={Pedregosa},
+           familyi={P\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+        {{useprefix=true,hash=1af2e1049c0f42049401999babb9f7b2}{%
+           family={Mulbregt},
+           familyi={M\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{fullhash}{f250109471b6de16324d417ff6e81e90}
+      \strng{fullhashraw}{f250109471b6de16324d417ff6e81e90}
+      \strng{bibnamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authorbibnamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authornamehash}{f252038edd7f112d75da3bf0c1edecbc}
+      \strng{authorfullhash}{f250109471b6de16324d417ff6e81e90}
+      \strng{authorfullhashraw}{f250109471b6de16324d417ff6e81e90}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments.}
+      \field{issn}{1548-7105}
+      \field{journaltitle}{Nature Methods}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shortjournal}{Nat Methods}
+      \field{shorttitle}{{{SciPy}} 1.0}
+      \field{title}{{{SciPy}} 1.0: Fundamental Algorithms for Scientific Computing in {{Python}}}
+      \field{urlday}{25}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{volume}{17}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{261\bibrangedash 272}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/s41592-019-0686-2
+      \endverb
+      \verb{file}
+      \verb C:\Users\Personal\Zotero\storage\D34RHCGB\Virtanen et al. - 2020 - SciPy 1.0 fundamental algorithms for scientific computing in Python.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41592-019-0686-2
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41592-019-0686-2
+      \endverb
+      \keyw{Biophysical chemistry,Computational biology and bioinformatics,Technology}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

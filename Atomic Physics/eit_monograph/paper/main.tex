@@ -1,0 +1,158 @@
+% !TEX program = pdflatex
+% !BIB program = bibtex
+
+%=====================================================================
+%  MODELO DE ARTÍCULO / MONOGRAFÍA — MECÁNICA CUÁNTICA
+%  Plantilla elegante en LaTeX  ·  compílese con pdfLaTeX
+%  Secuencia:  pdflatex → bibtex → pdflatex → pdflatex
+%---------------------------------------------------------------------
+%  Autor de la plantilla: (adáptese libremente)
+%  Diseño: paleta cálida "Navajo" · tipografía Palatino (mathpazo)
+%=====================================================================
+
+\documentclass[11pt,letterpaper]{article}
+%========================  CODIFICACIÓN E IDIOMA  =====================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{bm}
+\babelprovide[import,main]{spanish}          % locale español (babel moderno)
+
+%========================  MATEMÁTICAS Y FUENTE  =====================
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage[sc]{mathpazo}     % Palatino: elegante y muy legible en física
+\linespread{1.05}             % interlineado ligeramente holgado
+\usepackage{microtype}        % micro-tipografía: mejor gris de página
+\usepackage{physics}
+\usepackage{mathrsfs}
+
+%========================  GEOMETRÍA Y FIGURAS  ======================
+\usepackage[letterpaper,left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}         % reglas de tabla profesionales
+
+%========================  PALETA DE COLOR (navajo_seq)  =============
+\usepackage{xcolor}
+% Diez tonos del colormap secuencial navajo_seq (frío -> cálido):
+\definecolor{navaMidnight}{HTML}{0D1B2A}  % azul noche
+\definecolor{navaDeep}{HTML}{1B3A4B}      % pizarra profunda
+\definecolor{navaBlue}{HTML}{2E6E8E}      % azul-petróleo
+\definecolor{navaTurq}{HTML}{4FA8B8}      % turquesa
+\definecolor{navaAqua}{HTML}{88C9C8}      % aguamarina claro
+\definecolor{navaCream}{HTML}{F2E8D0}     % crema
+\definecolor{navaSand}{HTML}{E8A87C}      % arena / terracota clara
+\definecolor{navaBurnt}{HTML}{C46D3B}     % naranja quemado
+\definecolor{navaBrick}{HTML}{A0372A}     % ladrillo
+\definecolor{navaMaroon}{HTML}{6B1E1E}    % granate oscuro
+% Roles del documento (cálidos = jerarquía; frío = enlaces externos):
+\colorlet{siena}{navaMaroon}     % títulos de sección, etiqueta Resumen, pies
+\colorlet{terracota}{navaBrick}  % subsecciones, enlaces internos, recuadros
+\colorlet{ocre}{navaBurnt}       % reglas de acento (portada y secciones)
+\colorlet{turquesa}{navaBlue}    % citas y URLs
+\colorlet{adobe}{navaSand}       % filetes suaves del resumen
+\colorlet{crema}{navaCream}      % fondos de recuadro
+
+%========================  TÍTULOS DE SECCIÓN  =======================
+\usepackage{titlesec}
+\titleformat{\section}[hang]
+  {\normalfont\large\bfseries\color{navaDeep}}
+  {\thesection}{0.7em}{}
+  [{\vspace{2pt}\color{ocre}\titlerule[0.8pt]}]
+\titleformat{\subsection}[hang]
+  {\normalfont\normalsize\bfseries\color{navaBlue}}
+  {\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.6em}{0.7em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+
+%========================  PIES DE FIGURA / TABLA  ===================
+\usepackage{caption}
+\captionsetup{font=small,labelsep=period,labelfont={bf,color=siena}}
+
+%========================  BIBLIOGRAFÍA (natbib)  ====================
+\usepackage[numbers,sort&compress]{natbib}
+\bibpunct{[}{]}{,}{n}{}{,}
+
+%========================  RECUADROS DE CONSEJO  =====================
+\usepackage[most]{tcolorbox}
+\newtcolorbox{consejo}{
+  enhanced, breakable,
+  colback=crema, colframe=terracota,
+  boxrule=0.4pt, arc=2.5pt, outer arc=2.5pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  fontupper=\small,
+  coltitle=white, colbacktitle=terracota,
+  fonttitle=\bfseries\small,
+  title=Consejo de redacción,
+  attach boxed title to top left={xshift=10pt, yshift=-\tcboxedtitleheight/2},
+  boxed title style={boxrule=0pt, arc=2pt},
+  top=12pt
+}
+
+%========================  OPERADORES Y ATAJOS  ======================
+\newcommand{\ii}{\mathrm{i}}          % unidad imaginaria
+\newcommand{\vc}[1]{\bm{#1}}          % vectores en negrita
+
+%========================  HIPERVÍNCULOS  ============================
+\usepackage[unicode=true,pdfusetitle,colorlinks=true,
+            bookmarks=true,pdfborder={0 0 0}]{hyperref}
+\hypersetup{linkcolor=terracota, citecolor=turquesa, urlcolor=turquesa}
+%\usepackage{bookmark}
+%---------------------------------------------------------------------
+%  Datos del trabajo
+%---------------------------------------------------------------------
+\newcommand{\titulo}{Transparencia Inducida Electromagnéticamente (EIT):}
+\newcommand{\subtitulo}{Fundamentos teóricos y aplicaciones espectroscópicas}
+\newcommand{\autor}{Ángel André Aguilar Contreras}
+\date{\today}
+
+\begin{document}
+
+%=====================================================================
+%  PORTADA
+%=====================================================================
+\begin{center}
+  {\color{ocre}\rule{0.5\textwidth}{0.8pt}}\\[1.1em]
+  {\LARGE\bfseries\color{navaMidnight} \titulo}\\[0.45em]
+  {\large\itshape \subtitulo}\\[1.2em]
+  {\scshape\large \autor}\\[0.35em]
+  {\small Curso de Introducción a la Física Atómica y Molecular\ \textperiodcentered\ Facultad de Ciencias, UNAM\\
+   \texttt{andre.aguilar@ciencias.unam.mx}}\\[0.5em]
+  {\small \today}\\[0.6em]
+  {\color{ocre}\rule{0.5\textwidth}{0.8pt}}
+\end{center}
+\vspace{0.6em}
+
+%=====================================================================
+%  RESUMEN
+%=====================================================================
+\begin{center}
+\begin{minipage}{0.88\textwidth}
+  {\color{adobe}\rule{\linewidth}{0.6pt}}\par\vspace{0.6em}
+  \small
+  \noindent{\bfseries\color{siena} Resumen.\ }%
+  A lo largo de este trabajo se estudia el formalismo detrás de la Transparencia Inducida Electromagnéticamente (EIT). Se aborda el desarrollo formal y matemático a partir del modelo $\Lambda$ de tres niveles, la derivación analítica de la susceptibilidad compleja $\chi(\Delta_p)$, la deducción del comportamiento de absorción y dispersión así como el análisis de los efectos coherentes. Además se muestra una sencilla simulación numérica de las ventanas de EIT y su dependencia con la potencia del láser de control ($\Omega_c$), así como la revisión del panorama de aplicaciones tecnológicas actuales y su relevancia en el contexto experimental contemporáneo.
+  
+  \par\vspace{0.7em}
+  \noindent{\footnotesize\itshape Palabras clave:\/} sistema de tres niveles, transparencia inducida electromagnéticamente, luz lenta, memorias cuánticas, mmagnetometría atómica.
+  \par\vspace{0.6em}
+  {\color{adobe}\rule{\linewidth}{0.6pt}}
+\end{minipage}
+\end{center}
+\vspace{1.2em}
+%=====================================================================
+%  DESARROLLO
+%=====================================================================
+\input{sections/intro.tex}
+\input{sections/teoria.tex}
+\input{sections/resultados.tex}
+\input{sections/conclusiones.tex}
+\nocite{*}
+%=====================================================================
+%  BIBLIOGRAFÍA
+%=====================================================================
+\newpage
+\bibliographystyle{unsrtnat}   % numérica, en orden de aparición (estilo físico)
+\bibliography{EIT_bib}
+\end{document}

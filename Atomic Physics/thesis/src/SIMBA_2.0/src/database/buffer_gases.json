@@ -1,0 +1,31 @@
+{
+    "Rb":{
+        "D1":{
+            "He": 18.90e6,
+            "Ne": 9.84e6,
+            "Ar": 18.10e6,
+            "Kr": 17.10e6,
+            "Xe": 18.60e6, 
+            "H2": 17.30e6,
+            "N2": 16.30e6,
+            "CH4": 19.10e6,
+            "CF4": 18.70e6
+        },
+        "D2":{
+            "He": 20.00e6,
+            "Ne": 9.47e6,
+            "Ar": 17.70e6,
+            "Kr": 17.20e6,
+            "Xe": 26.40e6, 
+            "H2": 20.60e6,
+            "N2": 18.30e6,
+            "CH4": 26.20e6,
+            "CF4": 17.30e6
+        },
+        "units": "Hz/torr",
+        "T_ref_K": 394,
+        "fuente_ref": "Rotondaro, M. D., & Perram, G. P. (1997). Collisional broadening and shift of the rubidium $D_1$ and $D_2$ lines by rare gases, $\text{H}_2$, $\text{D}_2$, $\text{N}_2$, $\text{CH}_4$, and $\text{CF}_4$. Journal of Quantitative Spectroscopy and Radiative Transfer, 57(4), 497-507. https://doi.org/10.1016/S0022-4073(96)00147-1"
+    }
+
+
+}

@@ -1,0 +1,30 @@
+% !TEX program = pdflatex
+% !BIB program = biber
+\documentclass[12pt, letterpaper, twoside]{report}
+
+\input{packages.tex}
+
+\makeatother
+\decimalpoint
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\addbibresource{referencias.bib}
+
+\begin{document}
+\clearpage
+\pagestyle{empty} % Desactiva encabezados y números de página en el índice
+\tableofcontents
+\clearpage
+
+\pagestyle{fancy}
+\setcounter{page}{1}
+
+%\input{sections/introduccion.tex}
+\input{sections/teoria.tex}
+%\input{sections/experimento.tex}
+%\input{sections/computo.tex}
+\input{sections/resultados.tex}
+\input{sections/apendices.tex}
+\newpage
+\printbibliography[heading=bibintoc, title={Bibliografía}]
+\end{document}

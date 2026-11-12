@@ -1,0 +1,40 @@
+\chapter{Resultados}
+\section{Obtención de Espectros de Absorción}
+A continuación se presenta el procesamiento aplicado a las señales obtenidas experimentalmente para la obtención de espectros en términos de la desintonía espectral $\Delta \nu$ y la transmitancia normalizada $\mathscr{T}(\Delta \nu)$ para su posterior comparación y ajuste frente al modelo teórico presentado.
+\subsubsection*{Adquisición de Señales Experimentales}
+La adquisición de la señal de intensidad transmitida se realiza mediante un barrido temporal del diodo láser de cavidad externa sobre las transiciones de la línea $\text{D2}$ del rubidio. La señal obtenida del fotodetector registra en términos de voltaje, la variación de potencia del haz de luz de salida respecto al tiempo de barrido $t$.
+
+Los espectros obtenidos por el fotodiodo contienen fluctuaciones de alta frecuencia asociadas al ruido electrónico del fotodiodo y a ligeras variaciones térmicas. Para mejorar la calidad de las señales se aplica el filtro de suavizado digital \textbf{Savitsky-Golay} para atenuar el ruido de fluctuación rápida sin distorsionar el perfil de la señal ni alterar la amplitud de los picos de absorción de la estructura hiperfina.
+
+\todo[inline]{Aquí van DOS gráficas: la señal cruda y la señal tras el suavizado.}
+\subsubsection*{Reconstrucción de la Escala de Desintonía}
+Dado que la respuesta temporal del barrido de corriente y el voltaje del fotodetector no representan magnitudes físicas intrínsecas para la descripción cuantitativa de los fenómenos espectroscópicos, es necesario transformar los ejes de adquisición a una representación basada en frecuencias absolutas y transmitancias normalizadas.
+
+La calibración de frecuencia se fundamenta en la identificación de los picos de referencia de la estructura fina en frecuencias sub-doppler obtenidas mediante espectroscopía de absorción saturada. A través del reconocimiento de las posiciones conocidas de los picos de cruce y las transiciones hiperfinas de los isótopos de rubidio, se establece una función de interpolación polinómica que asigna a cada punto temporal una única desintonía espectral precisa $\Delta \nu$ respecto al centro de la línea atómica.
+
+Debido a las fluctuaciones en el intervalo de barrido, se ajusta un polinomio de bajo orden en las regiones fuera de resonancia para obtener la intensidad de referenica $I_0(\Delta \nu)$; de modo que la transmitancia normalizada queda determinada mediante la relación $\mathscr{T}(\Delta \nu) = I_{exp}(\Delta \nu)/ I_0(\Delta  \nu )$. Obtenemos así, un espectro experimental el espacio de frecuencias y transmitancias que constituye la entrada estandarizada para los algoritmos de ajuste no lineales desarrollados.
+
+\todo[inline]{Aquí van TRES gráficas: el ajuste de frecuencia, el ajuste del fondo y la gráfica del espectro ya en desintonía y transmitancia (o absorción).}
+\section{Correlación Espectral y Análisis de Error}
+\subsection{Fidelidad del Modelo}
+Para cuantificar la capacidad del modelo teórico en la reproducción del perfil espectral obtenido experimentalmente, se realiza la superposición gráfica entre los espectros experimentales normalizados y las curvas teóricas derivadas de la ley de Beer-Lambert con sus respectivos coeficientes de absorción.
+
+La bondad del ajuste se determina mediante el coeficiente de determinación $R^2$ y la raíz del error cuadrático medio $RMSE$. Resulta conveniente mencionar que el estadístico $\chi^2$ se omite del análisis cuantitativo debido a que las incertidumbres absolutas punto a punto no estaban calibradas de manera independiente.
+
+Bajo éstas condiciones, los coeficientes $R^2$ y $RMSE$ proporcionan una medida invariante y estadísticamente robusta de la capacidad del modelo teórico y algoritmo de ajuste para reproducir la forma y las amplitudes del perfil espectral. 
+
+El modelo presenta una alta coincidencia con el expectro experimental. 
+Se obtienen valores de $R^2$ superiores a $XX$ y alcanzando un valor máximo de $R^2_{max} = XX$ a una temperatura de $T = X \text{ K}$, demostrando que la mayor parte de la variación de los datos 
+
+valores de $RMSE$ inferiores a $XX$ y un valor mínimo de $RMSE_{min} = XX$. 
+
+\todo[inline]{Aquí va (no se cuantas) gráficas de varios espectros teóricos con las curvas experimentales respectivas.}
+\subsection{Análisis de Residuos}
+\section{Evaluación Comparativa entre los Modelos Espectrales}
+\subsection{Análisis de Residuos y Bondad de Ajuste}
+\subsection{Eficiencia Numérica y Tiempo de Cómputo}
+\section{Determinación de las Variables Termodinámicas}
+\subsection{Ajuste de Parámetros Libres}
+\subsection{Ajuste por Correlación de Variables}
+\section{Transiciones entre Regímenes y Límites del Modelo}
+

@@ -1,0 +1,103 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: unsrtnat.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Database file #1: EIT_bib.bib
+Warning--empty journal in alzettaExperimentalMethodObservation1976
+Warning--empty year in alzettaExperimentalMethodObservation1976
+Warning--empty journal in harrisNonlinearOpticalProcesses1990
+Warning--empty year in harrisNonlinearOpticalProcesses1990
+Warning--empty year in harrisNonlinearOpticalProcesses1990
+Warning--empty journal in xiaoMeasurementDispersiveProperties1995
+Warning--empty year in xiaoMeasurementDispersiveProperties1995
+Warning--empty year in xiaoMeasurementDispersiveProperties1995
+Warning--empty journal in hauLightSpeedReduction1999
+Warning--empty year in hauLightSpeedReduction1999
+Warning--empty year in hauLightSpeedReduction1999
+Warning--empty journal in phillipsStorageLightAtomic2001
+Warning--empty year in phillipsStorageLightAtomic2001
+Warning--empty year in phillipsStorageLightAtomic2001
+Warning--empty year in footAtomicPhysics2005
+Warning--empty year in footAtomicPhysics2005
+Warning--empty year in scullyQuantumOptics1997a
+Warning--empty year in scullyQuantumOptics1997a
+Warning--empty journal in gerryIntroductoryQuantumOpticsa
+Warning--empty year in gerryIntroductoryQuantumOpticsa
+Warning--empty year in gerryIntroductoryQuantumOpticsa
+Warning--empty journal in fleischhauerElectromagneticallyInducedTransparency2005
+Warning--empty year in fleischhauerElectromagneticallyInducedTransparency2005
+Warning--empty year in fleischhauerElectromagneticallyInducedTransparency2005
+Warning--empty publisher in robertw.boydNonlinearOptics
+Warning--empty year in robertw.boydNonlinearOptics
+Warning--empty year in robertw.boydNonlinearOptics
+Warning--empty publisher in steckQuantumAtomOptics2007
+Warning--empty year in steckQuantumAtomOptics2007
+Warning--empty year in steckQuantumAtomOptics2007
+Warning--empty journal in lindbladGeneratorsQuantumDynamical1976
+Warning--empty year in lindbladGeneratorsQuantumDynamical1976
+Warning--empty year in lindbladGeneratorsQuantumDynamical1976
+Warning--empty year in keaveneyAtomLightInteractions2014
+Warning--empty year in keaveneyAtomLightInteractions2014
+Warning--empty year in demtroderLaserSpectroscopy1996
+Warning--empty year in demtroderLaserSpectroscopy1996
+Warning--empty journal in gea-banaclocheElectromagneticallyInducedTransparency1995
+Warning--empty year in gea-banaclocheElectromagneticallyInducedTransparency1995
+Warning--empty year in gea-banaclocheElectromagneticallyInducedTransparency1995
+Warning--empty journal in bollerObservationElectromagneticallyInduced1991
+Warning--empty year in bollerObservationElectromagneticallyInduced1991
+Warning--empty year in bollerObservationElectromagneticallyInduced1991
+Warning--empty journal in ElectromagneticallyInducedTransparency1997
+Warning--empty year in ElectromagneticallyInducedTransparency1997
+Warning--empty year in ElectromagneticallyInducedTransparency1997
+Warning--empty journal in lukinControllingPhotonsUsing2001
+Warning--empty year in lukinControllingPhotonsUsing2001
+Warning--empty year in lukinControllingPhotonsUsing2001
+Warning--empty journal in kashUltraslowGroupVelocity1999
+Warning--empty year in kashUltraslowGroupVelocity1999
+Warning--empty year in kashUltraslowGroupVelocity1999
+Warning--empty journal in alzettaExperimentalMethodObservation1976a
+Warning--empty year in alzettaExperimentalMethodObservation1976a
+You've used 20 entries,
+            2481 wiz_defined-function locations,
+            702 strings with 9203 characters,
+and the built_in function-call counts, 7946 in all, are:
+= -- 705
+> -- 336
+< -- 13
++ -- 138
+- -- 97
+* -- 694
+:= -- 1258
+add.period$ -- 97
+call.type$ -- 20
+change.case$ -- 35
+chr.to.int$ -- 19
+cite$ -- 74
+duplicate$ -- 387
+empty$ -- 709
+format.name$ -- 123
+if$ -- 1631
+int.to.chr$ -- 2
+int.to.str$ -- 21
+missing$ -- 25
+newline$ -- 143
+num.names$ -- 62
+pop$ -- 221
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 171
+stack$ -- 0
+substring$ -- 359
+swap$ -- 34
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 125
+warning$ -- 54
+while$ -- 68
+width$ -- 0
+write$ -- 302
+(There were 54 warnings)

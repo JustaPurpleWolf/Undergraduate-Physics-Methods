@@ -1,0 +1,57 @@
+\section{Desarrollo Computacional}
+\subsection{Criterios Estadísticos de Ajuste Espectral}
+Para evaluar cuantitativamente la validez entre los modelos teóricos de absorción y los espectros experimentales es necesario emplear distintas métrocas estadísitcas que nos permitan determinar la fidelidad del ajuste así como la presencia de errores sistemáticos y sesgos de sobreajuste en los espectors.
+\subsubsection{Residuos y Criterios de Desviación}
+El análisis de residuos es la primera herramienta para diagnositcar la valides de un modelo de ajuste. El residuo $r_i$ para cada punto de muestra $i$ se define como la diferencia entre el valor medido experimentalmente $y_i$ y el valor predicho por el modelo teórico $\hat{y}_i$,
+\begin{equation}
+    r_i = y_i - \hat{y}_i.
+\end{equation}
+Si el modelo teórico describe con precisión los datos experimentales, los residuos deberían distribuirse aleatoriamente alrededor de cero ($r_i \approx 0$). Por lo tanto, los residuos puede proporcionar información sobre la calidad del ajuste y la validez del modelo teórico. De la misma forma, la presencia de patrones sistemáticos en los residuos puede indicar que el modelo teórico no captura adecuadamente la relación entre las variables independientes y dependientes.
+
+Para condensar la información de los residuos puntuales en un único valor numérico utilizaremos la raíz del error cuadrático medio (RMSE), definida como,
+\begin{equation}
+    RMSE = \sqrt{\frac{1}{N} \sum_{i=1}^{N}(y_i - \hat{y}_i)^2} =  \sqrt{\frac{1}{N} \sum_{i=1}^{N}r_i^2}
+\end{equation}
+donde $N$ es el número total de puntos de datos procesados.
+
+Al estar expresado en las mismas unidades que la intensidad del espectro, el RMSE cuantifica la desviación promedio directa entre la curva de ajuste y a señal medida. 
+
+De forma complementaria, el estádisitco de Durbin-Watson (DW) cuantifica de forma objetiva si los residuos se comportan como ruido aleatorio o si conservan un patrón sistemático,
+\begin{equation}
+    DW = \frac{\sum_{i=1}^N (r_i - r_i-1)^2}{\sum_{i=1}^N r_i^2}
+\end{equation}
+Un valor de $DW \approx 2$ confirma cuantitativamente la ausencia de correlación en los residuos, mientras un valor de $DW \ll 2$ indica una correlación positiva entre los residuos.
+
+\paragraph{Parámetros de Bondad de Ajuste}
+La calidad global del ajuste se puede evaluar cuantitativamente a partir del comportamiento de distintos parámetros de ajuste. El coeficiente de determinación $R^2$ indica la proporción de la varianza total de los datos que es explicada por el modelo teórico. Se define como,
+\begin{equation}
+R^2 = 1 - \frac{\sum_{i=1}^N (y_i - \hat{y}_i)^2}{\sum_{i=1}^N (y_i - \bar{y})^2} = 1 - \frac{\sum_{i=1}^N r_i^2}{\sum_{i=1}^N (y_i - \bar{y})^2}
+\end{equation}
+donde $\bar{y}$ es la media de los datos obtenidos. Un valor de $R^2$ cercano a $1$ confirma que el modelo captura adecuadamente la forma, las amplitudes y las posiciones de las trancisiones atómicas en el espectro de absorción.
+
+El estadístico chi-cuadrado $\chi^2$ mide las desviaciones respecto a las incertidumbres individuales $\sigma_i$ ce cada punto en el espectro. Está dado por,
+\begin{equation}
+    \chi^2 = \sum_{i=1}^N \frac{(y_i - \hat{y}_i)^2}{\sigma_i^2} = \sum_{i=1}^N \frac{r_i^2}{\sigma_i^2},
+\end{equation}
+y el estadístico chi-cuadrado reducido $\chi^2_\nu$ se define como,
+\begin{equation}
+    \chi^2_\nu = \frac{\chi^2}{df}
+\end{equation}
+donde $df = N - p$ es el número de grados de libertad, con $p$ siendo el número de parámetros ajustados en el modelo. En condiciones ideales con incertidumbres $\sigma_i$ indepenedientes y correctamente estimadas, se espera un valor de $\chi^2 \approx df$, lo que es equivalente a $\chi^2_\nu \approx 1$.
+
+Sin embargo, en señales espectroscópicas donde las incertidumbres punto a punto del detector no están calibradas experimentalmente, estámn correlacionados o bien se sobreestiman, el valor numérico  de $\chi^2$ o $\chi^2_\nu$ puede decaer artificalente hacia valores muy pequeños ($\chi^2_\nu \approx 0$). Bajo estas circunstancias, se justifica prescindir de $\chi^2$ como criterio de rechazo, pues el RMSE en conjunto con $R^2$ resultan suficientes para caracterizar la precisión del ajuste de forma objetiva. 
+
+\subsubsection{Criterios de Evaluación Comparativa}
+Al realizar el ajuste de perfiles espectriales mediante distintas formulaciones matemáticas, evaluar la calidad del ajuste a partir de parámetros de bondad de ajuste como lo son RMSE y $R^2$ puede resultar insuficiente para determinar la precisión de cada modelo sobretodo debido a los sesgos de sobreajuste.
+
+El criterio de información de Akaice (AIC) mide la pérdida de información relativa dentro del modelo. Conforme es menor el valor de AIC, mayor es la calidad relativa del modelo. Bajo la suposición de que los residuos de ajuste siguen una distribución normal con varianza constante, el AIC se expresa como la suma de residuos al cuadrado,
+\begin{equation}
+    AIC = N \ln\left( \frac{1}{N}\sum_{i=1}^N (y_i - \hat{y}_i)^2\right) + 2p = N \ln\left( \frac{SS_{res}}{N}
+    \right) + 2p 
+\end{equation}
+Por otro lado el criterio de información bayesiano (BIC) introduce una aproximación bayesiana para la selección de modelos. Bajo las mimsas suposiciones su formulación es,
+\begin{equation}
+    BIC = N \ln \left( \frac{1}{N}\sum_{i=1}^N (y_i - \hat{y}_i)^2\right) + p \ln(N) = N \ln\left( \frac{SS_{res}}{N}
+    \right) + p \ln(N)
+\end{equation}
+Podemos observar que la penalización de sobreajuste en el BIC escala de forma logarítmica con el tamaño de la muestra $N$. Debido a el número elevado de datos que contiene un espectro experimental es elevado, el BIC aumenta considerablemente para modelos sobreparamentrizados.

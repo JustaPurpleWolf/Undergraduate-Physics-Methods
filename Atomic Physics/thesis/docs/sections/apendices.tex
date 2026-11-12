@@ -1,0 +1,168 @@
+\appendix
+\chapter{Átomo de Rubidio}\label{sec:appendixA}
+% #region Inicion de Sección
+El rubidio ($\text{Rb}$) es un metal alcalino ampliamente utilizado en física atómica, espectroscopía y metrología debido a su estructura electrónica monovalente. Esta propiedad permite describir detalladamente sus respuestas ópticas y cuánticas a partir de modelos sencillos, como el sistema de dos niveles, en comparación con otros elementos \cite{footAtomicPhysics2005}.
+% #endregion
+\section{Propiedades Fundamentales}
+El rubidio ($\text{Rb}$, $Z = 37$) presenta una configuración electrónica en el estado fundamental compuesta por un núcleo rodeado por una nube de 36 electrones [$\text{Kr}$] y un único electrón de valencia en el orbital $5s$.
+\begin{equation*}
+    [\text{Kr}]\,5s^1 = 1s^2\,2s^2\,2p^6\,3s^2\,3p^6\,3d^{10}\,4s^2\,4p^6\,5s^1
+\end{equation*}
+En estado natural, el rubidio está constituido por una mezcla entre dos isótopos estables: el \textbf{rubidio-85} ($^{85}\text{Rb}$), con una abundancia del $72.17\%$, masa atómica de $\SI{84.911}{u}$ y espín nuclear de $I = 5/2$; y el \textbf{rubidio-87} ($^{87}\text{Rb}$), con una abundancia del $27.83\%$, masa atómica de $\SI{86.909}{u}$ y espín nuclear de $I = 3/2$. Debido a su alta reactividad y rápida oxidación, se almacena en vacío o en fluidos inertes \cite{danieladamsteckrubidium85Dlinedata, danieladamsteckrubidium87Dlinedata}.
+\subsection*{Comportamiento Termodinámico}
+El punto de fusión del rubidio es de $T_{fus} = \SI{39.31}{\degreeCelsius}$ ($\approx \SI{312.26}{K}$). La presión de vapor $P(T)$ se describe mediante la ecuación de Clausis-Clapeyron. Los coeficientes experimentales para las fases sólida y líquida son bien conocidos y se resumen en la tabla \ref{tab:rb_pressure_params} \cite{alcockVapourPressureEquations1984,  nesmeyanovVapourPressureElements}.
+% Tabla de Parámetros del Rubidio para Calusius-Capeyron
+\begin{table}[htbp]
+  \centering
+  \caption{Parámetros experimentales del rubidio para la ecuación de presión de vapor en aatmósferas ($\text{atm}$).}
+    \begin{tabular}{cccccrr}
+    \toprule
+    \textbf{Estado} &
+      \textbf{A } &
+      \textbf{B} &
+      \textbf{C} &
+      \textbf{D} &
+      \multicolumn{1}{c}{\boldmath{}\textbf{$T_{min}$}\unboldmath{}} &
+      \multicolumn{1}{c}{\boldmath{}\textbf{$T_{max}$}\unboldmath{}}
+      \\
+    \midrule
+    Sólido &
+      4.857 &
+      -4215.0 &
+      0.0 &
+      0.0 &
+      298.00 K&
+      312.46 K
+      \\
+    \midrule
+    Líquido &
+      4.312 &
+      -4040.0 &
+      0.0 &
+      0.0 &
+      312.46 K&
+      550.00 K
+      \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:rb_pressure_params}%
+\end{table}%
+\section{Estructura Fina e Hiperfina}
+\subsection*{Estructura Fina}
+El acoplamiento espín-órbita entre el momento angular orbital $\vec{L}$ y el espín del electrón de valencia $\vec{S}$ introduce la perturbación $\hat{H}_{\text{FS}} = \beta_{\text{FS}} \vec{L} \cdot \vec{S}$ con energías de acoplamiento $E_FS = \beta_{FS} \expval{\vec{L} \cdot \vec{S}}$ \cite{footAtomicPhysics2005}. 
+
+Al definir el momento angular electrónico total $\vec{J} = \vec{L} + \vec{S}$, acotado por $\abs{L-S} {\leq} J {\leq} L + S$, obtenemos eigenvalores $\expval{\vec{L} \cdot \vec{S}} = \frac{\hbar^2}{2} \left[J(J+1) - L(L+1) - S(S+1)\right]$ \cite{griffithsIntroductionQuantumMechanics2017}. Distinguimos cada uno de éstos niveles a partir de la notación espectroscópica $^{2S +1}L_J$, donde el momento angular $L$ es descrito por las letras $S, P, D, ...$ respectivamente.
+
+\begin{itemize}
+    \item \textbf{Estado fundamental} ($5s, L=0$).  El único valor posible para $J$ es $J=1/2$, por lo que no ocurren desdoblamientos. Éste nivel se denota como $5^2S_{1/2}$.
+    \item \textbf{Primer estado excitado} ($5p, L = 1$) Las combinaciones para $L$ y $S$ permiten dos valores posibles para $J$, $J = 1/2, 3/2$, ésto rompe la degeneración del nivel $5p$, separándolo en los subniveles $5^2P_{1/2}$ y $5^2P_{3/2}$ \cite{footAtomicPhysics2005}. 
+\end{itemize}
+Las transiciones del estado base hacia los subniveles del estado excitado originan el doblete de líneas $D$ del rubidio \cite{danieladamsteckrubidium85Dlinedata, danieladamsteckrubidium87Dlinedata}.
+\begin{equation}
+    \begin{split}
+        D_1: 5^2S_{1/2} \longrightarrow 5^2P_{1/2}, \quad \lambda_1 \approx 794.98 \text{ nm}\\
+        D_2: 5^2S_{1/2} \longrightarrow 5^2P_{3/2}, \quad \lambda_2 \approx 780.24 \text{ nm}
+    \end{split}
+\end{equation}
+\subsection*{Estructura Hiperfina}
+La interacción entre el momento angular electrónico total $\vec{J}$ y el espín nuclear $\vec{I}$ da lugar a la estructura hiperfina, descrita por el Hamiltoniano $\hat{H}_{\text{HFS}} = A_{\text{HFS}} \vec{I} \cdot \vec{J} + B_{\text{HFS}} \hat{H}_{\text{quad}}$, que considera el término dipolar magnético $A_{\text{HFS}}$ y el cuadrupolar eléctrico $B_{\text{HFS}}$ \cite{footAtomicPhysics2005}.
+
+Definiendo el momento angular total del átomo como $\vec{F} = \vec{J} + \vec{I}$ (con $\abs{J-I} \leq F \leq J+I$) y el parámetro $K = F(F+1) - J(J+1) - I(I+1)$, la corrección energética resultante para cada subnivel $F$ se expresa analíticamente como \cite{danieladamsteckQuantumAtomOptics2007},
+\begin{equation*}
+    \Delta E_{HFS} (F) = \frac{1}{2}A_{HFS}K + B_{HFS} \frac{\frac{3}{2}K(K+1) -2I(I+1)J(J+1)}{4I(1I-1)J(2J-1)}
+\end{equation*}
+En la línea $D_2$ del rubidio ($5^2S_{1/2} \to 5^2P^{3/2}$), la interacción hiperfina desdobla el estado base en dos niveles $F_g$ y el primer estado excitado en cuatro niveles $F_e$. De acuerdo con las reglas de selección dipolares eléctricas ($\Delta F = F_e - F_g \in \{ 0, \pm 1\}$), tenemos exactamente \textbf{6 trancisiones permitidas} por isótopo ($^{82}\text{Rb} \text{ y } ^{85}\text{Rb}$) \cite{siddonsAbsoluteAbsorptionRubidium2008}. 
+
+Las intensidades de transición relativas, descritas por los factores $C_F^2$ y normalizadas mediante los coeficientes de fuerza de línea $S_{FF'}$, se resumen en la Tabla \ref{tab:rb_D2_cge_params} \cite{danieladamsteckrubidium85Dlinedata, danieladamsteckrubidium87Dlinedata}.
+
+% Table generated by Excel2LaTeX from sheet 'Hoja1'
+\begin{table}[htbp]
+  \centering
+  \caption{Factores de intensidad relativa $C_F^2$ en transición hiperfina para la línea $D_2$ del rubidio ($5^2S_{1/2} \to 5^2P^{3/2}$).}
+
+    \begin{tabular}{cccc}
+    \toprule
+    \textbf{Isótopo} &
+      \boldmath{}\textbf{$F_g$}\unboldmath{} &
+      \boldmath{}\textbf{$F_e$}\unboldmath{} &
+      \boldmath{}\textbf{$C_F^2$}\unboldmath{}
+      \\
+    \midrule
+    \multirow{6}[12]{*}{\boldmath{}\textbf{$^{85}\text{Rb}$}\unboldmath{}} &
+      \multirow{3}[6]{*}{2} &
+      1 &
+      $3/10$
+      \\
+\cmidrule{3-4}     &
+       &
+      2 &
+      $7/18$
+      \\
+\cmidrule{3-4}     &
+       &
+      3 &
+      $14/45$
+      \\
+\cmidrule{2-4}     &
+      \multirow{3}[6]{*}{3} &
+      2 &
+      $5/63$
+      \\
+\cmidrule{3-4}     &
+       &
+      3 &
+      $4/9$
+      \\
+\cmidrule{3-4}     &
+       &
+      4 &
+      $9/14$
+      \\
+    \bottomrule
+    \end{tabular}%
+    \hspace{20pt}
+    \begin{tabular}{cccc}
+    \toprule
+    \textbf{Isótopo} &
+      \boldmath{}\textbf{$F_g$}\unboldmath{} &
+      \boldmath{}\textbf{$F_e$}\unboldmath{} &
+      \boldmath{}\textbf{$C_F^2$}\unboldmath{}
+      \\
+    \midrule
+    \multirow{6}[12]{*}{\boldmath{}\textbf{$^{87}\text{Rb}$}\unboldmath{}} &
+      \multirow{3}[6]{*}{1} &
+      0 &
+      $5/6$
+      \\
+\cmidrule{3-4}     &
+       &
+      1 &
+      $5/12$
+      \\
+\cmidrule{3-4}     &
+       &
+      2 &
+      $5/12$
+      \\
+\cmidrule{2-4}     &
+      \multirow{3}[6]{*}{2} &
+      1 &
+      $1/20$
+      \\
+\cmidrule{3-4}     &
+       &
+      2 &
+      $1/4$
+      \\
+\cmidrule{3-4}     &
+       &
+      3 &
+      $7/10$
+      \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:rb_D2_cge_params}%
+\end{table}%
+
+\nocite{*}
+
